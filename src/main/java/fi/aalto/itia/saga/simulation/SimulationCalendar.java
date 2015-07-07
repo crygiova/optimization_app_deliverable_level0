@@ -31,7 +31,7 @@ public class SimulationCalendar extends GregorianCalendar {
 
 	private TimerTask myTask = new TimerTask() {
 		@Override
-		public void run() {
+		public synchronized void run() {
 			myCalendar.add(MINUTE, 1);
 			log.debug("Minute Added: " + myCalendar.getTime());
 		}
@@ -71,7 +71,7 @@ public class SimulationCalendar extends GregorianCalendar {
 	/**
 	 * 
 	 */
-	public void stopSimluationCalendar() {
+	public synchronized void stopSimluationCalendar() {
 		log.debug("SimulationCalendar stopped");
 		myTask.cancel();
 	}
