@@ -6,10 +6,9 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-
-
 public class TimeSequencePlan {
 
+	// TODO Make ordered by Date/ Double Value
 	private Date start;
 	private List<TimeUnitTuple<Date, Double>> timEnergy = new ArrayList<TimeUnitTuple<Date, Double>>();
 
@@ -49,7 +48,8 @@ public class TimeSequencePlan {
 
 	public int indexOf(Date time) {
 		int index = -1;
-		// TODO you can optimize when time
+		// TODO you can optimize when time and change the compare to consider
+		// only year day month and hour
 		while (++index < timEnergy.size()) {
 			if (timEnergy.get(index).getDate().compareTo(time) == 0)
 				return index;
@@ -79,6 +79,15 @@ public class TimeSequencePlan {
 		gc.add(Calendar.HOUR_OF_DAY, add);
 		return (Date) gc.getTime().clone();
 	}
-	
+
+	@Override
+	public String toString() {
+		String str = "";
+		for (TimeUnitTuple<Date, Double> timeUnitTuple : timEnergy) {
+			str += timeUnitTuple.toString() + "\n";
+		}
+		return "TimeSequencePlan [start=" + start + ", timEnergy=\n" + str
+				+ "]";
+	}
 
 }

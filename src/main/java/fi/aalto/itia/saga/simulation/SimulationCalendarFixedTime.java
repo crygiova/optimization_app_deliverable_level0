@@ -1,28 +1,54 @@
+/**
+ * 
+ */
 package fi.aalto.itia.saga.simulation;
 
 import java.util.GregorianCalendar;
+import java.util.Timer;
+import java.util.TimerTask;
+import org.apache.log4j.Logger;
 
-public class SimulationCalendar extends GregorianCalendar {
+/**
+ * @author giovanc1
+ *
+ */
+// TODO DEPRECATED
+// TODO need to set the calendar at the beginning of of the day and set 0 the
+// seconds
+public class SimulationCalendarFixedTime extends GregorianCalendar {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	private static final Logger log = Logger
+			.getLogger(SimulationCalendarFixedTime.class);
 
-	private static SimulationCalendar myCalendar = new SimulationCalendar();
+	private long simulationHourTimeMs;// in Milliseconds
+	private long simulationMinTimeMs;
+
+	private static SimulationCalendarFixedTime myCalendar = new SimulationCalendarFixedTime();
+	private Timer timer = new Timer();
+
+	private TimerTask myTask = new TimerTask() {
+		@Override
+		public synchronized void run() {
+			myCalendar.add(MINUTE, 1);
+			log.debug("Minute Added: " + myCalendar.getTime());
+		}
+	};
 
 	/**
 	 * 
 	 */
-	private SimulationCalendar() {
+	private SimulationCalendarFixedTime() {
 		super();
 	}
 
-	public static synchronized SimulationCalendar getInstance() {
+	public static synchronized SimulationCalendarFixedTime getInstance() {
 		if (myCalendar == null) {
-			System.out.println("RiCreation New Singleton SimulationCalendar");
-			// TODO possible to erase this since it will never happen
-			return new SimulationCalendar();
+			log.debug("RiCreation New Singleton SimulationCalendar");
+			return new SimulationCalendarFixedTime();
 		} else
 			return myCalendar;
 
@@ -31,12 +57,24 @@ public class SimulationCalendar extends GregorianCalendar {
 	/**
 	 * @param simulationHourTimeMs
 	 */
-	public synchronized void initSimulationCalendar() {
+	public synchronized void startSimulationCalendar(long simulationHourTimeMs) {
+		this.simulationHourTimeMs = simulationHourTimeMs;
+		this.simulationMinTimeMs = (long) this.simulationHourTimeMs / 60l;
 		this.set(HOUR_OF_DAY, 0);
 		this.set(MINUTE, 0);
 		this.set(SECOND, 0);
 		this.set(MILLISECOND, 0);
-		System.out.println("SimulationCalendar started " + this.getTime());
+		log.debug("SimulationCalendar started " + this.getTime());
+		// timer.schedule(myTask, 2000, 2000); in Ms
+		timer.schedule(myTask, simulationMinTimeMs, simulationMinTimeMs);
+	}
+
+	/**
+	 * 
+	 */
+	public synchronized void stopSimluationCalendar() {
+		log.debug("SimulationCalendar stopped");
+		myTask.cancel();
 	}
 
 	/*
@@ -119,6 +157,5 @@ public class SimulationCalendar extends GregorianCalendar {
 	public int getLeastMaximum(int field) {
 		return super.getLeastMaximum(field);
 	}
-
 
 }

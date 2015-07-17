@@ -1,0 +1,114 @@
+package fi.aalto.itia.saga.aggregator.util;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+import fi.aalto.itia.saga.data.TimeSequencePlan;
+import jxl.*;
+import jxl.read.biff.BiffException;
+
+public class SpotPriceEstimator {
+	private static final String FILE_NAME_PROPERTIES = "spot-2013.xls";
+	private static final int DATE_COL = 0;
+	private static final int HOUR_COL = 1;
+	private static final int FI_COL = 7;
+	private static final int INITIAL_ROW = 3;
+
+	private static Workbook workbook;
+	private static TimeSequencePlan yearlyPlan;
+	private static GregorianCalendar utilityCalendar = new GregorianCalendar();
+	private static SpotPriceEstimator instance = new SpotPriceEstimator();
+
+	static {
+		ClassLoader classLoader = Thread.currentThread()
+				.getContextClassLoader();
+		try (InputStream resourceStream = classLoader
+				.getResourceAsStream(FILE_NAME_PROPERTIES)) {
+			workbook = Workbook.getWorkbook(resourceStream);
+		} catch (IOException e) {
+			System.out.println("Excel file not Found: " + FILE_NAME_PROPERTIES);
+		} catch (BiffException e) {
+			e.printStackTrace();
+		}
+	};
+
+	public static SpotPriceEstimator getInstance() {
+		if (instance ==null)
+			instance = new SpotPriceEstimator();
+		return instance;
+	}
+
+	private SpotPriceEstimator() {
+	}
+
+	public void init() {
+		boolean finished = false;
+		boolean first = true;
+
+		Sheet sheet = workbook.getSheet(0);
+		Cell dateCell;
+		Cell hourCell;
+		Cell priceCell;
+
+		for (int row = INITIAL_ROW; !finished && row < sheet.getRows(); row++) {
+			dateCell = sheet.getCell(DATE_COL, row);// DATE
+			hourCell = sheet.getCell(HOUR_COL, row);// Hours
+			priceCell = sheet.getCell(FI_COL, row);// prices in
+			if (dateCell.getType() == CellType.DATE
+					&& hourCell.getType() == CellType.LABEL
+					&& priceCell.getType() == CellType.NUMBER) {
+				DateCell dc = (DateCell) dateCell;
+				NumberCell n = (NumberCell) priceCell;
+				utilityCalendar.setTime(dc.getDate());
+				utilityCalendar.set(Calendar.HOUR_OF_DAY, Integer
+						.parseInt(hourCell.getContents().substring(0, 2)));
+				utilityCalendar.set(Calendar.YEAR,
+						Calendar.getInstance().get(Calendar.YEAR));
+				if (first) {
+					yearlyPlan = new TimeSequencePlan(utilityCalendar.getTime());
+					first = false;
+				}
+				double priceKWh = convertMWhtoKWh(n.getValue());
+				priceKWh = roundDoubleTo(priceKWh, 5); // Round;
+				yearlyPlan.addTimeEnergyTuple(utilityCalendar.getTime(),
+						priceKWh);
+
+			} else {
+				finished = true;
+			}
+		}
+	}
+
+	public TimeSequencePlan getSporPrice(Date dayRequested) {
+		TimeSequencePlan ep;
+		GregorianCalendar gc0 = new GregorianCalendar();
+		gc0.setTime(dayRequested);
+		GregorianCalendar gc = new GregorianCalendar(gc0.get(Calendar.YEAR),
+				gc0.get(Calendar.MONTH), gc0.get(Calendar.DAY_OF_MONTH));
+		dayRequested = gc.getTime();
+		if (yearlyPlan == null)
+			init();
+		utilityCalendar.setTime(dayRequested);
+		ep = new TimeSequencePlan(dayRequested);
+		int index = yearlyPlan.indexOf(utilityCalendar.getTime());
+		if (index != -1) {
+			for (int i = index; i < index + 24; i++) {
+				ep.addTimeEnergyTuple(yearlyPlan.getTimeEnergyTuple(i));
+			}
+			return ep;
+		}
+		return null;
+	}
+
+	private static double roundDoubleTo(double value, int decimal) {
+		double power = Math.pow(10d, decimal);
+		return Math.round(value * power) / power;
+	}
+
+	private static double convertMWhtoKWh(double price) {
+		return price / 1000d;
+	}
+}

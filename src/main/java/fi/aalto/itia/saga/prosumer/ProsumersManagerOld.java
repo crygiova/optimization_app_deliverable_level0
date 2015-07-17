@@ -10,14 +10,15 @@ import java.util.List;
  * @author giovanc1
  *
  */
-public class ProsumersManager implements Runnable {
+public class ProsumersManagerOld implements Runnable {
 
+	@SuppressWarnings({ "unused", "rawtypes" })
 	private List prosumers;
 	
 	/**
 	 * 
 	 */
-	public ProsumersManager(int numberOfProsumers) {
+	public ProsumersManagerOld(int numberOfProsumers) {
 		prosumers = new ArrayList<Prosumer>();
 		
 		// TODO Auto-generated constructor stub
