@@ -1,9 +1,13 @@
 package fi.aalto.itia.saga.simulation;
 
+import java.util.Calendar;
+import java.util.PriorityQueue;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.TimeUnit;
+
+import fi.aalto.itia.saga.data.TaskSchedule;
 
 public abstract class SimulationElement implements Runnable {
 
@@ -15,36 +19,60 @@ public abstract class SimulationElement implements Runnable {
 	// Queue to take the token from and release it from the Simulator
 	protected SynchronousQueue<Integer> simulationToken;
 	// Messages queue between R0Abstract
-	//TODO The type of the message needs to be changed once it has been developed a format for the messages
+	// TODO The type of the message needs to be changed once it has been
+	// developed a format for the messages
 	protected LinkedBlockingQueue<String> messageQueue;
+	// Tasks ordered by priority and time
+	protected PriorityQueue<TaskSchedule> tasks;
 	// Count down to communicate that the current R0Abstract has finished it s
-	// own tasks
-	// TODO change the name of all the variables with a proper meaning
+	// own tasks,
 	protected CountDownLatch endOfSimulationTasks;
 	private boolean countDown = false;
 	// releaseToken for releasing the simulationToken to the simulator
 	private boolean releaseToken = false;
+	// to quit the simulation
+	private boolean endOfSimulation = false;
+	protected SimulationCalendar calendar;
+	
 
 	public SimulationElement() {
 		super();
 		this.simulationToken = new SynchronousQueue<Integer>();
 		this.messageQueue = new LinkedBlockingQueue<String>();
-
+		this.tasks = new PriorityQueue<TaskSchedule>();
+		calendar = SimulationCalendar.getInstance();
 	}
 
+	/**
+	 * 
+	 */
+	public abstract void scheduleTasks();
+
+	public abstract void executeTasks();
+
+	public abstract void elaborateIncomingMessages();
+
+	/**
+	 * @param cdl
+	 */
 	public void updateEndOfSimulationTasks(CountDownLatch cdl) {
 		this.endOfSimulationTasks = cdl;
 		this.countDown = true;
 	}
 
+	/**
+	 * 
+	 */
 	public void notifyEndOfSimulationTasks() {
-		// TODO each R0Abstract can countDown only once
 		if (countDown) {
 			this.endOfSimulationTasks.countDown();
 			countDown = false;
 		}
 	}
 
+	/**
+	 * @return
+	 */
 	public Integer takeSimulationToken() {
 		Integer buffer = -1;
 		try {
@@ -55,6 +83,9 @@ public abstract class SimulationElement implements Runnable {
 		return buffer;
 	}
 
+	/**
+	 * 
+	 */
 	public void releaseSimulationToken() {
 		this.setReleaseToken(false);
 		try {
@@ -65,15 +96,25 @@ public abstract class SimulationElement implements Runnable {
 	}
 
 	// Add a msg to this SimulationElement
+	/**
+	 * @param msg
+	 */
 	public void addMessage(String msg) {
 		this.messageQueue.add(msg);
 	}
 
 	// Send a msg to a specified SimulationElement
+	/**
+	 * @param peer
+	 * @param msg
+	 */
 	public void sendMessage(SimulationElement peer, String msg) {
 		peer.addMessage(msg);
 	}
 
+	/**
+	 * @return
+	 */
 	public String takeMessage() {
 		try {
 			return this.messageQueue.take();
@@ -83,6 +124,15 @@ public abstract class SimulationElement implements Runnable {
 		return null;
 	}
 
+	public boolean nextTaskAtThisHour() {
+		return calendar.get(Calendar.HOUR_OF_DAY) == this.tasks
+				.peek().getHour();
+	}
+
+	/**
+	 * @param timeout
+	 * @return
+	 */
 	public String pollMessageMs(long timeout) {
 		try {
 			return this.messageQueue.poll(timeout, TimeUnit.MILLISECONDS);
@@ -92,11 +142,32 @@ public abstract class SimulationElement implements Runnable {
 		return null;
 	}
 
+	/**
+	 * @return
+	 */
 	public boolean isReleaseToken() {
 		return releaseToken;
 	}
 
+	/**
+	 * @param releaseToken
+	 */
 	public void setReleaseToken(boolean releaseToken) {
 		this.releaseToken = releaseToken;
 	}
+
+	/**
+	 * @return
+	 */
+	public boolean isEndOfSimulation() {
+		return endOfSimulation;
+	}
+
+	/**
+	 * @param endOfSimulation
+	 */
+	public void setEndOfSimulation(boolean endOfSimulation) {
+		this.endOfSimulation = endOfSimulation;
+	}
+
 }

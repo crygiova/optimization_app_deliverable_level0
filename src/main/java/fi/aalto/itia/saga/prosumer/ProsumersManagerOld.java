@@ -10,6 +10,7 @@ import java.util.List;
  * @author giovanc1
  *
  */
+//TODO Deprecated
 public class ProsumersManagerOld implements Runnable {
 
 	@SuppressWarnings({ "unused", "rawtypes" })

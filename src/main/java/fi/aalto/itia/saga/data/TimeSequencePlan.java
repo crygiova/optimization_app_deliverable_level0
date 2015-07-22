@@ -6,6 +6,12 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+import fi.aalto.itia.saga.simulation.SimulationCalendarUtils;
+
+/**
+ * @author giovanc1
+ *
+ */
 public class TimeSequencePlan {
 
 	// TODO Make ordered by Date/ Double Value
@@ -48,10 +54,23 @@ public class TimeSequencePlan {
 
 	public int indexOf(Date time) {
 		int index = -1;
+		GregorianCalendar gcTime = (GregorianCalendar) GregorianCalendar
+				.getInstance();
+		gcTime.setTime(time);
+		GregorianCalendar local = (GregorianCalendar) GregorianCalendar
+				.getInstance();
+
 		// TODO you can optimize when time and change the compare to consider
-		// only year day month and hour
+		// only day month and hour
 		while (++index < timEnergy.size()) {
-			if (timEnergy.get(index).getDate().compareTo(time) == 0)
+			local.setTime(timEnergy.get(index).getDate());
+			if (local.get(Calendar.MONTH) == gcTime.get(Calendar.MONTH)
+					&& local.get(Calendar.HOUR_OF_DAY) == gcTime
+							.get(Calendar.HOUR_OF_DAY)
+					&& local.get(Calendar.DAY_OF_MONTH) == gcTime
+							.get(Calendar.DAY_OF_MONTH)
+					&& local.get(Calendar.YEAR) == gcTime
+							.get(Calendar.YEAR))
 				return index;
 		}
 		return -1;
@@ -72,12 +91,22 @@ public class TimeSequencePlan {
 		// TODOthis.timEnergy = timEnergy;
 	}
 
-	public static Date calculateNextHour(Date start, int add) {
-		GregorianCalendar gc = (GregorianCalendar) GregorianCalendar
-				.getInstance();
-		gc.setTime(start);
-		gc.add(Calendar.HOUR_OF_DAY, add);
-		return (Date) gc.getTime().clone();
+	public static TimeSequencePlan initToZero(Date start, int numHours) {
+		TimeSequencePlan tsp = new TimeSequencePlan(start);
+		for (int i = 0; i < numHours; i++) {
+			tsp.addTimeEnergyTuple(start, 0d);
+			start = SimulationCalendarUtils.calculateNextHour(start, 1);
+		}
+		return tsp;
+	}
+	
+	public static TimeSequencePlan initToValue(Date start, int numHours, double value) {
+		TimeSequencePlan tsp = new TimeSequencePlan(start);
+		for (int i = 0; i < numHours; i++) {
+			tsp.addTimeEnergyTuple(start, value);
+			start = SimulationCalendarUtils.calculateNextHour(start, 1);
+		}
+		return tsp;
 	}
 
 	@Override

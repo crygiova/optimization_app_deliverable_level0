@@ -1,0 +1,1495 @@
+2015-07-20 12:40:45 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 12:43:31 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 12:44:10 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 12:44:58 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 14:42:09 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 14:42:09 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-20 14:42:09 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-20 14:43:01 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 14:43:01 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-20 14:43:01 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-20 14:59:07 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 14:59:07 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-20 14:59:07 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-20 14:59:35 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 14:59:35 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-20 14:59:35 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-20 15:14:01 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 15:14:01 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-20 15:14:01 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-20 15:15:30 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 15:15:30 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-20 15:15:30 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-20 15:21:55 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 15:21:55 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-20 15:21:55 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-20 15:22:04 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 15:22:04 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-20 15:22:04 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-20 15:44:33 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 15:44:33 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-20 15:44:33 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-20 15:45:00 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 15:45:00 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-20 15:45:00 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-20 15:46:16 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 15:46:17 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-20 15:46:17 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-20 16:01:58 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 16:01:58 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-20 16:01:58 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-20 16:20:24 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 16:20:24 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-20 16:20:24 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-20 16:20:24 DEBUG MainApp:83 - Run
+2015-07-20 16:20:24 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:24 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:24 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:24 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 00:00:00 EET 2015
+2015-07-20 16:20:24 DEBUG MainApp:97 - Updated Time: Thu Jan 01 01:00:00 EET 2015
+2015-07-20 16:20:24 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:24 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:24 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:24 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 01:00:00 EET 2015
+2015-07-20 16:20:25 DEBUG MainApp:97 - Updated Time: Thu Jan 01 02:00:00 EET 2015
+2015-07-20 16:20:25 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:25 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:25 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:25 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 02:00:00 EET 2015
+2015-07-20 16:20:25 DEBUG MainApp:97 - Updated Time: Thu Jan 01 03:00:00 EET 2015
+2015-07-20 16:20:25 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:25 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:25 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:25 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 03:00:00 EET 2015
+2015-07-20 16:20:25 DEBUG MainApp:97 - Updated Time: Thu Jan 01 04:00:00 EET 2015
+2015-07-20 16:20:25 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:25 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:25 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:25 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 04:00:00 EET 2015
+2015-07-20 16:20:25 DEBUG MainApp:97 - Updated Time: Thu Jan 01 05:00:00 EET 2015
+2015-07-20 16:20:25 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:25 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:25 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:25 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 05:00:00 EET 2015
+2015-07-20 16:20:25 DEBUG MainApp:97 - Updated Time: Thu Jan 01 06:00:00 EET 2015
+2015-07-20 16:20:25 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:25 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:25 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:25 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 06:00:00 EET 2015
+2015-07-20 16:20:25 DEBUG MainApp:97 - Updated Time: Thu Jan 01 07:00:00 EET 2015
+2015-07-20 16:20:25 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:25 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:25 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:25 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 07:00:00 EET 2015
+2015-07-20 16:20:25 DEBUG MainApp:97 - Updated Time: Thu Jan 01 08:00:00 EET 2015
+2015-07-20 16:20:25 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:25 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:25 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:25 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 08:00:00 EET 2015
+2015-07-20 16:20:25 DEBUG MainApp:97 - Updated Time: Thu Jan 01 09:00:00 EET 2015
+2015-07-20 16:20:25 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:25 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:25 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:25 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 09:00:00 EET 2015
+2015-07-20 16:20:26 DEBUG MainApp:97 - Updated Time: Thu Jan 01 10:00:00 EET 2015
+2015-07-20 16:20:26 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:26 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:26 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:26 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 10:00:00 EET 2015
+2015-07-20 16:20:26 DEBUG MainApp:97 - Updated Time: Thu Jan 01 11:00:00 EET 2015
+2015-07-20 16:20:26 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:26 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:26 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:26 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 11:00:00 EET 2015
+2015-07-20 16:20:26 DEBUG MainApp:97 - Updated Time: Thu Jan 01 12:00:00 EET 2015
+2015-07-20 16:20:26 DEBUG Aggregator:90 - **************Thu Jan 01 12:00:00 EET 2015 Task DAYAHEAD
+2015-07-20 16:20:26 DEBUG Aggregator:112 - A->P: AToP 0
+2015-07-20 16:20:26 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:26 DEBUG Prosumer:140 - P<-A: AToP 0
+2015-07-20 16:20:26 DEBUG Prosumer:142 - P->A: AToP 0 Reply1
+2015-07-20 16:20:26 DEBUG Aggregator:112 - A->P: AToP 1
+2015-07-20 16:20:26 DEBUG Prosumer:140 - P<-A: AToP 1
+2015-07-20 16:20:26 DEBUG Prosumer:142 - P->A: AToP 1 Reply1
+2015-07-20 16:20:26 DEBUG Aggregator:112 - A->P: AToP 2
+2015-07-20 16:20:26 DEBUG Prosumer:140 - P<-A: AToP 2
+2015-07-20 16:20:26 DEBUG Prosumer:142 - P->A: AToP 2 Reply1
+2015-07-20 16:20:26 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:26 DEBUG Aggregator:58 - A<-P: AToP 0 Reply1
+2015-07-20 16:20:26 DEBUG Aggregator:58 - A<-P: AToP 1 Reply1
+2015-07-20 16:20:26 DEBUG Aggregator:58 - A<-P: AToP 2 Reply1
+2015-07-20 16:20:26 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:26 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 12:00:00 EET 2015
+2015-07-20 16:20:26 DEBUG MainApp:97 - Updated Time: Thu Jan 01 13:00:00 EET 2015
+2015-07-20 16:20:26 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:26 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:26 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:26 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 13:00:00 EET 2015
+2015-07-20 16:20:26 DEBUG MainApp:97 - Updated Time: Thu Jan 01 14:00:00 EET 2015
+2015-07-20 16:20:26 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:26 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:26 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:26 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 14:00:00 EET 2015
+2015-07-20 16:20:26 DEBUG MainApp:97 - Updated Time: Thu Jan 01 15:00:00 EET 2015
+2015-07-20 16:20:26 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:26 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:26 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:26 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 15:00:00 EET 2015
+2015-07-20 16:20:26 DEBUG MainApp:97 - Updated Time: Thu Jan 01 16:00:00 EET 2015
+2015-07-20 16:20:26 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:26 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:26 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:26 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 16:00:00 EET 2015
+2015-07-20 16:20:27 DEBUG MainApp:97 - Updated Time: Thu Jan 01 17:00:00 EET 2015
+2015-07-20 16:20:27 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:27 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:27 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:27 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 17:00:00 EET 2015
+2015-07-20 16:20:27 DEBUG MainApp:97 - Updated Time: Thu Jan 01 18:00:00 EET 2015
+2015-07-20 16:20:27 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:27 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:27 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:27 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 18:00:00 EET 2015
+2015-07-20 16:20:27 DEBUG MainApp:97 - Updated Time: Thu Jan 01 19:00:00 EET 2015
+2015-07-20 16:20:27 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:27 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:27 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:27 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 19:00:00 EET 2015
+2015-07-20 16:20:27 DEBUG MainApp:97 - Updated Time: Thu Jan 01 20:00:00 EET 2015
+2015-07-20 16:20:27 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:27 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:27 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:27 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 20:00:00 EET 2015
+2015-07-20 16:20:27 DEBUG MainApp:97 - Updated Time: Thu Jan 01 21:00:00 EET 2015
+2015-07-20 16:20:27 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:27 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:27 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:27 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 21:00:00 EET 2015
+2015-07-20 16:20:27 DEBUG MainApp:97 - Updated Time: Thu Jan 01 22:00:00 EET 2015
+2015-07-20 16:20:27 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:27 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:27 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:27 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 22:00:00 EET 2015
+2015-07-20 16:20:27 DEBUG MainApp:97 - Updated Time: Thu Jan 01 23:00:00 EET 2015
+2015-07-20 16:20:27 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:20:27 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:20:27 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:20:27 DEBUG MainApp:91 - Sleepin Time: Thu Jan 01 23:00:00 EET 2015
+2015-07-20 16:20:28 DEBUG MainApp:97 - Updated Time: Fri Jan 02 00:00:00 EET 2015
+2015-07-20 16:21:17 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 16:21:17 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-20 16:21:17 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-20 16:21:17 DEBUG MainApp:83 - Run
+2015-07-20 16:21:17 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:17 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:17 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:17 DEBUG MainApp:96 - Updated Time: Thu Jan 01 01:00:00 EET 2015
+2015-07-20 16:21:17 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:17 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:17 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:17 DEBUG MainApp:96 - Updated Time: Thu Jan 01 02:00:00 EET 2015
+2015-07-20 16:21:17 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:17 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:17 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:17 DEBUG MainApp:96 - Updated Time: Thu Jan 01 03:00:00 EET 2015
+2015-07-20 16:21:17 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:17 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:17 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:18 DEBUG MainApp:96 - Updated Time: Thu Jan 01 04:00:00 EET 2015
+2015-07-20 16:21:18 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:18 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:18 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:18 DEBUG MainApp:96 - Updated Time: Thu Jan 01 05:00:00 EET 2015
+2015-07-20 16:21:18 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:18 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:18 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:18 DEBUG MainApp:96 - Updated Time: Thu Jan 01 06:00:00 EET 2015
+2015-07-20 16:21:18 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:18 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:18 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:18 DEBUG MainApp:96 - Updated Time: Thu Jan 01 07:00:00 EET 2015
+2015-07-20 16:21:18 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:18 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:18 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:18 DEBUG MainApp:96 - Updated Time: Thu Jan 01 08:00:00 EET 2015
+2015-07-20 16:21:18 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:18 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:18 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:18 DEBUG MainApp:96 - Updated Time: Thu Jan 01 09:00:00 EET 2015
+2015-07-20 16:21:18 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:18 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:18 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:18 DEBUG MainApp:96 - Updated Time: Thu Jan 01 10:00:00 EET 2015
+2015-07-20 16:21:18 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:18 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:18 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:19 DEBUG MainApp:96 - Updated Time: Thu Jan 01 11:00:00 EET 2015
+2015-07-20 16:21:19 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:19 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:19 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:19 DEBUG MainApp:96 - Updated Time: Thu Jan 01 12:00:00 EET 2015
+2015-07-20 16:21:19 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:19 DEBUG Aggregator:90 - **************Thu Jan 01 12:00:00 EET 2015 Task DAYAHEAD
+2015-07-20 16:21:19 DEBUG Aggregator:112 - A->P: AToP 0
+2015-07-20 16:21:19 DEBUG Prosumer:140 - P<-A: AToP 0
+2015-07-20 16:21:19 DEBUG Prosumer:142 - P->A: AToP 0 Reply1
+2015-07-20 16:21:19 DEBUG Aggregator:112 - A->P: AToP 1
+2015-07-20 16:21:19 DEBUG Prosumer:140 - P<-A: AToP 1
+2015-07-20 16:21:19 DEBUG Prosumer:142 - P->A: AToP 1 Reply1
+2015-07-20 16:21:19 DEBUG Aggregator:112 - A->P: AToP 2
+2015-07-20 16:21:19 DEBUG Prosumer:140 - P<-A: AToP 2
+2015-07-20 16:21:19 DEBUG Prosumer:142 - P->A: AToP 2 Reply1
+2015-07-20 16:21:19 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:19 DEBUG Aggregator:58 - A<-P: AToP 0 Reply1
+2015-07-20 16:21:19 DEBUG Aggregator:58 - A<-P: AToP 1 Reply1
+2015-07-20 16:21:19 DEBUG Aggregator:58 - A<-P: AToP 2 Reply1
+2015-07-20 16:21:19 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:19 DEBUG MainApp:96 - Updated Time: Thu Jan 01 13:00:00 EET 2015
+2015-07-20 16:21:19 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:19 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:19 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:19 DEBUG MainApp:96 - Updated Time: Thu Jan 01 14:00:00 EET 2015
+2015-07-20 16:21:19 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:19 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:19 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:19 DEBUG MainApp:96 - Updated Time: Thu Jan 01 15:00:00 EET 2015
+2015-07-20 16:21:19 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:19 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:19 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:19 DEBUG MainApp:96 - Updated Time: Thu Jan 01 16:00:00 EET 2015
+2015-07-20 16:21:19 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:19 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:19 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:19 DEBUG MainApp:96 - Updated Time: Thu Jan 01 17:00:00 EET 2015
+2015-07-20 16:21:19 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:19 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:19 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:19 DEBUG MainApp:96 - Updated Time: Thu Jan 01 18:00:00 EET 2015
+2015-07-20 16:21:19 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:19 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:20 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:20 DEBUG MainApp:96 - Updated Time: Thu Jan 01 19:00:00 EET 2015
+2015-07-20 16:21:20 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:20 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:20 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:20 DEBUG MainApp:96 - Updated Time: Thu Jan 01 20:00:00 EET 2015
+2015-07-20 16:21:20 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:20 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:20 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:20 DEBUG MainApp:96 - Updated Time: Thu Jan 01 21:00:00 EET 2015
+2015-07-20 16:21:20 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:20 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:20 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:20 DEBUG MainApp:96 - Updated Time: Thu Jan 01 22:00:00 EET 2015
+2015-07-20 16:21:20 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:20 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:20 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:20 DEBUG MainApp:96 - Updated Time: Thu Jan 01 23:00:00 EET 2015
+2015-07-20 16:21:20 DEBUG Prosumer:149 - Storage Task
+2015-07-20 16:21:20 DEBUG Aggregator:51 - AggEndOfSimTasks
+2015-07-20 16:21:20 DEBUG Prosumer:78 - ProsEndOfSimTasks
+2015-07-20 16:21:20 DEBUG MainApp:96 - Updated Time: Fri Jan 02 00:00:00 EET 2015
+2015-07-20 17:11:07 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-20 17:11:07 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-20 17:11:07 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-20 17:11:07 DEBUG MainApp:83 - Run
+2015-07-20 17:11:07 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-20 17:11:07 DEBUG Prosumer:150 - Storage Task
+2015-07-21 09:57:13 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-21 09:57:13 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-21 09:57:13 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 09:57:13 DEBUG MainApp:83 - Run
+2015-07-21 09:57:13 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 09:57:13 DEBUG Prosumer:150 - Storage Task
+2015-07-21 09:58:39 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-21 09:58:39 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-21 09:58:39 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 09:58:39 DEBUG MainApp:83 - Run
+2015-07-21 09:58:39 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 09:58:39 DEBUG Prosumer:150 - Storage Task
+2015-07-21 09:59:59 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-21 09:59:59 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-21 09:59:59 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 09:59:59 DEBUG MainApp:83 - Run
+2015-07-21 09:59:59 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 09:59:59 DEBUG Prosumer:150 - Storage TaskThu Jan 01 00:00:00 EET 2015
+2015-07-21 10:01:05 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-21 10:01:05 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-21 10:01:05 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:01:05 DEBUG MainApp:83 - Run
+2015-07-21 10:01:05 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:02:37 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-21 10:02:37 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-21 10:02:37 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:02:37 DEBUG MainApp:83 - Run
+2015-07-21 10:02:37 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:02:37 DEBUG Prosumer:152 - Storage Task 
+2015-07-21 10:04:51 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-21 10:04:51 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-21 10:04:51 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:51 DEBUG Prosumer:48 - TimeSequencePlan [start=Thu Jan 01 00:00:00 EET 2015, timEnergy=
+TimeEnergyTuple [date=Thu Jan 01 00:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 01:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 02:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 03:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 04:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 05:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 06:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 07:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 08:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 09:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 10:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 11:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 12:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 13:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 14:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 15:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 16:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 17:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 18:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 19:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 20:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 21:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 22:00:00 EET 2015, units=0.0]
+TimeEnergyTuple [date=Thu Jan 01 23:00:00 EET 2015, units=0.0]
+]
+2015-07-21 10:04:51 DEBUG MainApp:83 - Run
+2015-07-21 10:04:51 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:51 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:51 DEBUG Prosumer:155 - 0 CAl:Thu Jan 01 00:00:00 EET 2015
+2015-07-21 10:04:51 DEBUG Prosumer:157 - 0 CAl:Thu Jan 01 00:00:00 EET 2015
+2015-07-21 10:04:51 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:51 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:52 DEBUG MainApp:96 - Updated Time: Thu Jan 01 01:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:52 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:52 DEBUG Prosumer:155 - 1 CAl:Thu Jan 01 01:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG Prosumer:157 - 1 CAl:Thu Jan 01 01:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:52 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:52 DEBUG MainApp:96 - Updated Time: Thu Jan 01 02:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:52 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:52 DEBUG Prosumer:155 - 2 CAl:Thu Jan 01 02:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG Prosumer:157 - 2 CAl:Thu Jan 01 02:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:52 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:52 DEBUG MainApp:96 - Updated Time: Thu Jan 01 03:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:52 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:52 DEBUG Prosumer:155 - 3 CAl:Thu Jan 01 03:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG Prosumer:157 - 3 CAl:Thu Jan 01 03:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:52 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:52 DEBUG MainApp:96 - Updated Time: Thu Jan 01 04:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:52 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:52 DEBUG Prosumer:155 - 4 CAl:Thu Jan 01 04:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG Prosumer:157 - 4 CAl:Thu Jan 01 04:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:52 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:52 DEBUG MainApp:96 - Updated Time: Thu Jan 01 05:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:52 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:52 DEBUG Prosumer:155 - 5 CAl:Thu Jan 01 05:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG Prosumer:157 - 5 CAl:Thu Jan 01 05:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:52 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:52 DEBUG MainApp:96 - Updated Time: Thu Jan 01 06:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:52 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:52 DEBUG Prosumer:155 - 6 CAl:Thu Jan 01 06:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG Prosumer:157 - 6 CAl:Thu Jan 01 06:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:52 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:52 DEBUG MainApp:96 - Updated Time: Thu Jan 01 07:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:52 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:52 DEBUG Prosumer:155 - 7 CAl:Thu Jan 01 07:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG Prosumer:157 - 7 CAl:Thu Jan 01 07:00:00 EET 2015
+2015-07-21 10:04:52 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:52 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:53 DEBUG MainApp:96 - Updated Time: Thu Jan 01 08:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:53 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:53 DEBUG Prosumer:155 - 8 CAl:Thu Jan 01 08:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG Prosumer:157 - 8 CAl:Thu Jan 01 08:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:53 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:53 DEBUG MainApp:96 - Updated Time: Thu Jan 01 09:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:53 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:53 DEBUG Prosumer:155 - 9 CAl:Thu Jan 01 09:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG Prosumer:157 - 9 CAl:Thu Jan 01 09:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:53 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:53 DEBUG MainApp:96 - Updated Time: Thu Jan 01 10:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:53 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:53 DEBUG Prosumer:155 - 10 CAl:Thu Jan 01 10:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG Prosumer:157 - 10 CAl:Thu Jan 01 10:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:53 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:53 DEBUG MainApp:96 - Updated Time: Thu Jan 01 11:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:53 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:53 DEBUG Prosumer:155 - 11 CAl:Thu Jan 01 11:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG Prosumer:157 - 11 CAl:Thu Jan 01 11:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:53 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:53 DEBUG MainApp:96 - Updated Time: Thu Jan 01 12:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG Aggregator:87 - Thu Jan 01 12:00:00 EET 2015 Task DAYAHEAD
+2015-07-21 10:04:53 DEBUG Aggregator:108 - A->P: AToP 0
+2015-07-21 10:04:53 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:53 DEBUG Prosumer:155 - 12 CAl:Thu Jan 01 12:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG Prosumer:157 - 12 CAl:Thu Jan 01 12:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:53 DEBUG Prosumer:142 - P<-A: AToP 0
+2015-07-21 10:04:53 DEBUG Prosumer:144 - P->A: AToP 0 Reply1
+2015-07-21 10:04:53 DEBUG Aggregator:108 - A->P: AToP 1
+2015-07-21 10:04:53 DEBUG Prosumer:142 - P<-A: AToP 1
+2015-07-21 10:04:53 DEBUG Prosumer:144 - P->A: AToP 1 Reply1
+2015-07-21 10:04:53 DEBUG Aggregator:108 - A->P: AToP 2
+2015-07-21 10:04:53 DEBUG Prosumer:142 - P<-A: AToP 2
+2015-07-21 10:04:53 DEBUG Prosumer:144 - P->A: AToP 2 Reply1
+2015-07-21 10:04:53 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:53 DEBUG Aggregator:57 - A<-P: AToP 0 Reply1
+2015-07-21 10:04:53 DEBUG Aggregator:57 - A<-P: AToP 1 Reply1
+2015-07-21 10:04:53 DEBUG Aggregator:57 - A<-P: AToP 2 Reply1
+2015-07-21 10:04:53 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:53 DEBUG MainApp:96 - Updated Time: Thu Jan 01 13:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:53 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:53 DEBUG Prosumer:155 - 13 CAl:Thu Jan 01 13:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG Prosumer:157 - 13 CAl:Thu Jan 01 13:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:53 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:53 DEBUG MainApp:96 - Updated Time: Thu Jan 01 14:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:53 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:53 DEBUG Prosumer:155 - 14 CAl:Thu Jan 01 14:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG Prosumer:157 - 14 CAl:Thu Jan 01 14:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:53 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:53 DEBUG MainApp:96 - Updated Time: Thu Jan 01 15:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:53 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:53 DEBUG Prosumer:155 - 15 CAl:Thu Jan 01 15:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG Prosumer:157 - 15 CAl:Thu Jan 01 15:00:00 EET 2015
+2015-07-21 10:04:53 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:54 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:54 DEBUG MainApp:96 - Updated Time: Thu Jan 01 16:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:54 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:54 DEBUG Prosumer:155 - 16 CAl:Thu Jan 01 16:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG Prosumer:157 - 16 CAl:Thu Jan 01 16:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:54 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:54 DEBUG MainApp:96 - Updated Time: Thu Jan 01 17:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:54 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:54 DEBUG Prosumer:155 - 17 CAl:Thu Jan 01 17:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG Prosumer:157 - 17 CAl:Thu Jan 01 17:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:54 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:54 DEBUG MainApp:96 - Updated Time: Thu Jan 01 18:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:54 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:54 DEBUG Prosumer:155 - 18 CAl:Thu Jan 01 18:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG Prosumer:157 - 18 CAl:Thu Jan 01 18:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:54 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:54 DEBUG MainApp:96 - Updated Time: Thu Jan 01 19:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:54 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:54 DEBUG Prosumer:155 - 19 CAl:Thu Jan 01 19:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG Prosumer:157 - 19 CAl:Thu Jan 01 19:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:54 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:54 DEBUG MainApp:96 - Updated Time: Thu Jan 01 20:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:54 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:54 DEBUG Prosumer:155 - 20 CAl:Thu Jan 01 20:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG Prosumer:157 - 20 CAl:Thu Jan 01 20:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:54 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:54 DEBUG MainApp:96 - Updated Time: Thu Jan 01 21:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:54 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:54 DEBUG Prosumer:155 - 21 CAl:Thu Jan 01 21:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG Prosumer:157 - 21 CAl:Thu Jan 01 21:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:54 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:54 DEBUG MainApp:96 - Updated Time: Thu Jan 01 22:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:54 DEBUG Prosumer:155 - 22 CAl:Thu Jan 01 22:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:54 DEBUG Prosumer:157 - 22 CAl:Thu Jan 01 22:00:00 EET 2015
+2015-07-21 10:04:54 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:54 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:55 DEBUG MainApp:96 - Updated Time: Thu Jan 01 23:00:00 EET 2015
+2015-07-21 10:04:55 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:04:55 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:04:55 DEBUG Prosumer:155 - 23 CAl:Thu Jan 01 23:00:00 EET 2015
+2015-07-21 10:04:55 DEBUG Prosumer:157 - 23 CAl:Thu Jan 01 23:00:00 EET 2015
+2015-07-21 10:04:55 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:04:55 DEBUG Prosumer:85 - ProsEndOfSimTasks
+2015-07-21 10:04:55 DEBUG MainApp:96 - Updated Time: Fri Jan 02 00:00:00 EET 2015
+2015-07-21 10:05:50 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-21 10:05:50 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-21 10:05:50 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:50 DEBUG MainApp:83 - Run
+2015-07-21 10:05:50 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:50 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:50 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:50 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:51 DEBUG MainApp:96 - Updated Time: Thu Jan 01 01:00:00 EET 2015
+2015-07-21 10:05:51 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:51 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:51 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:51 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:51 DEBUG MainApp:96 - Updated Time: Thu Jan 01 02:00:00 EET 2015
+2015-07-21 10:05:51 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:51 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:51 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:51 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:51 DEBUG MainApp:96 - Updated Time: Thu Jan 01 03:00:00 EET 2015
+2015-07-21 10:05:51 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:51 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:51 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:51 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:51 DEBUG MainApp:96 - Updated Time: Thu Jan 01 04:00:00 EET 2015
+2015-07-21 10:05:51 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:51 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:51 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:51 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:51 DEBUG MainApp:96 - Updated Time: Thu Jan 01 05:00:00 EET 2015
+2015-07-21 10:05:51 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:51 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:51 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:51 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:51 DEBUG MainApp:96 - Updated Time: Thu Jan 01 06:00:00 EET 2015
+2015-07-21 10:05:51 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:51 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:51 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:51 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:51 DEBUG MainApp:96 - Updated Time: Thu Jan 01 07:00:00 EET 2015
+2015-07-21 10:05:51 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:51 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:51 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:51 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:51 DEBUG MainApp:96 - Updated Time: Thu Jan 01 08:00:00 EET 2015
+2015-07-21 10:05:51 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:51 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:51 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:51 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:52 DEBUG MainApp:96 - Updated Time: Thu Jan 01 09:00:00 EET 2015
+2015-07-21 10:05:52 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:52 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:52 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:52 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:52 DEBUG MainApp:96 - Updated Time: Thu Jan 01 10:00:00 EET 2015
+2015-07-21 10:05:52 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:52 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:52 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:52 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:52 DEBUG MainApp:96 - Updated Time: Thu Jan 01 11:00:00 EET 2015
+2015-07-21 10:05:52 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:52 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:52 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:52 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:52 DEBUG MainApp:96 - Updated Time: Thu Jan 01 12:00:00 EET 2015
+2015-07-21 10:05:52 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:52 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:52 DEBUG Aggregator:87 - Thu Jan 01 12:00:00 EET 2015 Task DAYAHEAD
+2015-07-21 10:05:52 DEBUG Aggregator:108 - A->P: AToP 0
+2015-07-21 10:05:52 DEBUG Prosumer:141 - P<-A: AToP 0
+2015-07-21 10:05:52 DEBUG Prosumer:143 - P->A: AToP 0 Reply1
+2015-07-21 10:05:52 DEBUG Aggregator:108 - A->P: AToP 1
+2015-07-21 10:05:52 DEBUG Prosumer:141 - P<-A: AToP 1
+2015-07-21 10:05:52 DEBUG Prosumer:143 - P->A: AToP 1 Reply1
+2015-07-21 10:05:52 DEBUG Aggregator:108 - A->P: AToP 2
+2015-07-21 10:05:52 DEBUG Prosumer:141 - P<-A: AToP 2
+2015-07-21 10:05:52 DEBUG Prosumer:143 - P->A: AToP 2 Reply1
+2015-07-21 10:05:52 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:52 DEBUG Aggregator:57 - A<-P: AToP 0 Reply1
+2015-07-21 10:05:52 DEBUG Aggregator:57 - A<-P: AToP 1 Reply1
+2015-07-21 10:05:52 DEBUG Aggregator:57 - A<-P: AToP 2 Reply1
+2015-07-21 10:05:52 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:52 DEBUG MainApp:96 - Updated Time: Thu Jan 01 13:00:00 EET 2015
+2015-07-21 10:05:52 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:52 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:52 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:52 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:52 DEBUG MainApp:96 - Updated Time: Thu Jan 01 14:00:00 EET 2015
+2015-07-21 10:05:52 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:52 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:52 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:52 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:52 DEBUG MainApp:96 - Updated Time: Thu Jan 01 15:00:00 EET 2015
+2015-07-21 10:05:52 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:52 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:52 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:52 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:53 DEBUG MainApp:96 - Updated Time: Thu Jan 01 16:00:00 EET 2015
+2015-07-21 10:05:53 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:53 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:53 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:53 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:53 DEBUG MainApp:96 - Updated Time: Thu Jan 01 17:00:00 EET 2015
+2015-07-21 10:05:53 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:53 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:53 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:53 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:53 DEBUG MainApp:96 - Updated Time: Thu Jan 01 18:00:00 EET 2015
+2015-07-21 10:05:53 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:53 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:53 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:53 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:53 DEBUG MainApp:96 - Updated Time: Thu Jan 01 19:00:00 EET 2015
+2015-07-21 10:05:53 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:53 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:53 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:53 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:53 DEBUG MainApp:96 - Updated Time: Thu Jan 01 20:00:00 EET 2015
+2015-07-21 10:05:53 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:53 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:53 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:53 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:53 DEBUG MainApp:96 - Updated Time: Thu Jan 01 21:00:00 EET 2015
+2015-07-21 10:05:53 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:53 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:53 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:53 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:53 DEBUG MainApp:96 - Updated Time: Thu Jan 01 22:00:00 EET 2015
+2015-07-21 10:05:53 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:53 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:53 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:53 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:53 DEBUG MainApp:96 - Updated Time: Thu Jan 01 23:00:00 EET 2015
+2015-07-21 10:05:53 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:05:53 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:05:53 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:05:53 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:05:54 DEBUG MainApp:96 - Updated Time: Fri Jan 02 00:00:00 EET 2015
+2015-07-21 10:07:24 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-21 10:07:24 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-21 10:07:24 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:24 DEBUG MainApp:83 - Run
+2015-07-21 10:07:24 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:24 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:24 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:24 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:24 DEBUG MainApp:96 - Updated Time: Thu Jan 01 01:00:00 EET 2015
+2015-07-21 10:07:24 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:24 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:24 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:24 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:24 DEBUG MainApp:96 - Updated Time: Thu Jan 01 02:00:00 EET 2015
+2015-07-21 10:07:24 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:24 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:24 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:24 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:24 DEBUG MainApp:96 - Updated Time: Thu Jan 01 03:00:00 EET 2015
+2015-07-21 10:07:24 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:24 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:24 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:24 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:24 DEBUG MainApp:96 - Updated Time: Thu Jan 01 04:00:00 EET 2015
+2015-07-21 10:07:24 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:24 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:24 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:24 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:24 DEBUG MainApp:96 - Updated Time: Thu Jan 01 05:00:00 EET 2015
+2015-07-21 10:07:24 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:24 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:24 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:24 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:24 DEBUG MainApp:96 - Updated Time: Thu Jan 01 06:00:00 EET 2015
+2015-07-21 10:07:24 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:24 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:24 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:24 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:24 DEBUG MainApp:96 - Updated Time: Thu Jan 01 07:00:00 EET 2015
+2015-07-21 10:07:24 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:24 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:24 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:25 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:25 DEBUG MainApp:96 - Updated Time: Thu Jan 01 08:00:00 EET 2015
+2015-07-21 10:07:25 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:25 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:25 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:25 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:25 DEBUG MainApp:96 - Updated Time: Thu Jan 01 09:00:00 EET 2015
+2015-07-21 10:07:25 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:25 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:25 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:25 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:25 DEBUG MainApp:96 - Updated Time: Thu Jan 01 10:00:00 EET 2015
+2015-07-21 10:07:25 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:25 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:25 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:25 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:25 DEBUG MainApp:96 - Updated Time: Thu Jan 01 11:00:00 EET 2015
+2015-07-21 10:07:25 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:25 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:25 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:25 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:25 DEBUG MainApp:96 - Updated Time: Thu Jan 01 12:00:00 EET 2015
+2015-07-21 10:07:25 DEBUG Aggregator:87 - Thu Jan 01 12:00:00 EET 2015 Task DAYAHEAD
+2015-07-21 10:07:25 DEBUG Aggregator:108 - A->P: AToP 0
+2015-07-21 10:07:25 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:25 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:25 DEBUG Prosumer:141 - P<-A: AToP 0
+2015-07-21 10:07:25 DEBUG Prosumer:143 - P->A: AToP 0 Reply1
+2015-07-21 10:07:25 DEBUG Aggregator:108 - A->P: AToP 1
+2015-07-21 10:07:25 DEBUG Prosumer:141 - P<-A: AToP 1
+2015-07-21 10:07:25 DEBUG Prosumer:143 - P->A: AToP 1 Reply1
+2015-07-21 10:07:25 DEBUG Aggregator:108 - A->P: AToP 2
+2015-07-21 10:07:25 DEBUG Prosumer:141 - P<-A: AToP 2
+2015-07-21 10:07:25 DEBUG Prosumer:143 - P->A: AToP 2 Reply1
+2015-07-21 10:07:25 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:25 DEBUG Aggregator:57 - A<-P: AToP 0 Reply1
+2015-07-21 10:07:25 DEBUG Aggregator:57 - A<-P: AToP 1 Reply1
+2015-07-21 10:07:25 DEBUG Aggregator:57 - A<-P: AToP 2 Reply1
+2015-07-21 10:07:25 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:25 DEBUG MainApp:96 - Updated Time: Thu Jan 01 13:00:00 EET 2015
+2015-07-21 10:07:25 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:25 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:25 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:25 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:25 DEBUG MainApp:96 - Updated Time: Thu Jan 01 14:00:00 EET 2015
+2015-07-21 10:07:25 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:25 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:25 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:25 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:26 DEBUG MainApp:96 - Updated Time: Thu Jan 01 15:00:00 EET 2015
+2015-07-21 10:07:26 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:26 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:26 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:26 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:26 DEBUG MainApp:96 - Updated Time: Thu Jan 01 16:00:00 EET 2015
+2015-07-21 10:07:26 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:26 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:26 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:26 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:26 DEBUG MainApp:96 - Updated Time: Thu Jan 01 17:00:00 EET 2015
+2015-07-21 10:07:26 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:26 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:26 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:26 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:26 DEBUG MainApp:96 - Updated Time: Thu Jan 01 18:00:00 EET 2015
+2015-07-21 10:07:26 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:26 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:26 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:26 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:26 DEBUG MainApp:96 - Updated Time: Thu Jan 01 19:00:00 EET 2015
+2015-07-21 10:07:26 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:26 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:26 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:26 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:26 DEBUG MainApp:96 - Updated Time: Thu Jan 01 20:00:00 EET 2015
+2015-07-21 10:07:26 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:26 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:26 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:26 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:26 DEBUG MainApp:96 - Updated Time: Thu Jan 01 21:00:00 EET 2015
+2015-07-21 10:07:26 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:26 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:26 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:26 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:27 DEBUG MainApp:96 - Updated Time: Thu Jan 01 22:00:00 EET 2015
+2015-07-21 10:07:27 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:27 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:27 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:27 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:27 DEBUG MainApp:96 - Updated Time: Thu Jan 01 23:00:00 EET 2015
+2015-07-21 10:07:27 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:07:27 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:07:27 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:07:27 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:07:27 DEBUG MainApp:96 - Updated Time: Fri Jan 02 00:00:00 EET 2015
+2015-07-21 10:08:39 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-21 10:08:39 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-21 10:08:39 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:39 DEBUG MainApp:83 - Run
+2015-07-21 10:08:39 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:39 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:39 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2100.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:39 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:39 DEBUG MainApp:96 - Updated Time: Thu Jan 01 01:00:00 EET 2015
+2015-07-21 10:08:39 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:39 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:39 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2200.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:39 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:40 DEBUG MainApp:96 - Updated Time: Thu Jan 01 02:00:00 EET 2015
+2015-07-21 10:08:40 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:40 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:40 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2300.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:40 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:40 DEBUG MainApp:96 - Updated Time: Thu Jan 01 03:00:00 EET 2015
+2015-07-21 10:08:40 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:40 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2400.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:40 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:40 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:40 DEBUG MainApp:96 - Updated Time: Thu Jan 01 04:00:00 EET 2015
+2015-07-21 10:08:40 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:40 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:40 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2500.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:40 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:40 DEBUG MainApp:96 - Updated Time: Thu Jan 01 05:00:00 EET 2015
+2015-07-21 10:08:40 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:40 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:40 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2600.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:40 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:40 DEBUG MainApp:96 - Updated Time: Thu Jan 01 06:00:00 EET 2015
+2015-07-21 10:08:40 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:40 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:40 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2700.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:40 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:40 DEBUG MainApp:96 - Updated Time: Thu Jan 01 07:00:00 EET 2015
+2015-07-21 10:08:40 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:40 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:40 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2800.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:40 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:40 DEBUG MainApp:96 - Updated Time: Thu Jan 01 08:00:00 EET 2015
+2015-07-21 10:08:40 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:40 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:40 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2900.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:40 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:41 DEBUG MainApp:96 - Updated Time: Thu Jan 01 09:00:00 EET 2015
+2015-07-21 10:08:41 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:41 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:41 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=3000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:41 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:41 DEBUG MainApp:96 - Updated Time: Thu Jan 01 10:00:00 EET 2015
+2015-07-21 10:08:41 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:41 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:41 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=3100.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:41 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:41 DEBUG MainApp:96 - Updated Time: Thu Jan 01 11:00:00 EET 2015
+2015-07-21 10:08:41 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:41 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:41 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=3200.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:41 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:41 DEBUG MainApp:96 - Updated Time: Thu Jan 01 12:00:00 EET 2015
+2015-07-21 10:08:41 DEBUG Aggregator:87 - Thu Jan 01 12:00:00 EET 2015 Task DAYAHEAD
+2015-07-21 10:08:41 DEBUG Aggregator:108 - A->P: AToP 0
+2015-07-21 10:08:41 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:41 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=3300.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:41 DEBUG Prosumer:141 - P<-A: AToP 0
+2015-07-21 10:08:41 DEBUG Prosumer:143 - P->A: AToP 0 Reply1
+2015-07-21 10:08:41 DEBUG Aggregator:108 - A->P: AToP 1
+2015-07-21 10:08:41 DEBUG Prosumer:141 - P<-A: AToP 1
+2015-07-21 10:08:41 DEBUG Prosumer:143 - P->A: AToP 1 Reply1
+2015-07-21 10:08:41 DEBUG Aggregator:108 - A->P: AToP 2
+2015-07-21 10:08:41 DEBUG Prosumer:141 - P<-A: AToP 2
+2015-07-21 10:08:41 DEBUG Prosumer:143 - P->A: AToP 2 Reply1
+2015-07-21 10:08:41 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:41 DEBUG Aggregator:57 - A<-P: AToP 0 Reply1
+2015-07-21 10:08:41 DEBUG Aggregator:57 - A<-P: AToP 1 Reply1
+2015-07-21 10:08:41 DEBUG Aggregator:57 - A<-P: AToP 2 Reply1
+2015-07-21 10:08:41 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:41 DEBUG MainApp:96 - Updated Time: Thu Jan 01 13:00:00 EET 2015
+2015-07-21 10:08:41 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:41 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:41 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=3400.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:41 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:41 DEBUG MainApp:96 - Updated Time: Thu Jan 01 14:00:00 EET 2015
+2015-07-21 10:08:41 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:41 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:41 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=3500.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:41 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:41 DEBUG MainApp:96 - Updated Time: Thu Jan 01 15:00:00 EET 2015
+2015-07-21 10:08:41 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:41 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:41 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=3600.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:41 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:42 DEBUG MainApp:96 - Updated Time: Thu Jan 01 16:00:00 EET 2015
+2015-07-21 10:08:42 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:42 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:42 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=3700.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:42 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:42 DEBUG MainApp:96 - Updated Time: Thu Jan 01 17:00:00 EET 2015
+2015-07-21 10:08:42 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:42 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:42 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=3800.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:42 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:42 DEBUG MainApp:96 - Updated Time: Thu Jan 01 18:00:00 EET 2015
+2015-07-21 10:08:42 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:42 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:42 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=3900.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:42 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:42 DEBUG MainApp:96 - Updated Time: Thu Jan 01 19:00:00 EET 2015
+2015-07-21 10:08:42 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:42 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:42 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=4000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:42 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:42 DEBUG MainApp:96 - Updated Time: Thu Jan 01 20:00:00 EET 2015
+2015-07-21 10:08:42 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:42 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:42 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=4100.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:42 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:42 DEBUG MainApp:96 - Updated Time: Thu Jan 01 21:00:00 EET 2015
+2015-07-21 10:08:42 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:42 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:42 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=4200.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:42 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:42 DEBUG MainApp:96 - Updated Time: Thu Jan 01 22:00:00 EET 2015
+2015-07-21 10:08:42 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:42 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:42 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=4300.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:42 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:42 DEBUG MainApp:96 - Updated Time: Thu Jan 01 23:00:00 EET 2015
+2015-07-21 10:08:42 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:08:42 DEBUG Prosumer:150 - Storage Task 
+2015-07-21 10:08:42 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=4400.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:08:42 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:08:43 DEBUG MainApp:96 - Updated Time: Fri Jan 02 00:00:00 EET 2015
+2015-07-21 10:20:29 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-21 10:20:29 DEBUG StorageModelFactory:82 - Generating Storage of Type: CONSTANT
+2015-07-21 10:20:29 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:29 DEBUG MainApp:83 - Run
+2015-07-21 10:20:29 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:29 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:29 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:29 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:29 DEBUG MainApp:96 - Updated Time: Thu Jan 01 01:00:00 EET 2015
+2015-07-21 10:20:29 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:29 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:29 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:29 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:30 DEBUG MainApp:96 - Updated Time: Thu Jan 01 02:00:00 EET 2015
+2015-07-21 10:20:30 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:30 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:30 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:30 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:30 DEBUG MainApp:96 - Updated Time: Thu Jan 01 03:00:00 EET 2015
+2015-07-21 10:20:30 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:30 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:30 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:30 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:30 DEBUG MainApp:96 - Updated Time: Thu Jan 01 04:00:00 EET 2015
+2015-07-21 10:20:30 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:30 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:30 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:30 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:30 DEBUG MainApp:96 - Updated Time: Thu Jan 01 05:00:00 EET 2015
+2015-07-21 10:20:30 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:30 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:30 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:30 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:30 DEBUG MainApp:96 - Updated Time: Thu Jan 01 06:00:00 EET 2015
+2015-07-21 10:20:30 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:30 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:30 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:30 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:30 DEBUG MainApp:96 - Updated Time: Thu Jan 01 07:00:00 EET 2015
+2015-07-21 10:20:30 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:30 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:30 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:30 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:30 DEBUG MainApp:96 - Updated Time: Thu Jan 01 08:00:00 EET 2015
+2015-07-21 10:20:30 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:30 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:30 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:30 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:30 DEBUG MainApp:96 - Updated Time: Thu Jan 01 09:00:00 EET 2015
+2015-07-21 10:20:30 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:30 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:30 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:31 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:31 DEBUG MainApp:96 - Updated Time: Thu Jan 01 10:00:00 EET 2015
+2015-07-21 10:20:31 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:31 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:31 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:31 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:31 DEBUG MainApp:96 - Updated Time: Thu Jan 01 11:00:00 EET 2015
+2015-07-21 10:20:31 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:31 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:31 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:31 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:31 DEBUG MainApp:96 - Updated Time: Thu Jan 01 12:00:00 EET 2015
+2015-07-21 10:20:31 DEBUG Aggregator:87 - Thu Jan 01 12:00:00 EET 2015 Task DAYAHEAD
+2015-07-21 10:20:31 DEBUG Aggregator:108 - A->P: AToP 0
+2015-07-21 10:20:31 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:31 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:31 DEBUG Prosumer:141 - P<-A: AToP 0
+2015-07-21 10:20:31 DEBUG Prosumer:143 - P->A: AToP 0 Reply1
+2015-07-21 10:20:31 DEBUG Aggregator:108 - A->P: AToP 1
+2015-07-21 10:20:31 DEBUG Prosumer:141 - P<-A: AToP 1
+2015-07-21 10:20:31 DEBUG Prosumer:143 - P->A: AToP 1 Reply1
+2015-07-21 10:20:31 DEBUG Aggregator:108 - A->P: AToP 2
+2015-07-21 10:20:31 DEBUG Prosumer:141 - P<-A: AToP 2
+2015-07-21 10:20:31 DEBUG Prosumer:143 - P->A: AToP 2 Reply1
+2015-07-21 10:20:31 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:31 DEBUG Aggregator:57 - A<-P: AToP 0 Reply1
+2015-07-21 10:20:31 DEBUG Aggregator:57 - A<-P: AToP 1 Reply1
+2015-07-21 10:20:31 DEBUG Aggregator:57 - A<-P: AToP 2 Reply1
+2015-07-21 10:20:31 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:31 DEBUG MainApp:96 - Updated Time: Thu Jan 01 13:00:00 EET 2015
+2015-07-21 10:20:31 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:31 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:31 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:31 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:31 DEBUG MainApp:96 - Updated Time: Thu Jan 01 14:00:00 EET 2015
+2015-07-21 10:20:31 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:31 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:31 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:31 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:31 DEBUG MainApp:96 - Updated Time: Thu Jan 01 15:00:00 EET 2015
+2015-07-21 10:20:31 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:31 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:31 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:31 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:31 DEBUG MainApp:96 - Updated Time: Thu Jan 01 16:00:00 EET 2015
+2015-07-21 10:20:31 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:31 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:31 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:31 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:32 DEBUG MainApp:96 - Updated Time: Thu Jan 01 17:00:00 EET 2015
+2015-07-21 10:20:32 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:32 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:32 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:32 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:32 DEBUG MainApp:96 - Updated Time: Thu Jan 01 18:00:00 EET 2015
+2015-07-21 10:20:32 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:32 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:32 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:32 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:32 DEBUG MainApp:96 - Updated Time: Thu Jan 01 19:00:00 EET 2015
+2015-07-21 10:20:32 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:32 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:32 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:32 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:32 DEBUG MainApp:96 - Updated Time: Thu Jan 01 20:00:00 EET 2015
+2015-07-21 10:20:32 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:32 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:32 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:32 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:32 DEBUG MainApp:96 - Updated Time: Thu Jan 01 21:00:00 EET 2015
+2015-07-21 10:20:32 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:32 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:32 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:32 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:32 DEBUG MainApp:96 - Updated Time: Thu Jan 01 22:00:00 EET 2015
+2015-07-21 10:20:32 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:32 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:32 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:32 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:32 DEBUG MainApp:96 - Updated Time: Thu Jan 01 23:00:00 EET 2015
+2015-07-21 10:20:32 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 10:20:32 DEBUG Prosumer:151 - Storage Task 
+2015-07-21 10:20:32 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 10:20:32 DEBUG Prosumer:84 - ProsEndOfSimTasks
+2015-07-21 10:20:33 DEBUG MainApp:96 - Updated Time: Fri Jan 02 00:00:00 EET 2015
+2015-07-21 11:04:49 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-21 11:04:49 DEBUG StorageModelFactory:75 - Generating Storage of Type: CONSTANT
+2015-07-21 11:04:49 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:49 DEBUG MainApp:99 - Run
+2015-07-21 11:04:49 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:49 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:49 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:49 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:49 DEBUG MainApp:111 - Updated Time: Thu Jan 01 01:00:00 EET 2015
+2015-07-21 11:04:49 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:49 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:49 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:49 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:49 DEBUG MainApp:111 - Updated Time: Thu Jan 01 02:00:00 EET 2015
+2015-07-21 11:04:49 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:49 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:49 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:49 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:49 DEBUG MainApp:111 - Updated Time: Thu Jan 01 03:00:00 EET 2015
+2015-07-21 11:04:49 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:49 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:49 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:49 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:49 DEBUG MainApp:111 - Updated Time: Thu Jan 01 04:00:00 EET 2015
+2015-07-21 11:04:49 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:49 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:49 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:49 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:49 DEBUG MainApp:111 - Updated Time: Thu Jan 01 05:00:00 EET 2015
+2015-07-21 11:04:49 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:49 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:49 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:49 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:49 DEBUG MainApp:111 - Updated Time: Thu Jan 01 06:00:00 EET 2015
+2015-07-21 11:04:49 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:49 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:49 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:49 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:50 DEBUG MainApp:111 - Updated Time: Thu Jan 01 07:00:00 EET 2015
+2015-07-21 11:04:50 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:50 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:50 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:50 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:50 DEBUG MainApp:111 - Updated Time: Thu Jan 01 08:00:00 EET 2015
+2015-07-21 11:04:50 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:50 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:50 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:50 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:50 DEBUG MainApp:111 - Updated Time: Thu Jan 01 09:00:00 EET 2015
+2015-07-21 11:04:50 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:50 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:50 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:50 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:50 DEBUG MainApp:111 - Updated Time: Thu Jan 01 10:00:00 EET 2015
+2015-07-21 11:04:50 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:50 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:50 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:50 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:50 DEBUG MainApp:111 - Updated Time: Thu Jan 01 11:00:00 EET 2015
+2015-07-21 11:04:50 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:50 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:50 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:50 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:50 DEBUG MainApp:111 - Updated Time: Thu Jan 01 12:00:00 EET 2015
+2015-07-21 11:04:50 DEBUG Aggregator:87 - Thu Jan 01 12:00:00 EET 2015 Task DAYAHEAD
+2015-07-21 11:04:50 DEBUG Aggregator:108 - A->P: AToP 0
+2015-07-21 11:04:50 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:50 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:50 DEBUG Prosumer:134 - P<-A: AToP 0
+2015-07-21 11:04:50 DEBUG Prosumer:136 - P->A: AToP 0 Reply1
+2015-07-21 11:04:50 DEBUG Aggregator:108 - A->P: AToP 1
+2015-07-21 11:04:50 DEBUG Prosumer:134 - P<-A: AToP 1
+2015-07-21 11:04:50 DEBUG Prosumer:136 - P->A: AToP 1 Reply1
+2015-07-21 11:04:50 DEBUG Aggregator:108 - A->P: AToP 2
+2015-07-21 11:04:50 DEBUG Prosumer:134 - P<-A: AToP 2
+2015-07-21 11:04:50 DEBUG Prosumer:136 - P->A: AToP 2 Reply1
+2015-07-21 11:04:50 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:50 DEBUG Aggregator:57 - A<-P: AToP 0 Reply1
+2015-07-21 11:04:50 DEBUG Aggregator:57 - A<-P: AToP 1 Reply1
+2015-07-21 11:04:50 DEBUG Aggregator:57 - A<-P: AToP 2 Reply1
+2015-07-21 11:04:50 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:50 DEBUG MainApp:111 - Updated Time: Thu Jan 01 13:00:00 EET 2015
+2015-07-21 11:04:50 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:50 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:50 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:50 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:51 DEBUG MainApp:111 - Updated Time: Thu Jan 01 14:00:00 EET 2015
+2015-07-21 11:04:51 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:51 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:51 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:51 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:51 DEBUG MainApp:111 - Updated Time: Thu Jan 01 15:00:00 EET 2015
+2015-07-21 11:04:51 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:51 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:51 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:51 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:51 DEBUG MainApp:111 - Updated Time: Thu Jan 01 16:00:00 EET 2015
+2015-07-21 11:04:51 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:51 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:51 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:51 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:51 DEBUG MainApp:111 - Updated Time: Thu Jan 01 17:00:00 EET 2015
+2015-07-21 11:04:51 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:51 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:51 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:51 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:51 DEBUG MainApp:111 - Updated Time: Thu Jan 01 18:00:00 EET 2015
+2015-07-21 11:04:51 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:51 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:51 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:51 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:51 DEBUG MainApp:111 - Updated Time: Thu Jan 01 19:00:00 EET 2015
+2015-07-21 11:04:51 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:51 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:51 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:51 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:51 DEBUG MainApp:111 - Updated Time: Thu Jan 01 20:00:00 EET 2015
+2015-07-21 11:04:51 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:51 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:51 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:51 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:51 DEBUG MainApp:111 - Updated Time: Thu Jan 01 21:00:00 EET 2015
+2015-07-21 11:04:51 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:51 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:51 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:51 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:52 DEBUG MainApp:111 - Updated Time: Thu Jan 01 22:00:00 EET 2015
+2015-07-21 11:04:52 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:52 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:52 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:52 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:52 DEBUG MainApp:111 - Updated Time: Thu Jan 01 23:00:00 EET 2015
+2015-07-21 11:04:52 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 11:04:52 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 11:04:52 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 11:04:52 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 11:04:52 DEBUG MainApp:111 - Updated Time: Fri Jan 02 00:00:00 EET 2015
+2015-07-21 13:53:15 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-21 13:53:15 DEBUG StorageModelFactory:75 - Generating Storage of Type: CONSTANT
+2015-07-21 13:53:15 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:15 DEBUG MainApp:99 - Run
+2015-07-21 13:53:15 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:15 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:15 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:15 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:15 DEBUG MainApp:111 - Updated Time: Thu Jan 01 01:00:00 EET 2015
+2015-07-21 13:53:15 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:15 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:15 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:15 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:15 DEBUG MainApp:111 - Updated Time: Thu Jan 01 02:00:00 EET 2015
+2015-07-21 13:53:15 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:15 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:15 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:15 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:15 DEBUG MainApp:111 - Updated Time: Thu Jan 01 03:00:00 EET 2015
+2015-07-21 13:53:15 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:15 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:15 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:15 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:15 DEBUG MainApp:111 - Updated Time: Thu Jan 01 04:00:00 EET 2015
+2015-07-21 13:53:15 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:15 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:15 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:15 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:15 DEBUG MainApp:111 - Updated Time: Thu Jan 01 05:00:00 EET 2015
+2015-07-21 13:53:15 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:15 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:15 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:16 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:16 DEBUG MainApp:111 - Updated Time: Thu Jan 01 06:00:00 EET 2015
+2015-07-21 13:53:16 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:16 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:16 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:16 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:16 DEBUG MainApp:111 - Updated Time: Thu Jan 01 07:00:00 EET 2015
+2015-07-21 13:53:16 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:16 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:16 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:16 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:16 DEBUG MainApp:111 - Updated Time: Thu Jan 01 08:00:00 EET 2015
+2015-07-21 13:53:16 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:16 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:16 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:16 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:16 DEBUG MainApp:111 - Updated Time: Thu Jan 01 09:00:00 EET 2015
+2015-07-21 13:53:16 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:16 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:16 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:16 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:16 DEBUG MainApp:111 - Updated Time: Thu Jan 01 10:00:00 EET 2015
+2015-07-21 13:53:16 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:16 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:16 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:16 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:16 DEBUG MainApp:111 - Updated Time: Thu Jan 01 11:00:00 EET 2015
+2015-07-21 13:53:16 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:16 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:16 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:16 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:16 DEBUG MainApp:111 - Updated Time: Thu Jan 01 12:00:00 EET 2015
+2015-07-21 13:53:16 DEBUG Aggregator:87 - Thu Jan 01 12:00:00 EET 2015 Task DAYAHEAD
+2015-07-21 13:53:16 DEBUG Aggregator:108 - A->P: AToP 0
+2015-07-21 13:53:16 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:16 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:16 DEBUG Prosumer:134 - P<-A: AToP 0
+2015-07-21 13:53:16 DEBUG Prosumer:136 - P->A: AToP 0 Reply1
+2015-07-21 13:53:16 DEBUG Aggregator:108 - A->P: AToP 1
+2015-07-21 13:53:16 DEBUG Prosumer:134 - P<-A: AToP 1
+2015-07-21 13:53:16 DEBUG Prosumer:136 - P->A: AToP 1 Reply1
+2015-07-21 13:53:16 DEBUG Aggregator:108 - A->P: AToP 2
+2015-07-21 13:53:16 DEBUG Prosumer:134 - P<-A: AToP 2
+2015-07-21 13:53:16 DEBUG Prosumer:136 - P->A: AToP 2 Reply1
+2015-07-21 13:53:16 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:16 DEBUG Aggregator:57 - A<-P: AToP 0 Reply1
+2015-07-21 13:53:16 DEBUG Aggregator:57 - A<-P: AToP 1 Reply1
+2015-07-21 13:53:16 DEBUG Aggregator:57 - A<-P: AToP 2 Reply1
+2015-07-21 13:53:16 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:17 DEBUG MainApp:111 - Updated Time: Thu Jan 01 13:00:00 EET 2015
+2015-07-21 13:53:17 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:17 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:17 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:17 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:17 DEBUG MainApp:111 - Updated Time: Thu Jan 01 14:00:00 EET 2015
+2015-07-21 13:53:17 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:17 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:17 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:17 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:17 DEBUG MainApp:111 - Updated Time: Thu Jan 01 15:00:00 EET 2015
+2015-07-21 13:53:17 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:17 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:17 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:17 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:17 DEBUG MainApp:111 - Updated Time: Thu Jan 01 16:00:00 EET 2015
+2015-07-21 13:53:17 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:17 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:17 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:17 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:17 DEBUG MainApp:111 - Updated Time: Thu Jan 01 17:00:00 EET 2015
+2015-07-21 13:53:17 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:17 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:17 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:17 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:17 DEBUG MainApp:111 - Updated Time: Thu Jan 01 18:00:00 EET 2015
+2015-07-21 13:53:17 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:17 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:17 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:17 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:17 DEBUG MainApp:111 - Updated Time: Thu Jan 01 19:00:00 EET 2015
+2015-07-21 13:53:17 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:17 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:17 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:17 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:17 DEBUG MainApp:111 - Updated Time: Thu Jan 01 20:00:00 EET 2015
+2015-07-21 13:53:17 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:17 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:17 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:18 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:18 DEBUG MainApp:111 - Updated Time: Thu Jan 01 21:00:00 EET 2015
+2015-07-21 13:53:18 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:18 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:18 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:18 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:18 DEBUG MainApp:111 - Updated Time: Thu Jan 01 22:00:00 EET 2015
+2015-07-21 13:53:18 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:18 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:18 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:18 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:18 DEBUG MainApp:111 - Updated Time: Thu Jan 01 23:00:00 EET 2015
+2015-07-21 13:53:18 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:53:18 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:53:18 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:53:18 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:53:18 DEBUG MainApp:111 - Updated Time: Fri Jan 02 00:00:00 EET 2015
+2015-07-21 13:54:21 DEBUG SimulationCalendar:44 - SimulationCalendar started Thu Jan 01 00:00:00 EET 2015
+2015-07-21 13:54:21 DEBUG StorageModelFactory:75 - Generating Storage of Type: CONSTANT
+2015-07-21 13:54:21 DEBUG StorageModel:43 - StorageModel ConstructorStorageModel [id=0, stateOfChargeW=2000.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:21 DEBUG MainApp:99 - Run
+2015-07-21 13:54:21 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:21 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:21 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2010.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:21 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:21 DEBUG MainApp:111 - Updated Time: Thu Jan 01 01:00:00 EET 2015
+2015-07-21 13:54:21 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:21 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:21 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2020.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:21 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:21 DEBUG MainApp:111 - Updated Time: Thu Jan 01 02:00:00 EET 2015
+2015-07-21 13:54:21 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:21 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:21 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2030.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:21 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:21 DEBUG MainApp:111 - Updated Time: Thu Jan 01 03:00:00 EET 2015
+2015-07-21 13:54:21 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:21 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:21 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2040.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:21 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:21 DEBUG MainApp:111 - Updated Time: Thu Jan 01 04:00:00 EET 2015
+2015-07-21 13:54:21 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:21 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:21 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2050.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:21 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:21 DEBUG MainApp:111 - Updated Time: Thu Jan 01 05:00:00 EET 2015
+2015-07-21 13:54:21 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:21 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2060.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:21 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:21 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:21 DEBUG MainApp:111 - Updated Time: Thu Jan 01 06:00:00 EET 2015
+2015-07-21 13:54:21 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:21 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:21 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2070.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:21 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:21 DEBUG MainApp:111 - Updated Time: Thu Jan 01 07:00:00 EET 2015
+2015-07-21 13:54:21 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:21 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:21 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2080.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:22 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:22 DEBUG MainApp:111 - Updated Time: Thu Jan 01 08:00:00 EET 2015
+2015-07-21 13:54:22 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:22 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:22 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2090.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:22 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:22 DEBUG MainApp:111 - Updated Time: Thu Jan 01 09:00:00 EET 2015
+2015-07-21 13:54:22 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:22 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:22 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2100.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:22 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:22 DEBUG MainApp:111 - Updated Time: Thu Jan 01 10:00:00 EET 2015
+2015-07-21 13:54:22 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:22 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:22 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2110.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:22 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:22 DEBUG MainApp:111 - Updated Time: Thu Jan 01 11:00:00 EET 2015
+2015-07-21 13:54:22 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:22 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:22 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2120.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:22 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:22 DEBUG MainApp:111 - Updated Time: Thu Jan 01 12:00:00 EET 2015
+2015-07-21 13:54:22 DEBUG Aggregator:87 - Thu Jan 01 12:00:00 EET 2015 Task DAYAHEAD
+2015-07-21 13:54:22 DEBUG Aggregator:108 - A->P: AToP 0
+2015-07-21 13:54:22 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:22 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2130.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:22 DEBUG Prosumer:134 - P<-A: AToP 0
+2015-07-21 13:54:22 DEBUG Prosumer:136 - P->A: AToP 0 Reply1
+2015-07-21 13:54:22 DEBUG Aggregator:108 - A->P: AToP 1
+2015-07-21 13:54:22 DEBUG Prosumer:134 - P<-A: AToP 1
+2015-07-21 13:54:22 DEBUG Prosumer:136 - P->A: AToP 1 Reply1
+2015-07-21 13:54:22 DEBUG Aggregator:108 - A->P: AToP 2
+2015-07-21 13:54:22 DEBUG Prosumer:134 - P<-A: AToP 2
+2015-07-21 13:54:22 DEBUG Prosumer:136 - P->A: AToP 2 Reply1
+2015-07-21 13:54:22 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:22 DEBUG Aggregator:57 - A<-P: AToP 0 Reply1
+2015-07-21 13:54:22 DEBUG Aggregator:57 - A<-P: AToP 1 Reply1
+2015-07-21 13:54:22 DEBUG Aggregator:57 - A<-P: AToP 2 Reply1
+2015-07-21 13:54:22 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:22 DEBUG MainApp:111 - Updated Time: Thu Jan 01 13:00:00 EET 2015
+2015-07-21 13:54:22 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:22 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:22 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2140.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:22 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:22 DEBUG MainApp:111 - Updated Time: Thu Jan 01 14:00:00 EET 2015
+2015-07-21 13:54:22 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:22 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:22 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2150.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:22 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:23 DEBUG MainApp:111 - Updated Time: Thu Jan 01 15:00:00 EET 2015
+2015-07-21 13:54:23 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:23 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:23 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2160.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:23 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:23 DEBUG MainApp:111 - Updated Time: Thu Jan 01 16:00:00 EET 2015
+2015-07-21 13:54:23 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:23 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:23 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2170.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:23 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:23 DEBUG MainApp:111 - Updated Time: Thu Jan 01 17:00:00 EET 2015
+2015-07-21 13:54:23 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:23 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:23 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2180.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:23 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:23 DEBUG MainApp:111 - Updated Time: Thu Jan 01 18:00:00 EET 2015
+2015-07-21 13:54:23 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:23 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:23 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2190.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:23 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:23 DEBUG MainApp:111 - Updated Time: Thu Jan 01 19:00:00 EET 2015
+2015-07-21 13:54:23 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:23 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:23 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2200.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:23 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:23 DEBUG MainApp:111 - Updated Time: Thu Jan 01 20:00:00 EET 2015
+2015-07-21 13:54:23 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:23 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:23 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2210.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:23 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:23 DEBUG MainApp:111 - Updated Time: Thu Jan 01 21:00:00 EET 2015
+2015-07-21 13:54:23 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:23 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:23 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2220.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:23 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:24 DEBUG MainApp:111 - Updated Time: Thu Jan 01 22:00:00 EET 2015
+2015-07-21 13:54:24 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:24 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:24 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2230.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:24 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:24 DEBUG MainApp:111 - Updated Time: Thu Jan 01 23:00:00 EET 2015
+2015-07-21 13:54:24 DEBUG Prosumer:145 - Storage Task 
+2015-07-21 13:54:24 DEBUG Aggregator:50 - AggEndOfSimTasks
+2015-07-21 13:54:24 DEBUG StorageModel:154 - Charging Storage: StorageModel [id=0, stateOfChargeW=2240.0, maxCapacityW=10000.0, maxChargingRateWh=5000.0, maxDischargingRateWh=10000.0, minCapacityW=0.0]
+2015-07-21 13:54:24 DEBUG Prosumer:76 - ProsEndOfSimTasks
+2015-07-21 13:54:24 DEBUG MainApp:111 - Updated Time: Fri Jan 02 00:00:00 EET 2015

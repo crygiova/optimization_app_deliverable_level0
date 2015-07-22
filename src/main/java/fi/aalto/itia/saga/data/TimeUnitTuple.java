@@ -1,5 +1,14 @@
 package fi.aalto.itia.saga.data;
 
+/**
+ * Tuple class which contains a Date type and a Double value called unit which
+ * can represent different units as KW/h or €/KWh etc
+ * 
+ * @author giovanc1
+ *
+ * @param <Date>
+ * @param <Double>
+ */
 @SuppressWarnings("hiding")
 public class TimeUnitTuple<Date, Double> {
 
@@ -28,6 +37,7 @@ public class TimeUnitTuple<Date, Double> {
 	public boolean equals(Object o) {
 		if (!(o instanceof TimeUnitTuple))
 			return false;
+		@SuppressWarnings({ "rawtypes", "unchecked" })
 		TimeUnitTuple<Date, Double> pairo = (TimeUnitTuple) o;
 		return this.date.equals(pairo.getDate())
 				&& this.unit.equals(pairo.getUnit());

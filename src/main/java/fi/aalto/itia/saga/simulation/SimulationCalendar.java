@@ -2,12 +2,17 @@ package fi.aalto.itia.saga.simulation;
 
 import java.util.GregorianCalendar;
 
+import org.apache.log4j.Logger;
+
 public class SimulationCalendar extends GregorianCalendar {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
+	private static final Logger log = Logger
+			.getLogger(SimulationCalendar.class);
 
 	private static SimulationCalendar myCalendar = new SimulationCalendar();
 
@@ -20,12 +25,23 @@ public class SimulationCalendar extends GregorianCalendar {
 
 	public static synchronized SimulationCalendar getInstance() {
 		if (myCalendar == null) {
-			System.out.println("RiCreation New Singleton SimulationCalendar");
+			log.debug("RiCreation New Singleton SimulationCalendar");
 			// TODO possible to erase this since it will never happen
 			return new SimulationCalendar();
 		} else
 			return myCalendar;
+	}
 
+	/**
+	 * @param simulationHourTimeMs
+	 */
+	public synchronized void initSimulationCalendar(int month, int day) {
+		this.set(MONTH, month);
+		this.set(DAY_OF_MONTH, day);
+		this.set(HOUR_OF_DAY, 0);
+		this.set(MINUTE, 0);
+		this.set(SECOND, 0);
+		log.debug("SimulationCalendar started " + this.getTime());
 	}
 
 	/**
@@ -36,7 +52,7 @@ public class SimulationCalendar extends GregorianCalendar {
 		this.set(MINUTE, 0);
 		this.set(SECOND, 0);
 		this.set(MILLISECOND, 0);
-		System.out.println("SimulationCalendar started " + this.getTime());
+		log.debug("SimulationCalendar started " + this.getTime());
 	}
 
 	/*
@@ -119,6 +135,5 @@ public class SimulationCalendar extends GregorianCalendar {
 	public int getLeastMaximum(int field) {
 		return super.getLeastMaximum(field);
 	}
-
 
 }

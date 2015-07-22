@@ -10,6 +10,13 @@ import fi.aalto.itia.saga.data.TimeSequencePlan;
 import jxl.*;
 import jxl.read.biff.BiffException;
 
+/**
+ * This class provides an estimation service for the SPOT Prices based on the
+ * yearly spot prices defined in the xls file specified in the variable
+ * FILE_NAME_PROPERTIES.
+ *  
+ * @author giovanc1
+ * */
 public class SpotPriceEstimator {
 	private static final String FILE_NAME_PROPERTIES = "spot-2013.xls";
 	private static final int DATE_COL = 0;
@@ -20,6 +27,9 @@ public class SpotPriceEstimator {
 	private static Workbook workbook;
 	private static TimeSequencePlan yearlyPlan;
 	private static GregorianCalendar utilityCalendar = new GregorianCalendar();
+	/**
+	 * Singleton instance of the SpotPriceEstimator
+	 */
 	private static SpotPriceEstimator instance = new SpotPriceEstimator();
 
 	static {
@@ -35,8 +45,13 @@ public class SpotPriceEstimator {
 		}
 	};
 
+	/**
+	 * singleton implementation for the SpotPrice class
+	 * 
+	 * @return Singleton instance of the SpotPriceEstimator
+	 */
 	public static SpotPriceEstimator getInstance() {
-		if (instance ==null)
+		if (instance == null)
 			instance = new SpotPriceEstimator();
 		return instance;
 	}
@@ -44,6 +59,11 @@ public class SpotPriceEstimator {
 	private SpotPriceEstimator() {
 	}
 
+	/**
+	 * This method initialize the SpotPriceEstimator instance by reading the
+	 * Finnish prices from the excel file resource.
+	 * 
+	 */
 	public void init() {
 		boolean finished = false;
 		boolean first = true;
@@ -82,6 +102,16 @@ public class SpotPriceEstimator {
 		}
 	}
 
+	/**
+	 * This method can be seen as a service which estimates and return the SPOT
+	 * Prices for a required and given day of the year
+	 * 
+	 * @param dayRequested
+	 *            The adte of the current year to generate the SPOTPrices which
+	 *            are read from the xls file.
+	 * @return TimeSequencePlan with the SPOT Prices for the requested day of
+	 *         the year
+	 */
 	public TimeSequencePlan getSporPrice(Date dayRequested) {
 		TimeSequencePlan ep;
 		GregorianCalendar gc0 = new GregorianCalendar();

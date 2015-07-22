@@ -1,4 +1,4 @@
-	package fi.aalto.itia.saga.storage;
+package fi.aalto.itia.saga.storage;
 
 import org.apache.log4j.Logger;
 

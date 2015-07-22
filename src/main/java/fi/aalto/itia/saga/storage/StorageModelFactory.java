@@ -3,12 +3,12 @@
  */
 package fi.aalto.itia.saga.storage;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
-import org.apache.commons.math3.distribution.NormalDistribution;
 
+import org.apache.commons.math3.distribution.NormalDistribution;
 import org.apache.log4j.Logger;
+
+import fi.aalto.itia.saga.util.Utility;
 
 /**
  * @author giovanc1
@@ -52,16 +52,7 @@ public class StorageModelFactory {
 
 	/** Load Properties from Property File */
 	static {
-		properties = new Properties();
-		ClassLoader classLoader = Thread.currentThread()
-				.getContextClassLoader();
-		try (InputStream resourceStream = classLoader
-				.getResourceAsStream(FILE_NAME_PROPERTIES)) {
-			properties.load(resourceStream);
-		} catch (IOException e) {
-			System.out.println("Property file not Found: "
-					+ FILE_NAME_PROPERTIES);
-		}
+		properties = Utility.getProperties(FILE_NAME_PROPERTIES);
 		avgChargingRate = Double.parseDouble(properties
 				.getProperty(AVG_CHARGING_RATE));
 		avgDischargingRate = Double.parseDouble(properties
