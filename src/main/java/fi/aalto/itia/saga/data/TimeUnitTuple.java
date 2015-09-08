@@ -45,7 +45,7 @@ public class TimeUnitTuple<Date, Double> {
 
 	@Override
 	public String toString() {
-		return "TimeEnergyTuple [date=" + date + ", units=" + unit + "]";
+		return "TimeUnitTuple [date=" + date + ", units=" + unit + "]";
 	}
 
 }

@@ -21,14 +21,6 @@ import fi.aalto.itia.saga.util.Utility;
  *
  */
 
-/**
- * @author giovanc1
- *
- */
-/**
- * @author giovanc1
- *
- */
 public class MainApp {
 
 	private static final String FILE_NAME_PROPERTIES = "mainApp.properties";
@@ -101,7 +93,6 @@ public class MainApp {
 			simulationCountDownLatch.await();
 			takeTokens();
 			// Simulator Progress
-			MainApp.sleep(100);
 			isEndOfSimulation = nextSimulationStep();
 			if (isEndOfSimulation) {
 				endOfSimulation();

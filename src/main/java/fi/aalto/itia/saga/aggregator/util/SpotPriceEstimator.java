@@ -7,6 +7,8 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 import fi.aalto.itia.saga.data.TimeSequencePlan;
+import fi.aalto.itia.saga.util.MathUtility;
+
 import jxl.*;
 import jxl.read.biff.BiffException;
 
@@ -91,8 +93,8 @@ public class SpotPriceEstimator {
 					yearlyPlan = new TimeSequencePlan(utilityCalendar.getTime());
 					first = false;
 				}
-				double priceKWh = convertMWhtoKWh(n.getValue());
-				priceKWh = roundDoubleTo(priceKWh, 5); // Round;
+				double priceKWh = MathUtility.convertMWhtoKWh(n.getValue());
+				priceKWh = MathUtility.roundDoubleTo(priceKWh, 5); // Round;
 				yearlyPlan.addTimeEnergyTuple(utilityCalendar.getTime(),
 						priceKWh);
 
@@ -112,7 +114,7 @@ public class SpotPriceEstimator {
 	 * @return TimeSequencePlan with the SPOT Prices for the requested day of
 	 *         the year
 	 */
-	public TimeSequencePlan getSporPrice(Date dayRequested) {
+	public TimeSequencePlan getSpotPrice(Date dayRequested) {
 		TimeSequencePlan ep;
 		GregorianCalendar gc0 = new GregorianCalendar();
 		gc0.setTime(dayRequested);
@@ -131,14 +133,5 @@ public class SpotPriceEstimator {
 			return ep;
 		}
 		return null;
-	}
-
-	private static double roundDoubleTo(double value, int decimal) {
-		double power = Math.pow(10d, decimal);
-		return Math.round(value * power) / power;
-	}
-
-	private static double convertMWhtoKWh(double price) {
-		return price / 1000d;
 	}
 }

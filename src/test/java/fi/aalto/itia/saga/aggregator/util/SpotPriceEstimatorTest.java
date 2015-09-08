@@ -13,7 +13,7 @@ public class SpotPriceEstimatorTest {
 
 	@Test
 	public void testGetSpotPrice() {
-		TimeSequencePlan sp = SpotPriceEstimator.getInstance().getSporPrice(
+		TimeSequencePlan sp = SpotPriceEstimator.getInstance().getSpotPrice(
 				Calendar.getInstance().getTime());
 		assertNotNull(sp);
 		System.out.println(sp.toString());

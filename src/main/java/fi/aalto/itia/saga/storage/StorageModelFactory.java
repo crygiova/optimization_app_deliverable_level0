@@ -44,8 +44,10 @@ public class StorageModelFactory {
 
 	private static Double avgStateOfCharge;
 	
+	@SuppressWarnings("unused")
 	private static Double varianceStateOfCharge;
 	
+	@SuppressWarnings("unused")
 	private static NormalDistribution nd;
 
 	private static Properties properties;

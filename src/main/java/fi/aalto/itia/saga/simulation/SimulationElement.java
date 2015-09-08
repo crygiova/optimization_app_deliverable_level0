@@ -21,7 +21,7 @@ public abstract class SimulationElement implements Runnable {
 	// Messages queue between R0Abstract
 	// TODO The type of the message needs to be changed once it has been
 	// developed a format for the messages
-	protected LinkedBlockingQueue<String> messageQueue;
+	protected LinkedBlockingQueue<SimulationMessage> messageQueue;
 	// Tasks ordered by priority and time
 	protected PriorityQueue<TaskSchedule> tasks;
 	// Count down to communicate that the current R0Abstract has finished it s
@@ -38,7 +38,7 @@ public abstract class SimulationElement implements Runnable {
 	public SimulationElement() {
 		super();
 		this.simulationToken = new SynchronousQueue<Integer>();
-		this.messageQueue = new LinkedBlockingQueue<String>();
+		this.messageQueue = new LinkedBlockingQueue<SimulationMessage>();
 		this.tasks = new PriorityQueue<TaskSchedule>();
 		calendar = SimulationCalendar.getInstance();
 	}
@@ -99,7 +99,7 @@ public abstract class SimulationElement implements Runnable {
 	/**
 	 * @param msg
 	 */
-	public void addMessage(String msg) {
+	public void addMessage(SimulationMessage msg) {
 		this.messageQueue.add(msg);
 	}
 
@@ -108,14 +108,14 @@ public abstract class SimulationElement implements Runnable {
 	 * @param peer
 	 * @param msg
 	 */
-	public void sendMessage(SimulationElement peer, String msg) {
-		peer.addMessage(msg);
+	public void sendMessage( SimulationMessage msg) {
+		msg.getReceiver().addMessage(msg);
 	}
 
 	/**
 	 * @return
 	 */
-	public String takeMessage() {
+	public SimulationMessage takeMessage() {
 		try {
 			return this.messageQueue.take();
 		} catch (InterruptedException e) {
@@ -133,7 +133,7 @@ public abstract class SimulationElement implements Runnable {
 	 * @param timeout
 	 * @return
 	 */
-	public String pollMessageMs(long timeout) {
+	public SimulationMessage pollMessageMs(long timeout) {
 		try {
 			return this.messageQueue.poll(timeout, TimeUnit.MILLISECONDS);
 		} catch (InterruptedException e) {

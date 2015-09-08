@@ -1,14 +1,17 @@
 package fi.aalto.itia.saga.aggregator;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import org.apache.log4j.Logger;
 
-import fi.aalto.itia.saga.MainApp;
+import fi.aalto.itia.saga.aggregator.util.SpotPriceEstimator;
 import fi.aalto.itia.saga.data.TaskSchedule;
+import fi.aalto.itia.saga.data.TimeSequencePlan;
 import fi.aalto.itia.saga.simulation.SimulationCalendar;
 import fi.aalto.itia.saga.simulation.SimulationCalendarUtils;
 import fi.aalto.itia.saga.simulation.SimulationElement;
+import fi.aalto.itia.saga.simulation.SimulationMessage;
 
 public class Aggregator extends SimulationElement {
 
@@ -45,16 +48,16 @@ public class Aggregator extends SimulationElement {
 				// TODO Do the all the operations needed at that time
 				executeTasks();
 				// TODO check message queue and keep doing it till is not empty
-				// TODO Notify the Simulator that the operations are finished
+				// Notify the Simulator that the operations are finished
 				this.notifyEndOfSimulationTasks();
 				log.debug("AggEndOfSimTasks");
 				// TODO check message queue and keep doing it till the main
 				// Thread
-				// update release
+				// TODO DELETE Communication Test
 				while (!this.isReleaseToken() || !this.messageQueue.isEmpty()) {
-					String str = this.pollMessageMs(10);
+					SimulationMessage str = this.pollMessageMs(10);
 					if (str != null) {
-						log.debug("A<-P: " + str);
+						log.debug("A<-P: " + str.getHeader());
 						// this.sendMsg(str + " Risposta dopo CountDown Run0");
 					}
 				}
@@ -80,6 +83,7 @@ public class Aggregator extends SimulationElement {
 		if (SimulationCalendarUtils
 				.isMidnight(SimulationCalendar.getInstance())) {
 			scheduleTasks();
+
 		}
 		// execute tasks for the current hour
 		while (!this.tasks.isEmpty() && this.nextTaskAtThisHour()) {
@@ -103,12 +107,28 @@ public class Aggregator extends SimulationElement {
 	}
 
 	private void dayAheadTask() {
+		Date tomorrow = SimulationCalendarUtils.getDayAheadMidnight(calendar
+				.getTime());
+		TimeSequencePlan spotPriceDayAhead = SpotPriceEstimator.getInstance()
+				.getSpotPrice(tomorrow);
+
+		SimulationMessage sm = new SimulationMessage(this,
+				prosumers.get(0), "AToP");
+		this.sendMessage(sm);
+
+	}
+
+	
+	private void communicationTest() {
+		// TODO DELETE Communication Test
 		for (int i = 0; i < 3; i++) {
-			String str = "AToP " + i;
-			log.debug("A->P: " + str);
-			this.sendMessage(prosumers.get(0), str);
+			SimulationMessage sm = new SimulationMessage(this,
+					prosumers.get(0), "AToP " + i);
+			log.debug("A->P: " + sm.getHeader());
+			this.sendMessage(sm);
+
+			log.debug("A<-P:TAKE " + this.takeMessage().getHeader());
 			// System.out.println(this.takeMsg());
-			MainApp.sleep(10);
 		}
 	}
 }

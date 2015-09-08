@@ -14,6 +14,7 @@ public class ConsumptionEstimatorTest {
 		for (int i = 0; i < ep.getTimEnergy().size(); i++) {
 			System.out.println("Date:"+ep.getTimeEnergyTuple(i).getDate()+" Unit:"+ep.getTimeEnergyTuple(i).getUnit());
 		}
-		//TODO finish
+		
+		System.out.println("Consumption MEAN: " + ep.getMeanValue(1));
 	}
 }

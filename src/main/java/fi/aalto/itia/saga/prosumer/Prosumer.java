@@ -7,9 +7,12 @@ import org.apache.log4j.Logger;
 
 import fi.aalto.itia.saga.data.TaskSchedule;
 import fi.aalto.itia.saga.data.TimeSequencePlan;
+import fi.aalto.itia.saga.prosumer.util.ConsumptionEstimator;
+import fi.aalto.itia.saga.prosumer.util.OptimizedScheduler;
 import fi.aalto.itia.saga.simulation.SimulationCalendarUtils;
 import fi.aalto.itia.saga.simulation.SimulationCalendar;
 import fi.aalto.itia.saga.simulation.SimulationElement;
+import fi.aalto.itia.saga.simulation.SimulationMessage;
 import fi.aalto.itia.saga.storage.StorageController;
 
 /**
@@ -23,7 +26,7 @@ public class Prosumer extends SimulationElement {
 	private final static Logger log = Logger.getLogger(Prosumer.class);
 
 	private int id;
-	
+
 	private SimulationElement aggregator;
 	private StorageController storageController;
 	private TimeSequencePlan todayConsumption;
@@ -46,6 +49,10 @@ public class Prosumer extends SimulationElement {
 
 	public void setAggregator(SimulationElement aggregator) {
 		this.aggregator = aggregator;
+	}
+
+	public SimulationElement getAggregator() {
+		return aggregator;
 	}
 
 	public int getId() {
@@ -77,15 +84,9 @@ public class Prosumer extends SimulationElement {
 				log.debug("ProsEndOfSimTasks");
 				// TODO if there are messages use those till the simulator does
 				// not
-				String str;
+				// TODO DELETE Communication Test
 				while (!this.isReleaseToken() || !this.messageQueue.isEmpty()) {
-					str = this.pollMessageMs(10);
-					if (str != null) {
-						log.debug("P<-A: " + str);
-						str += " Reply2";
-						log.debug("P->A: " + str);
-						this.sendMessage(this.aggregator, str);
-					}
+					elaborateIncomingMessages();
 				}
 				// send the release signal
 				// TODO wait for signal of the simulator to putSQ
@@ -123,21 +124,24 @@ public class Prosumer extends SimulationElement {
 			// elaborate incoming messages
 			elaborateIncomingMessages();
 		}
-		// elaborate incoming messages
+		// TODO delete// elaborate incoming messages
 		elaborateIncomingMessages();
 	}
 
 	@Override
 	public void elaborateIncomingMessages() {
-		String str;
-		// while (!this.msg.isEmpty()) {
+		SimulationMessage str;
 		while ((str = this.pollMessageMs(10)) != null) {
-			log.debug("P<-A: " + str);
-			str += " Reply1";
-			log.debug("P->A: " + str);
-			this.sendMessage(this.aggregator, str);
-		}
 
+			log.debug("P<-A: " + str.getHeader());
+			// TODO based on the type of message it should call one method to
+			// handle it.
+			dayAheadConsumption = ConsumptionEstimator
+					.getConsumption(SimulationCalendarUtils
+							.getDayAheadMidnight(calendar.getTime()));
+			log.debug("DayAhead Consumption " + dayAheadConsumption.toString());
+			OptimizedScheduler.jOptimizeTest(dayAheadConsumption, storageController);
+		}
 	}
 
 	// TODO all the necessary controls for the task to be executed without
@@ -168,13 +172,11 @@ public class Prosumer extends SimulationElement {
 		todayConsumption = TimeSequencePlan.initToZero(
 				SimulationCalendarUtils.getMidnight(calendar.getTime()), 24);
 		todaySchedule = TimeSequencePlan.initToValue(
-				SimulationCalendarUtils.getMidnight(calendar.getTime()), 24,
-				10d);
+				SimulationCalendarUtils.getMidnight(calendar.getTime()), 24, 0);
 		dayAheadConsumption = TimeSequencePlan.initToZero(
 				SimulationCalendarUtils.getMidnight(calendar.getTime()), 24);
 		dayAheadSchedule = TimeSequencePlan.initToValue(
-				SimulationCalendarUtils.getMidnight(calendar.getTime()), 24,
-				10d);
+				SimulationCalendarUtils.getMidnight(calendar.getTime()), 24, 0);
 	}
 
 }

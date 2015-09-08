@@ -6,7 +6,10 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+import org.apache.commons.math3.stat.descriptive.moment.Mean;
+
 import fi.aalto.itia.saga.simulation.SimulationCalendarUtils;
+import fi.aalto.itia.saga.util.MathUtility;
 
 /**
  * @author giovanc1
@@ -69,11 +72,17 @@ public class TimeSequencePlan {
 							.get(Calendar.HOUR_OF_DAY)
 					&& local.get(Calendar.DAY_OF_MONTH) == gcTime
 							.get(Calendar.DAY_OF_MONTH)
-					&& local.get(Calendar.YEAR) == gcTime
-							.get(Calendar.YEAR))
+					&& local.get(Calendar.YEAR) == gcTime.get(Calendar.YEAR))
 				return index;
 		}
 		return -1;
+	}
+
+	public TimeUnitTuple<Date, Double> getIndex(int index) {
+		if (index >= 0 && index < this.size())
+			return timEnergy.get(index);
+		else
+			throw new ArrayIndexOutOfBoundsException(index);
 	}
 
 	public TimeUnitTuple<Date, Double> getTimeEnergyTuple(int index) {
@@ -87,8 +96,16 @@ public class TimeSequencePlan {
 		return timEnergy;
 	}
 
-	public void setTimEnergy(List<TimeUnitTuple<Date, Double>> timEnergy) {
-		// TODOthis.timEnergy = timEnergy;
+	public int size() {
+		return timEnergy.size();
+	}
+
+	// number of decimal values for the rounding of the mean
+	public Double getMeanValue(int decimal) {
+		Mean mean = new Mean();
+		for (int i = 0; i < timEnergy.size(); i++)
+			mean.increment(timEnergy.get(i).getUnit());
+		return MathUtility.roundDoubleTo(mean.getResult(), decimal);
 	}
 
 	public static TimeSequencePlan initToZero(Date start, int numHours) {
@@ -99,14 +116,23 @@ public class TimeSequencePlan {
 		}
 		return tsp;
 	}
-	
-	public static TimeSequencePlan initToValue(Date start, int numHours, double value) {
+
+	public static TimeSequencePlan initToValue(Date start, int numHours,
+			double value) {
 		TimeSequencePlan tsp = new TimeSequencePlan(start);
 		for (int i = 0; i < numHours; i++) {
 			tsp.addTimeEnergyTuple(start, value);
 			start = SimulationCalendarUtils.calculateNextHour(start, 1);
 		}
 		return tsp;
+	}
+
+	public double[] getUnitToArray() {
+		double[] d = new double[timEnergy.size()];
+		for (int i = 0; i < timEnergy.size(); i++) {
+			d[i] = timEnergy.get(i).getUnit();
+		}
+		return d;
 	}
 
 	@Override
