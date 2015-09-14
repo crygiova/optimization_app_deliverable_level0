@@ -3,12 +3,16 @@
  */
 package fi.aalto.itia.saga.prosumer;
 
+import java.util.Date;
+
 import org.apache.log4j.Logger;
 
+import fi.aalto.itia.saga.aggregator.util.SpotPriceEstimator;
 import fi.aalto.itia.saga.data.TaskSchedule;
 import fi.aalto.itia.saga.data.TimeSequencePlan;
 import fi.aalto.itia.saga.prosumer.util.ConsumptionEstimator;
-import fi.aalto.itia.saga.prosumer.util.OptimizedScheduler;
+import fi.aalto.itia.saga.prosumer.util.OptimizationResult;
+import fi.aalto.itia.saga.prosumer.util.Scheduler;
 import fi.aalto.itia.saga.simulation.SimulationCalendarUtils;
 import fi.aalto.itia.saga.simulation.SimulationCalendar;
 import fi.aalto.itia.saga.simulation.SimulationElement;
@@ -136,11 +140,22 @@ public class Prosumer extends SimulationElement {
 			log.debug("P<-A: " + str.getHeader());
 			// TODO based on the type of message it should call one method to
 			// handle it.
-			dayAheadConsumption = ConsumptionEstimator
-					.getConsumption(SimulationCalendarUtils
-							.getDayAheadMidnight(calendar.getTime()));
+			Date midnight = SimulationCalendarUtils
+					.getDayAheadMidnight(calendar.getTime());
+			dayAheadConsumption = ConsumptionEstimator.getConsumption(midnight);
+			SpotPriceEstimator spe = SpotPriceEstimator.getInstance();
 			log.debug("DayAhead Consumption " + dayAheadConsumption.toString());
-			OptimizedScheduler.jOptimizeTest(dayAheadConsumption, storageController);
+			// TODO test
+			double[] dayAheadQ = dayAheadConsumption.getUnitToArray();
+			OptimizationResult opt;
+			//TODO many values are casted so make it work better
+			opt = Scheduler.optimizeMatlab(24, 2,
+					spe.getSpotPriceDouble(midnight),
+					storageController.getStorageStatusW(),
+					storageController.getStorageCapacityW(),
+					storageController.getStorageMaxChargingRateWh(), dayAheadQ,
+					0, dayAheadQ, dayAheadQ, 1, midnight);
+			log.debug(opt.toString());
 		}
 	}
 

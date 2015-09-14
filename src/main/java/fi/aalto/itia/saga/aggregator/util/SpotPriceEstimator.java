@@ -134,4 +134,10 @@ public class SpotPriceEstimator {
 		}
 		return null;
 	}
+	
+	public double[] getSpotPriceDouble(Date dayRequested) {
+		TimeSequencePlan ep;
+		ep = getSpotPrice(dayRequested);
+		return ep.getUnitToArray();
+	}
 }
