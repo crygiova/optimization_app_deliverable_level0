@@ -18,6 +18,7 @@ import java.util.List;
 import fi.aalto.itia.saga.data.TimeSequencePlan;
 import fi.aalto.itia.saga.prosumer.util.OptimizationResult;
 import fi.aalto.itia.saga.simulation.SimulationCalendarUtils;
+import fi.aalto.itia.saga.util.MathUtility;
 
 public class MatlabIO {
 	private static final String H = "H";
@@ -112,6 +113,8 @@ public class MatlabIO {
 						if (fileIn.compareToIgnoreCase(event.context()
 								.toString()) == 0) {
 							outLoop = true;
+							//TODO sleep to wait the file to be completely written
+							Thread.sleep(10);
 						}
 					}
 				}
@@ -167,8 +170,10 @@ public class MatlabIO {
 			Date dayAheadMidnight) {
 		TimeSequencePlan tsp = new TimeSequencePlan(dayAheadMidnight);
 		Date start = dayAheadMidnight;
+		double unit;
 		for (int i = 0; i < values.length; i++) {
-			tsp.addTimeEnergyTuple(start, Double.parseDouble(values[i]));
+			unit = MathUtility.roundDoubleTo(Double.parseDouble(values[i]),6);
+			tsp.addTimeEnergyTuple(start, unit);
 			start = SimulationCalendarUtils.calculateNextHour(start, 1);
 		}
 		return tsp;
@@ -178,7 +183,7 @@ public class MatlabIO {
 		String[] buffer = s.split(COMMA);
 		double array[] = new double[buffer.length];
 		for (int i = 0; i < buffer.length; i++) {
-			array[i] = Double.parseDouble(buffer[i]);
+			array[i] = MathUtility.roundDoubleTo(Double.parseDouble(buffer[i]),6);
 		}
 		return array;
 	}

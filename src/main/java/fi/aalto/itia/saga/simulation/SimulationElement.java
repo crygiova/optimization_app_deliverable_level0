@@ -86,7 +86,7 @@ public abstract class SimulationElement implements Runnable {
 	/**
 	 * 
 	 */
-	public void releaseSimulationToken() {
+	public synchronized void releaseSimulationToken() {
 		this.setReleaseToken(false);
 		try {
 			this.simulationToken.put(0);

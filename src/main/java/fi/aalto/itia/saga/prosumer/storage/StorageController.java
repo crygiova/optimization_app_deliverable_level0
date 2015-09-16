@@ -1,7 +1,7 @@
 /**
  * 
  */
-package fi.aalto.itia.saga.storage;
+package fi.aalto.itia.saga.prosumer.storage;
 
 /**
  * @author giovanc1
@@ -9,7 +9,8 @@ package fi.aalto.itia.saga.storage;
  */
 public class StorageController {
 	private StorageModel storage;
-
+	private int initialHourStatus;
+	private int finalHourStatus;
 	/**
 	 * 
 	 */
@@ -29,7 +30,7 @@ public class StorageController {
 	public Double getStorageStatusW() {
 		return storage.getStateOfChargeW();
 	}
-
+	
 	public Double getStorageMaxChargingRateWh() {
 		return storage.getMaxChargingRateWh();
 	}

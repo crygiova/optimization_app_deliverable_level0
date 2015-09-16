@@ -54,7 +54,7 @@ public class Aggregator extends SimulationElement {
 				// TODO check message queue and keep doing it till the main
 				// Thread
 				// TODO DELETE Communication Test
-				while (!this.isReleaseToken() || !this.messageQueue.isEmpty()) {
+				while (!this.isReleaseToken() || !this.messageQueue.isEmpty() && !this.isEndOfSimulation()) {
 					SimulationMessage str = this.pollMessageMs(10);
 					if (str != null) {
 						log.debug("A<-P: " + str.getHeader());
@@ -64,7 +64,9 @@ public class Aggregator extends SimulationElement {
 			}
 			// TODO use release to putSq and reset release to false
 			this.releaseSimulationToken();
+			//log.debug("Loop");
 		}
+		log.debug("EndOfSimulation");
 	}
 
 	/*
@@ -107,18 +109,17 @@ public class Aggregator extends SimulationElement {
 	}
 
 	private void dayAheadTask() {
-		Date tomorrow = SimulationCalendarUtils.getDayAheadMidnight(calendar
+		Date midnight = SimulationCalendarUtils.getDayAheadMidnight(calendar
 				.getTime());
 		TimeSequencePlan spotPriceDayAhead = SpotPriceEstimator.getInstance()
-				.getSpotPrice(tomorrow);
+				.getSpotPrice(midnight);
 
-		SimulationMessage sm = new SimulationMessage(this,
-				prosumers.get(0), "AToP");
+		SimulationMessage sm = new SimulationMessage(this, prosumers.get(0),
+				"AToP");
 		this.sendMessage(sm);
 
 	}
 
-	
 	private void communicationTest() {
 		// TODO DELETE Communication Test
 		for (int i = 0; i < 3; i++) {

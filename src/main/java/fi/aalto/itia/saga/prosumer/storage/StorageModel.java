@@ -1,10 +1,12 @@
-package fi.aalto.itia.saga.storage;
+package fi.aalto.itia.saga.prosumer.storage;
 
 import org.apache.log4j.Logger;
 
+import fi.aalto.itia.saga.util.MathUtility;
+
 /**
  * @author giovanc1
- *
+ *Values are in Kw
  */
 public class StorageModel {
 	private final String EX_STORAGE_CAPACITY = "Maximum or minimum capacity storage exceeded\n";
@@ -147,7 +149,8 @@ public class StorageModel {
 
 			log.debug("Charging rates out of bounds: " + this.toString());
 		}
-		Double nextStateOfCharge = this.stateOfChargeW + chargeWh - dischargeWh;
+		Double nextStateOfCharge = MathUtility.roundDoubleTo(
+				(this.stateOfChargeW + chargeWh - dischargeWh), 6);
 		if (nextStateOfCharge >= this.minCapacityW
 				&& nextStateOfCharge <= this.maxCapacityW) {
 			this.setStateOfChargeW(nextStateOfCharge);

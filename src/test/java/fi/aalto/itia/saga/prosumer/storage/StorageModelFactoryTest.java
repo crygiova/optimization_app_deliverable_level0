@@ -1,7 +1,7 @@
 /**
  * 
  */
-package fi.aalto.itia.saga.storage;
+package fi.aalto.itia.saga.prosumer.storage;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -9,6 +9,8 @@ import java.util.Properties;
 
 import org.junit.Test;
 
+import fi.aalto.itia.saga.prosumer.storage.StorageModel;
+import fi.aalto.itia.saga.prosumer.storage.StorageModelFactory;
 import static org.junit.Assert.*;
 
 /**

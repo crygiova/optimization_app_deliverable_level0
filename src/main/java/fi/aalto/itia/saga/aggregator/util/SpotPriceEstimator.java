@@ -94,7 +94,7 @@ public class SpotPriceEstimator {
 					first = false;
 				}
 				double priceKWh = MathUtility.convertMWhtoKWh(n.getValue());
-				priceKWh = MathUtility.roundDoubleTo(priceKWh, 5); // Round;
+				priceKWh = MathUtility.roundDoubleTo(priceKWh, 6); // Round;
 				yearlyPlan.addTimeEnergyTuple(utilityCalendar.getTime(),
 						priceKWh);
 

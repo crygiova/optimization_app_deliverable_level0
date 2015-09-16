@@ -8,6 +8,7 @@ import java.util.Properties;
 
 import fi.aalto.itia.saga.data.TimeSequencePlan;
 import fi.aalto.itia.saga.simulation.SimulationCalendarUtils;
+import fi.aalto.itia.saga.util.MathUtility;
 import fi.aalto.itia.saga.util.Utility;
 
 import org.apache.commons.math3.distribution.NormalDistribution;
@@ -46,7 +47,7 @@ public class ConsumptionEstimator {
 		TimeSequencePlan ep = new TimeSequencePlan(start);
 		nd = new NormalDistribution(mean, variance);
 		for (int i = 0; i < H; i++) {
-			double value = Math.round(nd.sample());
+			double value = MathUtility.roundDoubleTo(nd.sample(),6);//Math.round(nd.sample());
 			ep.addTimeEnergyTuple(start, value);
 			start = SimulationCalendarUtils.calculateNextHour(start, 1);
 		}

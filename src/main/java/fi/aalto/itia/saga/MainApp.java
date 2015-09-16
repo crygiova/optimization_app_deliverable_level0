@@ -99,6 +99,7 @@ public class MainApp {
 			}
 			log.debug("Updated Time: " + cal.getTime());
 		}
+		log.debug("EndOfSimulation");
 	}
 
 	/**
