@@ -9,8 +9,7 @@ package fi.aalto.itia.saga.prosumer.storage;
  */
 public class StorageController {
 	private StorageModel storage;
-	private int initialHourStatus;
-	private int finalHourStatus;
+
 	/**
 	 * 
 	 */
@@ -30,7 +29,7 @@ public class StorageController {
 	public Double getStorageStatusW() {
 		return storage.getStateOfChargeW();
 	}
-	
+
 	public Double getStorageMaxChargingRateWh() {
 		return storage.getMaxChargingRateWh();
 	}
@@ -45,8 +44,9 @@ public class StorageController {
 
 	/*
 	 * TODO implement a solution that knows what is the real charge of the
-	 * Storage and returns the exceeded charge or discharge of the battery
-	 * need also to implement a solution for receiving the dayly plan and charge the battery 
+	 * Storage and returns the exceeded charge or discharge of the battery need
+	 * also to implement a solution for receiving the dayly plan and charge the
+	 * battery
 	 */
 	public void chargeAndDischargeStorageWh(Double chargeWh, Double dischargeWh)
 			throws Exception {

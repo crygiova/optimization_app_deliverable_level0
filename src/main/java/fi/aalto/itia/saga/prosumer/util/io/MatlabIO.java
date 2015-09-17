@@ -16,8 +16,8 @@ import java.util.Date;
 import java.util.List;
 
 import fi.aalto.itia.saga.data.TimeSequencePlan;
-import fi.aalto.itia.saga.prosumer.util.OptimizationResult;
 import fi.aalto.itia.saga.simulation.SimulationCalendarUtils;
+import fi.aalto.itia.saga.simulation.messages.DayAheadContentResponse;
 import fi.aalto.itia.saga.util.MathUtility;
 
 public class MatlabIO {
@@ -41,11 +41,10 @@ public class MatlabIO {
 	private static final String P = "P";
 	private static final String DP = "dP";
 	private static final String J = "J";
-	
 
 	public static String prepareStringOut(int h, int r, double[] k, double s0,
-			double sh, double pmax, double[] q, double w, double[] tUp,double[] tDown,
-			double tsize, String outDir, int id) {
+			double sh, double pmax, double[] q, double w, double[] tUp,
+			double[] tDown, double tsize, String outDir, int id) {
 		String buffer = H + EQ + String.valueOf(h) + NL;
 		buffer += R + EQ + String.valueOf(r) + NL;
 		buffer += S_0 + EQ + String.valueOf(s0) + NL;
@@ -54,14 +53,14 @@ public class MatlabIO {
 		buffer += K + EQ + printArray(k) + NL;// K
 		buffer += Q + EQ + printArray(q) + NL;// Q
 		buffer += W + EQ + String.valueOf(w) + NL;
-		buffer += T_UP + EQ + printArray(tUp)+ NL;
-		buffer += T_DOWN + EQ + printArray(tDown)+ NL;
+		buffer += T_UP + EQ + printArray(tUp) + NL;
+		buffer += T_DOWN + EQ + printArray(tDown) + NL;
 		buffer += T_SIZE + EQ + String.valueOf(tsize) + NL;
 		buffer += OUT_DIR + EQ + outDir + NL;
 		buffer += ID + EQ + String.valueOf(id);
 		return buffer;
 	}
-	
+
 	public static void writeOutputFile(String toWrite, String fileName) {
 		try {
 			BufferedWriter writer = new BufferedWriter(new FileWriter(new File(
@@ -73,7 +72,7 @@ public class MatlabIO {
 			e.printStackTrace();
 		}
 	}
-	
+
 	private static String printArray(double[] k2) {
 		String buffer = "";
 		int i;
@@ -83,7 +82,7 @@ public class MatlabIO {
 		buffer += String.valueOf(k2[i]);
 		return buffer;
 	}
-	
+
 	public static boolean watchOptResult(String dirIn, String fileIn) {
 		Path myDir = Paths.get(dirIn);
 		boolean outLoop = false;
@@ -113,7 +112,8 @@ public class MatlabIO {
 						if (fileIn.compareToIgnoreCase(event.context()
 								.toString()) == 0) {
 							outLoop = true;
-							//TODO sleep to wait the file to be completely written
+							// TODO sleep to wait the file to be completely
+							// written
 							Thread.sleep(10);
 						}
 					}
@@ -125,11 +125,11 @@ public class MatlabIO {
 		}
 		return true;
 	}
-	
-	public static OptimizationResult readOptResult(String fileName,
+
+	public static DayAheadContentResponse readOptResult(String fileName,
 			Date dayAheadMidnight) {
 		BufferedReader br = null;
-		OptimizationResult opt = new OptimizationResult();
+		DayAheadContentResponse opt = new DayAheadContentResponse();
 		try {
 			String sCurrentLine;
 			br = new BufferedReader(new FileReader(fileName));
@@ -165,14 +165,14 @@ public class MatlabIO {
 		}
 		return opt;
 	}
-	
+
 	private static TimeSequencePlan createPSequence(String[] values,
 			Date dayAheadMidnight) {
 		TimeSequencePlan tsp = new TimeSequencePlan(dayAheadMidnight);
 		Date start = dayAheadMidnight;
 		double unit;
 		for (int i = 0; i < values.length; i++) {
-			unit = MathUtility.roundDoubleTo(Double.parseDouble(values[i]),6);
+			unit = MathUtility.roundDoubleTo(Double.parseDouble(values[i]), 6);
 			tsp.addTimeEnergyTuple(start, unit);
 			start = SimulationCalendarUtils.calculateNextHour(start, 1);
 		}
@@ -183,7 +183,8 @@ public class MatlabIO {
 		String[] buffer = s.split(COMMA);
 		double array[] = new double[buffer.length];
 		for (int i = 0; i < buffer.length; i++) {
-			array[i] = MathUtility.roundDoubleTo(Double.parseDouble(buffer[i]),6);
+			array[i] = MathUtility.roundDoubleTo(Double.parseDouble(buffer[i]),
+					6);
 		}
 		return array;
 	}

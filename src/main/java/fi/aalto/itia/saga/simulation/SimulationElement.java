@@ -8,6 +8,7 @@ import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.TimeUnit;
 
 import fi.aalto.itia.saga.data.TaskSchedule;
+import fi.aalto.itia.saga.simulation.messages.SimulationMessage;
 
 public abstract class SimulationElement implements Runnable {
 
@@ -136,6 +137,15 @@ public abstract class SimulationElement implements Runnable {
 	public SimulationMessage pollMessageMs(long timeout) {
 		try {
 			return this.messageQueue.poll(timeout, TimeUnit.MILLISECONDS);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public SimulationMessage waitForMessage() {
+		try {
+			return this.messageQueue.take();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

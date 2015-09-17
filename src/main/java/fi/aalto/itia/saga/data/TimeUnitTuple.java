@@ -7,15 +7,15 @@ package fi.aalto.itia.saga.data;
  * @author giovanc1
  *
  * @param <Date>
- * @param <Double>
+ * @param <BigDecimal>
  */
 @SuppressWarnings("hiding")
-public class TimeUnitTuple<Date, Double> {
+public class TimeUnitTuple<Date, BigDecimal> {
 
 	private final Date date;
-	private final Double unit;
+	private final BigDecimal unit;
 
-	public TimeUnitTuple(Date date, Double unit) {
+	public TimeUnitTuple(Date date, BigDecimal unit) {
 		this.date = date;
 		this.unit = unit;
 	}
@@ -24,9 +24,13 @@ public class TimeUnitTuple<Date, Double> {
 		return date;
 	}
 
-	public Double getUnit() {
+	public BigDecimal getUnit() {
 		return unit;
 	}
+
+	// public v addToUnit(Double value) {
+	// this.unit = this.unit.doubleValue + value;
+	// }
 
 	@Override
 	public int hashCode() {
@@ -45,7 +49,7 @@ public class TimeUnitTuple<Date, Double> {
 
 	@Override
 	public String toString() {
-		return "TimeUnitTuple [date=" + date + ", units=" + unit + "]";
+		return "TU[ " + date + ", " + unit + "]";
 	}
 
 }

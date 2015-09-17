@@ -1,5 +1,6 @@
 package fi.aalto.itia.saga.data;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -19,7 +20,7 @@ public class TimeSequencePlan {
 
 	// TODO Make ordered by Date/ Double Value
 	private Date start;
-	private List<TimeUnitTuple<Date, Double>> timEnergy = new ArrayList<TimeUnitTuple<Date, Double>>();
+	private List<TimeUnitTuple<Date, BigDecimal>> timEnergy = new ArrayList<TimeUnitTuple<Date, BigDecimal>>();
 
 	public TimeSequencePlan(Date start) {
 		this.start = start;
@@ -33,23 +34,23 @@ public class TimeSequencePlan {
 		this.start = start;
 	}
 
-	public void addTimeEnergyTuple(Date date, Double unit) {
-		this.addTimeEnergyTuple(new TimeUnitTuple<Date, Double>(date, unit));
+	public void addTimeEnergyTuple(Date date, BigDecimal unit) {
+		this.addTimeEnergyTuple(new TimeUnitTuple<Date, BigDecimal>(date, unit));
 	}
 
-	public void addTimeEnergyTuple(TimeUnitTuple<Date, Double> tet) {
+	public void addTimeEnergyTuple(TimeUnitTuple<Date, BigDecimal> tet) {
 		// log.debug("Adding hourly plan, t:" + tet.getDate() + " e:"
 		// + tet.getWatts());
 		this.timEnergy.add(tet);
 	}
 
-	public boolean updateTimeEnergyTuple(Date date, Double unit) {
+	public boolean updateTimeEnergyTuple(Date date, BigDecimal unit) {
 		int index;
 		index = indexOf(date);
 		if (index == -1)
 			return false;
 		else {
-			this.timEnergy.set(index, new TimeUnitTuple<Date, Double>(date,
+			this.timEnergy.set(index, new TimeUnitTuple<Date, BigDecimal>(date,
 					unit));
 			return true;
 		}
@@ -78,27 +79,35 @@ public class TimeSequencePlan {
 		return -1;
 	}
 
-	public TimeUnitTuple<Date, Double> getIndex(int index) {
+	public TimeUnitTuple<Date, BigDecimal> getIndex(int index) {
 		if (index >= 0 && index < this.size())
 			return timEnergy.get(index);
 		else
 			throw new ArrayIndexOutOfBoundsException(index);
 	}
 
-	public TimeUnitTuple<Date, Double> getTimeEnergyTuple(int index) {
+	public TimeUnitTuple<Date, BigDecimal> getTimeEnergyTuple(int index) {
 
 		if (index < 0 || index >= timEnergy.size())
 			return null;
 		return timEnergy.get(index);
 	}
 
-	public List<TimeUnitTuple<Date, Double>> getTimEnergy() {
+	public List<TimeUnitTuple<Date, BigDecimal>> getTimEnergy() {
 		return timEnergy;
 	}
 
 	public int size() {
 		return timEnergy.size();
 	}
+
+	// public boolean addToIndex(int index, double value) {
+	//
+	// if (index < this.timEnergy.size())
+	// timEnergy.get(index).add
+	// return true;
+	// return false;
+	// }
 
 	// number of decimal values for the rounding of the mean
 	public Double getMeanValue(int decimal) {

@@ -60,16 +60,17 @@ public class OptParamEstimator {
 		for (int row = INITIAL_ROW_T; !finished && row < sheet.getRows(); row++) {
 			tUpCell = (NumberCell) sheet.getCell(TUP_COL, row);// Target UP
 			tDwCell = (NumberCell) sheet.getCell(TDW_COL, row);// Target Down
-			//Target Flex Scaled down and rounded
+			// Target Flex Scaled down and rounded
 			t[0][row] = scaleDownTargetFlex(MathUtility.roundDoubleTo(
 					tUpCell.getValue(), 6));
 			t[1][row] = scaleDownTargetFlex(MathUtility.roundDoubleTo(
 					tDwCell.getValue(), 6));
 		}
-		//Calculating tSize
+		// Calculating tSize
 		tSize = 0;
 		for (int i = 0; i < t[0].length; i++) {
-			tSize += Math.pow(t[0][1], 2);
+			tSize += Math.pow(t[0][i], 2);
+			tSize += Math.pow(t[1][i], 2);
 		}
 		// Loading W values
 		Properties properties;
@@ -77,8 +78,9 @@ public class OptParamEstimator {
 		w = Double.parseDouble(properties.getProperty(W_KEY));
 	};
 
-	
-	/**Singleton Pattern implementation
+	/**
+	 * Singleton Pattern implementation
+	 * 
 	 * @return OptParamEstimator object
 	 */
 	public static OptParamEstimator getInstance() {
@@ -96,7 +98,9 @@ public class OptParamEstimator {
 
 	/**
 	 * Get the T up[0] and down[1] given
-	 * @param midnight the day the target is required
+	 * 
+	 * @param midnight
+	 *            the day the target is required
 	 * @return
 	 */
 	public double[][] getT(Date midnight) {
@@ -119,7 +123,6 @@ public class OptParamEstimator {
 		return t[1];
 	}
 
-	
 	/**
 	 * @param midnight
 	 * @return
@@ -132,13 +135,14 @@ public class OptParamEstimator {
 	public double getTSize(Date midnight) {
 		return tSize;
 	}
-	
 
 	/**
 	 * Scales down the target flexibility
+	 * 
 	 * @param flexToScale
 	 * @return Flexibility scaled by SCALE_FACTOR
 	 */
+	//TODO scale down by 5000 and multiply by number of prosumers !!!!
 	private static double scaleDownTargetFlex(double flexToScale) {
 		return flexToScale / SCALE_FACTOR;
 	}

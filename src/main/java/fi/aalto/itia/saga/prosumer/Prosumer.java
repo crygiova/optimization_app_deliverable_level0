@@ -7,18 +7,17 @@ import java.util.Date;
 
 import org.apache.log4j.Logger;
 
-import fi.aalto.itia.saga.aggregator.util.OptParamEstimator;
-import fi.aalto.itia.saga.aggregator.util.SpotPriceEstimator;
 import fi.aalto.itia.saga.data.TaskSchedule;
 import fi.aalto.itia.saga.data.TimeSequencePlan;
 import fi.aalto.itia.saga.prosumer.storage.StorageController;
 import fi.aalto.itia.saga.prosumer.util.ConsumptionEstimator;
-import fi.aalto.itia.saga.prosumer.util.OptimizationResult;
 import fi.aalto.itia.saga.prosumer.util.Scheduler;
 import fi.aalto.itia.saga.simulation.SimulationCalendarUtils;
 import fi.aalto.itia.saga.simulation.SimulationCalendar;
 import fi.aalto.itia.saga.simulation.SimulationElement;
-import fi.aalto.itia.saga.simulation.SimulationMessage;
+import fi.aalto.itia.saga.simulation.messages.DayAheadContentRequest;
+import fi.aalto.itia.saga.simulation.messages.DayAheadContentResponse;
+import fi.aalto.itia.saga.simulation.messages.SimulationMessage;
 import fi.aalto.itia.saga.util.MathUtility;
 
 /**
@@ -28,6 +27,7 @@ import fi.aalto.itia.saga.util.MathUtility;
 public class Prosumer extends SimulationElement {
 
 	private final String STORAGE_TASK = "STORAGE";
+	private final String DA_RESPONSE = "DAResponse";
 
 	private final static Logger log = Logger.getLogger(Prosumer.class);
 
@@ -89,7 +89,7 @@ public class Prosumer extends SimulationElement {
 				executeTasks();
 				// Notify the end of the tasks
 				this.notifyEndOfSimulationTasks();
-				log.debug("ProsEndOfSimTasks");
+				// log.debug("ProsEndOfSimTasks");
 				// TODO if there are messages use those till the simulator does
 				// not
 				while (!this.isReleaseToken() || !this.messageQueue.isEmpty()
@@ -102,7 +102,7 @@ public class Prosumer extends SimulationElement {
 			// send the release signal
 			this.releaseSimulationToken();
 		}
-		log.debug("EndOfSimulation");
+		log.debug("EndOfSimulation P_" + id);
 	}
 
 	@Override
@@ -139,35 +139,44 @@ public class Prosumer extends SimulationElement {
 
 	@Override
 	public void elaborateIncomingMessages() {
-		SimulationMessage str;
+		SimulationMessage inputMsg;
 		final int h = 24;
 		final int r = 2;
-		while ((str = this.pollMessageMs(10)) != null) {
-			log.debug("P<-A: " + str.getHeader());
+		while ((inputMsg = this.pollMessageMs(10)) != null) {
+			log.debug("P<-A: " + inputMsg.getHeader() + "\n"
+					+ inputMsg.getContent().toString());
+			DayAheadContentRequest msgContent = (DayAheadContentRequest) inputMsg
+					.getContent();
 			// TODO based on the type of message it should call one method to
 			// handle it.
+
 			Date midnight = SimulationCalendarUtils
 					.getDayAheadMidnight(calendar.getTime());
+
 			dayAheadConsumption = ConsumptionEstimator.getConsumption(midnight);
-			SpotPriceEstimator spe = SpotPriceEstimator.getInstance();
+			double[] dayAheadQ = dayAheadConsumption.getUnitToArray();
+
 			log.debug("DayAhead Consumption " + dayAheadConsumption.toString());
 			log.debug("StorageStatusAtMidnight " + storageStatusAtMidnight);
-			// TODO test
-			double[] dayAheadQ = dayAheadConsumption.getUnitToArray();
-			OptimizationResult opt;
-			OptParamEstimator ope = OptParamEstimator.getInstance();
-			// TODO many values are casted so make it work better
-			// TODO correct get status W since U will need to calculate the
-			// status at midnight
+
+			DayAheadContentResponse optResult;
+			DayAheadContentResponse response;
 			// TODO is could be a REST Web service or so
-			opt = Scheduler.optimizeMatlab(h, r,
-					spe.getSpotPriceDouble(midnight), storageStatusAtMidnight,
+			optResult = Scheduler.optimizeMatlab(h, r,
+					msgContent.getSpotPrice(), storageStatusAtMidnight,
 					storageController.getStorageCapacityW(),
 					storageController.getStorageMaxChargingRateWh(), dayAheadQ,
-					ope.getW(midnight), ope.getT(midnight)[0],
-					ope.getT(midnight)[1], ope.getTSize(midnight), midnight);
-			dayAheadSchedule = opt.getP();
-			log.debug(opt.toString());
+					msgContent.getW(), msgContent.gettUp(),
+					msgContent.gettDw(), msgContent.getTsize(), midnight);
+			dayAheadSchedule = optResult.getP();
+			// this is used only to clarify that the id of the response is
+			// changed and assigned the Prosumer ID
+			response = optResult;
+			response.setId(this.id);
+			SimulationMessage sm = new SimulationMessage(this, this.aggregator,
+					DA_RESPONSE, response);
+			this.sendMessage(sm);
+			log.debug(optResult.toString());
 		}
 	}
 
@@ -210,7 +219,6 @@ public class Prosumer extends SimulationElement {
 
 	private double predictStorageNextStatusAtMidnight(
 			TimeSequencePlan consumption, TimeSequencePlan schedule) {
-		// TODO is it the current hour status of the next hour status already?
 		double currentHourStatus = storageController.getStorageStatusW();
 		Date now = calendar.getTime();
 		int index = consumption.indexOf(now);

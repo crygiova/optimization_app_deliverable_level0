@@ -4,9 +4,10 @@ import java.util.Date;
 import java.util.Properties;
 
 import fi.aalto.itia.saga.prosumer.util.io.MatlabIO;
+import fi.aalto.itia.saga.simulation.messages.DayAheadContentResponse;
 import fi.aalto.itia.saga.util.Utility;
 
-public class Scheduler implements EnergyScheduler {
+public class Scheduler {
 
 	// TODO put this in a config file maybe
 	private static final String fileDir;
@@ -29,11 +30,11 @@ public class Scheduler implements EnergyScheduler {
 	};
 
 	// TODO make it return an object which contains the OPT result
-	public static synchronized OptimizationResult optimizeMatlab(int h, int r,
+	public static synchronized DayAheadContentResponse optimizeMatlab(int h, int r,
 			double[] k, double s0, double sh, double pmax, double[] q,
 			double w, double[] tUp, double[] tDw, double tsize,
 			Date dayAheadMidnight) {
-		OptimizationResult opt = null;
+		DayAheadContentResponse opt = null;
 		String write = MatlabIO.prepareStringOut(h, r, k, s0, sh, pmax, q, w,
 				tUp, tDw, tsize, fileDir + fileInName, id);
 		MatlabIO.writeOutputFile(write, fileDir + fileOutName);

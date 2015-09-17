@@ -27,6 +27,9 @@ public class MainApp {
 	private static final String MONTH_START = "monthStart";
 	private static final String DAY_START = "dayStart";
 	private static final String NUMBER_OF_DAYS_SIMULATION = "numberOfDays";
+	private static final String NUMBER_OF_PROSUMERS = "numberOfProsumers";
+	// index of the aggregatos in the list of SimmulationElements
+	private static final int AGG_INDEX = 0;
 
 	/**
 	 * Simulation Calendar
@@ -57,11 +60,16 @@ public class MainApp {
 	private static Integer startingMonthSimulation;
 
 	/**
+	 * Number of Prosumers in the Simulation
+	 */
+	public static final Integer numberOfProsumers;
+
+	/**
 	 * Represents the number of days of simulation requested
 	 */
 	private static Integer numberOfDaysSimulation;
 	/**
-	 * Represents the number of days of simulation requested, but it will be
+	 * Represents the number of days of simulation requested, and it will be
 	 * used as counted to end the simulation
 	 */
 	private static Integer numberOfDaysSimulationCountDown;
@@ -78,6 +86,8 @@ public class MainApp {
 		numberOfDaysSimulation = Integer.parseInt(properties
 				.getProperty(NUMBER_OF_DAYS_SIMULATION));
 		numberOfDaysSimulationCountDown = numberOfDaysSimulation;
+		numberOfProsumers = Integer.parseInt(properties
+				.getProperty(NUMBER_OF_PROSUMERS));
 	}
 
 	public static void main(String[] args) throws NoSuchFieldException,
@@ -141,21 +151,45 @@ public class MainApp {
 	// TODO improve this first draft of this function
 	private static void initSimulationEnvironment() {
 		// add Server
-		simulationElements.add(0, new Aggregator());
+		simulationElements.add(AGG_INDEX, new Aggregator());
 		// add One client
 		ArrayList<SimulationElement> prosumers = new ArrayList<SimulationElement>();
 		// Add as much as clients you want theoretically
-		prosumers.add(0, new Prosumer(0));
+		for (int i = 0; i < numberOfProsumers; i++) {
+			prosumers.add(i, new Prosumer(i));
+		}
 		simulationElements.addAll(prosumers);
 		// Adding clients to Server #in this case only ONE
-		((Aggregator) simulationElements.get(0)).setProsumers(prosumers);
+		((Aggregator) simulationElements.get(AGG_INDEX))
+				.setProsumers(prosumers);
 		// Adding server reference to Clients
 		for (int i = 1; i < simulationElements.size(); i++) {
 			((Prosumer) simulationElements.get(i))
-					.setAggregator(simulationElements.get(0));
+					.setAggregator(simulationElements.get(AGG_INDEX));
 		}
 
 	}
+
+	// private static void initSimulationEnvironment() {
+	// // add Server
+	// simulationElements.add(0, new Aggregator());
+	// // add One client
+	// ArrayList<SimulationElement> prosumers = new
+	// ArrayList<SimulationElement>();
+	// // Add as much as clients you want theoretically
+	// prosumers.add(0, new Prosumer(0));
+	//
+	//
+	// simulationElements.addAll(prosumers);
+	// // Adding clients to Server #in this case only ONE
+	// ((Aggregator) simulationElements.get(0)).setProsumers(prosumers);
+	// // Adding server reference to Clients
+	// for (int i = 1; i < simulationElements.size(); i++) {
+	// ((Prosumer) simulationElements.get(i))
+	// .setAggregator(simulationElements.get(0));
+	// }
+	//
+	// }
 
 	/**
 	 * This function releases all the simulation Tokens for each

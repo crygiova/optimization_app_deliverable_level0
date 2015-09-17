@@ -1,20 +1,37 @@
-package fi.aalto.itia.saga.prosumer.util;
+package fi.aalto.itia.saga.simulation.messages;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 import fi.aalto.itia.saga.data.TimeSequencePlan;
 
-public class OptimizationResult {
+public class DayAheadContentResponse implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2L;
 	private int id;
 	private TimeSequencePlan p;
-	private double [] dpUp;
-	private double [] dpDown;
-	
+	private double[] dpUp;
+	private double[] dpDown;
 	private double j;
-	
-	public OptimizationResult() {
-		// TODO Auto-generated constructor stub
+
+	/**
+	 * 
+	 */
+	public DayAheadContentResponse() {
+		super();
+	}
+
+	public DayAheadContentResponse(int id, TimeSequencePlan p, double[] dpUp,
+			double[] dpDown, double j) {
+		super();
+		this.id = id;
+		this.p = p;
+		this.dpUp = dpUp;
+		this.dpDown = dpDown;
+		this.j = j;
 	}
 
 	public int getId() {
@@ -32,7 +49,7 @@ public class OptimizationResult {
 	public void setP(TimeSequencePlan p) {
 		this.p = p;
 	}
-	
+
 	public double[] getDpUp() {
 		return dpUp;
 	}
@@ -45,7 +62,7 @@ public class OptimizationResult {
 		this.dpUp = dpUp;
 		this.dpDown = dpDown;
 	}
-	
+
 	public double[] getDpDown() {
 		return dpDown;
 	}
@@ -53,7 +70,7 @@ public class OptimizationResult {
 	public void setDpDown(double[] dpDown) {
 		this.dpDown = dpDown;
 	}
-	
+
 	public double getJ() {
 		return j;
 	}
@@ -62,12 +79,15 @@ public class OptimizationResult {
 		this.j = j;
 	}
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
 	@Override
 	public String toString() {
-		return "OptimizationResult [id=" + id + ", p=" + p + ", dpUp="
+		return "DayAheadContentResponse [id=" + id + ", p=" + p + ", dpUp="
 				+ Arrays.toString(dpUp) + ", dpDown=" + Arrays.toString(dpDown)
 				+ ", j=" + j + "]";
 	}
-	
-	
+
 }
