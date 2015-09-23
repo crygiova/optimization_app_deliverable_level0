@@ -10,18 +10,17 @@ import java.util.concurrent.TimeUnit;
 import fi.aalto.itia.saga.data.TaskSchedule;
 import fi.aalto.itia.saga.simulation.messages.SimulationMessage;
 
+/**
+ * @author giovanc1
+ *
+ */
 public abstract class SimulationElement implements Runnable {
 
 	// TODO make it client server, means that the AG can have a list of clients
 	// which
-	// TODO add end of simulation parameter to quit the simulation.
-	// at the moment are peers and the Prosumers they can have only a server at
-	// the moment
 	// Queue to take the token from and release it from the Simulator
 	protected SynchronousQueue<Integer> simulationToken;
-	// Messages queue between R0Abstract
-	// TODO The type of the message needs to be changed once it has been
-	// developed a format for the messages
+	// Message queue
 	protected LinkedBlockingQueue<SimulationMessage> messageQueue;
 	// Tasks ordered by priority and time
 	protected PriorityQueue<TaskSchedule> tasks;
@@ -34,7 +33,6 @@ public abstract class SimulationElement implements Runnable {
 	// to quit the simulation
 	private boolean endOfSimulation = false;
 	protected SimulationCalendar calendar;
-	
 
 	public SimulationElement() {
 		super();
@@ -45,12 +43,19 @@ public abstract class SimulationElement implements Runnable {
 	}
 
 	/**
-	 * 
+	 * this method is used to schedule the daily tasks of a simulation element
 	 */
 	public abstract void scheduleTasks();
 
+	/**
+	 * Used to execute the tasks for the current hour
+	 */
 	public abstract void executeTasks();
 
+	/**
+	 * This method is used to elaborate the messages received in input from
+	 * other Simulation elements
+	 */
 	public abstract void elaborateIncomingMessages();
 
 	/**
@@ -109,7 +114,7 @@ public abstract class SimulationElement implements Runnable {
 	 * @param peer
 	 * @param msg
 	 */
-	public void sendMessage( SimulationMessage msg) {
+	public void sendMessage(SimulationMessage msg) {
 		msg.getReceiver().addMessage(msg);
 	}
 
@@ -126,8 +131,8 @@ public abstract class SimulationElement implements Runnable {
 	}
 
 	public boolean nextTaskAtThisHour() {
-		return calendar.get(Calendar.HOUR_OF_DAY) == this.tasks
-				.peek().getHour();
+		return calendar.get(Calendar.HOUR_OF_DAY) == this.tasks.peek()
+				.getHour();
 	}
 
 	/**
@@ -142,7 +147,7 @@ public abstract class SimulationElement implements Runnable {
 		}
 		return null;
 	}
-	
+
 	public SimulationMessage waitForMessage() {
 		try {
 			return this.messageQueue.take();
@@ -176,7 +181,7 @@ public abstract class SimulationElement implements Runnable {
 	/**
 	 * @param endOfSimulation
 	 */
-	public void setEndOfSimulation(boolean endOfSimulation) {
+	public synchronized void setEndOfSimulation(boolean endOfSimulation) {
 		this.endOfSimulation = endOfSimulation;
 	}
 

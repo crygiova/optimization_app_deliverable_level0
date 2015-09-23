@@ -1,6 +1,7 @@
 package fi.aalto.itia.saga.aggregator;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -18,6 +19,12 @@ import fi.aalto.itia.saga.simulation.messages.DayAheadContentRequest;
 import fi.aalto.itia.saga.simulation.messages.DayAheadContentResponse;
 import fi.aalto.itia.saga.simulation.messages.SimulationMessage;
 
+/**
+ * Class which represents an Aggregator
+ * 
+ * @author giovanc1
+ *
+ */
 public class Aggregator extends SimulationElement {
 
 	private final String DAY_AHEAD_TASK = "DAYAHEAD";
@@ -41,31 +48,17 @@ public class Aggregator extends SimulationElement {
 		this.prosumers = prosumers;
 	}
 
-	/*
-	 * @Override public void run() { while (true) { // take the token and start
-	 * working this.takeSimulationToken(); // TODO Do the all the operations
-	 * needed at the calendar time // TODO check message queue and keep doing it
-	 * till is not empty // Notify the Simulator that the operations are
-	 * finished this.notifyEndOfSimulationTasks(); // TODO check message queue
-	 * and keep doing it till the main Thread // update release // TODO use
-	 * release to releaseSimulationToken this.releaseSimulationToken(); } }
-	 */
-
 	@Override
 	public void run() {
 		while (!this.isEndOfSimulation()) {
 			// take the token and start working
 			this.takeSimulationToken();
 			if (!this.isEndOfSimulation()) {
-				// TODO Do the all the operations needed at that time
+				// Do the all the operations needed at that time
 				executeTasks();
-				// TODO check message queue and keep doing it till is not empty
 				// Notify the Simulator that the operations are finished
 				this.notifyEndOfSimulationTasks();
 				// log.debug("AggEndOfSimTasks");
-				// TODO check message queue and keep doing it till the main
-				// Thread
-				// TODO DELETE Communication Test
 				while (!this.isReleaseToken() || !this.messageQueue.isEmpty()
 						&& !this.isEndOfSimulation()) {
 					SimulationMessage str = this.pollMessageMs(10);
@@ -75,11 +68,10 @@ public class Aggregator extends SimulationElement {
 					}
 				}
 			}
-			// TODO use release to putSq and reset release to false
+			// use release to putSq and reset release to false
 			this.releaseSimulationToken();
-			// log.debug("Loop");
 		}
-		log.debug("EndOfSimulation");
+		log.debug("Agg_EndOfSimulation");
 	}
 
 	/*
@@ -128,18 +120,18 @@ public class Aggregator extends SimulationElement {
 		// creating the content of the message
 		Date midnight = SimulationCalendarUtils.getDayAheadMidnight(calendar
 				.getTime());
-		double[] spotPrice = SpotPriceEstimator.getInstance()
+		BigDecimal[] spotPrice = SpotPriceEstimator.getInstance()
 				.getSpotPriceDouble(midnight);
-		double w = OptParamEstimator.getInstance().getW(midnight);
-		double tSize = OptParamEstimator.getInstance().getTSize(midnight);
+		BigDecimal w = OptParamEstimator.getInstance().getW(midnight);
+		BigDecimal tSize = OptParamEstimator.getInstance().getTSize(midnight);
 
 		// won't change during the process
-		final double[] tUpTotal = OptParamEstimator.getInstance().getTUp(
+		final BigDecimal[] tUpTotal = OptParamEstimator.getInstance().getTUp(
 				midnight);
-		final double[] tDwTotal = OptParamEstimator.getInstance().getTDw(
+		final BigDecimal[] tDwTotal = OptParamEstimator.getInstance().getTDw(
 				midnight);
-		double[] tUp = tUpTotal.clone();
-		double[] tDw = tDwTotal.clone();
+		BigDecimal[] tUp = tUpTotal.clone();
+		BigDecimal[] tDw = tDwTotal.clone();
 
 		for (SimulationElement prosumer : prosumers) {
 			// Create content of the message
@@ -152,18 +144,19 @@ public class Aggregator extends SimulationElement {
 			// Wait for the response of the Prosumer means that at the moment is
 			// synchronous communication
 			SimulationMessage response = this.waitForMessage();
-			log.debug(idProsumer + " Responded successful!! "
-					+ response.getHeader() + "\n"
-					+ response.getContent().toString());
-			// TODO Ask Olli!!!! Update TArget and total Consumption
+			log.debug(" Responded successful!! " + response.getHeader() + "\n");
 			// Must to be the same length
 			DayAheadContentResponse dacr = ((DayAheadContentResponse) response
 					.getContent());
 			for (int i = 0; i < tUp.length && i < tDw.length; i++) {
-				tUp[i] -= dacr.getDpUp()[i];
-				tDw[i] -= dacr.getDpDown()[i];
-				//TODO
+				tUp[i] = tUp[i].subtract(dacr.getDpUp()[i]);
+				tDw[i] = tDw[i].subtract(dacr.getDpDown()[i]);
+				// TODO Update Total Day Ahead Consumption
+				totalDayAheadConsumption.addUnitToIndex(i, dacr.getP()
+						.getIndex(i));
 			}
+			log.debug("Total Scheduled Consumption "
+					+ totalDayAheadConsumption.toString());
 		}
 
 	}

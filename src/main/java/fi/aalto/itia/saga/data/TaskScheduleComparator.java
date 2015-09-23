@@ -2,6 +2,7 @@ package fi.aalto.itia.saga.data;
 
 import java.util.Comparator;
 
+//TODO not in use yet
 public class TaskScheduleComparator implements Comparator<TaskSchedule> {
 
 	public TaskScheduleComparator() {

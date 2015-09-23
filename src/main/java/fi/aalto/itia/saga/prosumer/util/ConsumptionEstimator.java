@@ -3,6 +3,7 @@
  */
 package fi.aalto.itia.saga.prosumer.util;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Properties;
 
@@ -47,7 +48,7 @@ public class ConsumptionEstimator {
 		TimeSequencePlan ep = new TimeSequencePlan(start);
 		nd = new NormalDistribution(mean, variance);
 		for (int i = 0; i < H; i++) {
-			double value = MathUtility.roundDoubleTo(nd.sample(),6);//Math.round(nd.sample());
+			BigDecimal value = MathUtility.roundDoubleTo(nd.sample(),6);//Math.round(nd.sample());
 			ep.addTimeEnergyTuple(start, value);
 			start = SimulationCalendarUtils.calculateNextHour(start, 1);
 		}

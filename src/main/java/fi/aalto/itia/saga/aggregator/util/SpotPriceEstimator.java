@@ -2,13 +2,13 @@ package fi.aalto.itia.saga.aggregator.util;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
 import fi.aalto.itia.saga.data.TimeSequencePlan;
 import fi.aalto.itia.saga.util.MathUtility;
-
 import jxl.*;
 import jxl.read.biff.BiffException;
 
@@ -16,7 +16,7 @@ import jxl.read.biff.BiffException;
  * This class provides an estimation service for the SPOT Prices based on the
  * yearly spot prices defined in the xls file specified in the variable
  * FILE_NAME_PROPERTIES.
- *  
+ * 
  * @author giovanc1
  * */
 public class SpotPriceEstimator {
@@ -93,8 +93,8 @@ public class SpotPriceEstimator {
 					yearlyPlan = new TimeSequencePlan(utilityCalendar.getTime());
 					first = false;
 				}
-				double priceKWh = MathUtility.convertMWhtoKWh(n.getValue());
-				priceKWh = MathUtility.roundDoubleTo(priceKWh, 6); // Round;
+				BigDecimal priceKWh = MathUtility.convertMWhtoKWh(n.getValue());
+				priceKWh = MathUtility.roundDoubleTo(priceKWh.doubleValue(), 6); // Round;
 				yearlyPlan.addTimeEnergyTuple(utilityCalendar.getTime(),
 						priceKWh);
 
@@ -134,8 +134,8 @@ public class SpotPriceEstimator {
 		}
 		return null;
 	}
-	
-	public double[] getSpotPriceDouble(Date dayRequested) {
+
+	public BigDecimal[] getSpotPriceDouble(Date dayRequested) {
 		TimeSequencePlan ep;
 		ep = getSpotPrice(dayRequested);
 		return ep.getUnitToArray();

@@ -4,6 +4,9 @@ import java.util.GregorianCalendar;
 
 import org.apache.log4j.Logger;
 
+/**
+ * @author giovanc1 Calendar used in the simulation
+ */
 public class SimulationCalendar extends GregorianCalendar {
 
 	/**
@@ -23,6 +26,11 @@ public class SimulationCalendar extends GregorianCalendar {
 		super();
 	}
 
+	/**
+	 * Singleton
+	 * 
+	 * @return SimulationCalendar object
+	 */
 	public static synchronized SimulationCalendar getInstance() {
 		if (myCalendar == null) {
 			log.debug("RiCreation New Singleton SimulationCalendar");
@@ -32,8 +40,11 @@ public class SimulationCalendar extends GregorianCalendar {
 			return myCalendar;
 	}
 
+
 	/**
-	 * @param simulationHourTimeMs
+	 * Initiate the Simulator calendar with the required month and day of the year
+	 * @param month
+	 * @param day
 	 */
 	public synchronized void initSimulationCalendar(int month, int day) {
 		this.set(MONTH, month);
@@ -44,8 +55,9 @@ public class SimulationCalendar extends GregorianCalendar {
 		log.debug("SimulationCalendar started " + this.getTime());
 	}
 
+
 	/**
-	 * @param simulationHourTimeMs
+	 * Init the calendar with default values
 	 */
 	public synchronized void initSimulationCalendar() {
 		this.set(HOUR_OF_DAY, 0);

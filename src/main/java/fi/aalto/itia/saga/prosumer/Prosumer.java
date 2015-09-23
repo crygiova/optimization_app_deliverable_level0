@@ -3,6 +3,7 @@
  */
 package fi.aalto.itia.saga.prosumer;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 import org.apache.log4j.Logger;
@@ -21,6 +22,9 @@ import fi.aalto.itia.saga.simulation.messages.SimulationMessage;
 import fi.aalto.itia.saga.util.MathUtility;
 
 /**
+ * 
+ * Prosumer class
+ * 
  * @author giovanc1
  *
  */
@@ -40,7 +44,7 @@ public class Prosumer extends SimulationElement {
 	private TimeSequencePlan todaySchedule;
 	private TimeSequencePlan dayAheadSchedule;
 
-	private double storageStatusAtMidnight;
+	private BigDecimal storageStatusAtMidnight;
 
 	/**
 	 * 
@@ -55,6 +59,11 @@ public class Prosumer extends SimulationElement {
 		this(id, new StorageController());
 	}
 
+	/**
+	 * Allows to set the aggregator for this prosumer
+	 * 
+	 * @param aggregator
+	 */
 	public void setAggregator(SimulationElement aggregator) {
 		this.aggregator = aggregator;
 	}
@@ -85,13 +94,11 @@ public class Prosumer extends SimulationElement {
 			// start execution
 			this.takeSimulationToken();
 			if (!this.isEndOfSimulation()) {
-				// exe tasks
+				// execute tasks of the current hour
 				executeTasks();
 				// Notify the end of the tasks
 				this.notifyEndOfSimulationTasks();
 				// log.debug("ProsEndOfSimTasks");
-				// TODO if there are messages use those till the simulator does
-				// not
 				while (!this.isReleaseToken() || !this.messageQueue.isEmpty()
 						&& !this.isEndOfSimulation()) {
 					elaborateIncomingMessages();
@@ -102,16 +109,21 @@ public class Prosumer extends SimulationElement {
 			// send the release signal
 			this.releaseSimulationToken();
 		}
-		log.debug("EndOfSimulation P_" + id);
+		log.debug("P_" + id + "_EndOfSimulation");
 	}
 
 	@Override
 	public void scheduleTasks() {
 		for (int i = 0; i < 24; i++) {
+			// charging and discharging of the storage is scheduled once every
+			// hour
 			tasks.add(new TaskSchedule(STORAGE_TASK, i, 2));
 		}
 	}
 
+	/* (non-Javadoc)
+	 * @see fi.aalto.itia.saga.simulation.SimulationElement#executeTasks()
+	 */
 	@Override
 	public void executeTasks() {
 		// Schedule Tasks at midnight
@@ -121,6 +133,8 @@ public class Prosumer extends SimulationElement {
 			scheduleTasks();
 		}
 		// Execute Tasks
+		// TODO this part can be improved by using classes for the scheduled
+		// tasks rather than simple mathods
 		while (!this.tasks.isEmpty() && this.nextTaskAtThisHour()) {
 			TaskSchedule currentTask = this.tasks.remove();
 			switch (currentTask.getTaskName()) {
@@ -133,10 +147,13 @@ public class Prosumer extends SimulationElement {
 			// elaborate incoming messages
 			elaborateIncomingMessages();
 		}
-		// TODO delete// elaborate incoming messages
+		// TODO delete// elaborate incoming messages// this is not necessary
 		elaborateIncomingMessages();
 	}
 
+	/* (non-Javadoc)
+	 * @see fi.aalto.itia.saga.simulation.SimulationElement#elaborateIncomingMessages()
+	 */
 	@Override
 	public void elaborateIncomingMessages() {
 		SimulationMessage inputMsg;
@@ -154,7 +171,7 @@ public class Prosumer extends SimulationElement {
 					.getDayAheadMidnight(calendar.getTime());
 
 			dayAheadConsumption = ConsumptionEstimator.getConsumption(midnight);
-			double[] dayAheadQ = dayAheadConsumption.getUnitToArray();
+			BigDecimal[] dayAheadQ = dayAheadConsumption.getUnitToArray();
 
 			log.debug("DayAhead Consumption " + dayAheadConsumption.toString());
 			log.debug("StorageStatusAtMidnight " + storageStatusAtMidnight);
@@ -185,8 +202,8 @@ public class Prosumer extends SimulationElement {
 	// TODO u can also try to make a class task
 	private void storageTask() {
 		// log.debug("Storage Task ");
-		double chargeWh;
-		double dischargeWh;
+		BigDecimal chargeWh;
+		BigDecimal dischargeWh;
 		chargeWh = this.todaySchedule.getTimeEnergyTuple(
 				this.todaySchedule.indexOf(calendar.getTime())).getUnit();
 		dischargeWh = this.todayConsumption.getTimeEnergyTuple(
@@ -210,30 +227,42 @@ public class Prosumer extends SimulationElement {
 		todayConsumption = TimeSequencePlan.initToZero(
 				SimulationCalendarUtils.getMidnight(calendar.getTime()), 24);
 		todaySchedule = TimeSequencePlan.initToValue(
-				SimulationCalendarUtils.getMidnight(calendar.getTime()), 24, 0);
+				SimulationCalendarUtils.getMidnight(calendar.getTime()), 24,
+				new BigDecimal(0));
 		dayAheadConsumption = TimeSequencePlan.initToZero(
 				SimulationCalendarUtils.getMidnight(calendar.getTime()), 24);
 		dayAheadSchedule = TimeSequencePlan.initToValue(
-				SimulationCalendarUtils.getMidnight(calendar.getTime()), 24, 0);
+				SimulationCalendarUtils.getMidnight(calendar.getTime()), 24,
+				new BigDecimal(0));
 	}
 
-	private double predictStorageNextStatusAtMidnight(
+	/**
+	 * This utility method is used to predict the status of the battery at
+	 * midnight
+	 * 
+	 * @param consumption
+	 * @param schedule
+	 * @return
+	 */
+	private BigDecimal predictStorageNextStatusAtMidnight(
 			TimeSequencePlan consumption, TimeSequencePlan schedule) {
-		double currentHourStatus = storageController.getStorageStatusW();
+		BigDecimal currentHourStatus = storageController.getStorageStatusW();
 		Date now = calendar.getTime();
 		int index = consumption.indexOf(now);
 		int size = consumption.size();
-		double unitConsumption[] = consumption.getUnitToArray();
-		double unitScheduled[] = schedule.getUnitToArray();
+		BigDecimal unitConsumption[] = consumption.getUnitToArray();
+		BigDecimal unitScheduled[] = schedule.getUnitToArray();
 
 		for (int i = index; i < size; i++) {
-			currentHourStatus += (unitScheduled[i] - unitConsumption[i]);
+			currentHourStatus = currentHourStatus.add(unitScheduled[i]);
+			currentHourStatus = currentHourStatus.subtract(unitConsumption[i]);
 		}
-		if (currentHourStatus < 0)
-			currentHourStatus = 0;
-		if (currentHourStatus > storageController.getStorageCapacityW())
+		if (currentHourStatus.compareTo(BigDecimal.ZERO) < 0)
+			currentHourStatus = BigDecimal.ZERO;
+		if (currentHourStatus
+				.compareTo(storageController.getStorageCapacityW()) > 0)
 			currentHourStatus = storageController.getStorageCapacityW();
-		return MathUtility.roundDoubleTo(currentHourStatus, 6);
+		return MathUtility.roundBigDecimalTo(currentHourStatus, 6);
 
 	}
 

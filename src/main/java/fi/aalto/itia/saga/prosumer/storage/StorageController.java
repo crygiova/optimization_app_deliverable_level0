@@ -3,7 +3,10 @@
  */
 package fi.aalto.itia.saga.prosumer.storage;
 
+import java.math.BigDecimal;
+
 /**
+ * Class which represent a controller of a storage
  * @author giovanc1
  *
  */
@@ -26,19 +29,19 @@ public class StorageController {
 		this.storage = storage;
 	}
 
-	public Double getStorageStatusW() {
+	public BigDecimal getStorageStatusW() {
 		return storage.getStateOfChargeW();
 	}
 
-	public Double getStorageMaxChargingRateWh() {
+	public BigDecimal getStorageMaxChargingRateWh() {
 		return storage.getMaxChargingRateWh();
 	}
 
-	public Double getStorageMaxDischargingRateWh() {
+	public BigDecimal getStorageMaxDischargingRateWh() {
 		return storage.getMaxDischargingRateWh();
 	}
 
-	public Double getStorageCapacityW() {
+	public BigDecimal getStorageCapacityW() {
 		return storage.getMaxCapacityW();
 	}
 
@@ -48,7 +51,7 @@ public class StorageController {
 	 * also to implement a solution for receiving the dayly plan and charge the
 	 * battery
 	 */
-	public void chargeAndDischargeStorageWh(Double chargeWh, Double dischargeWh)
+	public void chargeAndDischargeStorageWh(BigDecimal chargeWh, BigDecimal dischargeWh)
 			throws Exception {
 		storage.chargeAndDischarge(chargeWh, dischargeWh);
 	}

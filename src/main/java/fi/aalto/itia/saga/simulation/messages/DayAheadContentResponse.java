@@ -1,10 +1,16 @@
 package fi.aalto.itia.saga.simulation.messages;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Arrays;
 
 import fi.aalto.itia.saga.data.TimeSequencePlan;
 
+/**
+ * @author giovanc1
+ *
+ *         This class represents the content of the dayahead messsage response
+ */
 public class DayAheadContentResponse implements Serializable {
 
 	/**
@@ -13,9 +19,9 @@ public class DayAheadContentResponse implements Serializable {
 	private static final long serialVersionUID = 2L;
 	private int id;
 	private TimeSequencePlan p;
-	private double[] dpUp;
-	private double[] dpDown;
-	private double j;
+	private BigDecimal[] dpUp;
+	private BigDecimal[] dpDown;
+	private BigDecimal j;
 
 	/**
 	 * 
@@ -24,8 +30,8 @@ public class DayAheadContentResponse implements Serializable {
 		super();
 	}
 
-	public DayAheadContentResponse(int id, TimeSequencePlan p, double[] dpUp,
-			double[] dpDown, double j) {
+	public DayAheadContentResponse(int id, TimeSequencePlan p,
+			BigDecimal[] dpUp, BigDecimal[] dpDown, BigDecimal j) {
 		super();
 		this.id = id;
 		this.p = p;
@@ -50,32 +56,32 @@ public class DayAheadContentResponse implements Serializable {
 		this.p = p;
 	}
 
-	public double[] getDpUp() {
+	public BigDecimal[] getDpUp() {
 		return dpUp;
 	}
 
-	public void setDpUp(double[] dpUp) {
+	public void setDpUp(BigDecimal[] dpUp) {
 		this.dpUp = dpUp;
 	}
 
-	public void setDp(double[] dpUp, double[] dpDown) {
+	public void setDp(BigDecimal[] dpUp, BigDecimal[] dpDown) {
 		this.dpUp = dpUp;
 		this.dpDown = dpDown;
 	}
 
-	public double[] getDpDown() {
+	public BigDecimal[] getDpDown() {
 		return dpDown;
 	}
 
-	public void setDpDown(double[] dpDown) {
+	public void setDpDown(BigDecimal[] dpDown) {
 		this.dpDown = dpDown;
 	}
 
-	public double getJ() {
+	public BigDecimal getJ() {
 		return j;
 	}
 
-	public void setJ(double j) {
+	public void setJ(BigDecimal j) {
 		this.j = j;
 	}
 

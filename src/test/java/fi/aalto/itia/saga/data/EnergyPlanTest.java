@@ -1,8 +1,10 @@
 package fi.aalto.itia.saga.data;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class EnergyPlanTest {
@@ -14,8 +16,8 @@ public class EnergyPlanTest {
 		TimeSequencePlan enerP = new TimeSequencePlan(start);
 		assertTrue("Start Date ", enerP.getStart().compareTo(start) == 0);
 		for (int i = 0; i < 24; i++) {
-			enerP.addTimeEnergyTuple(new TimeUnitTuple<Date, Double>(start,
-					i * 1000d));
+			enerP.addTimeEnergyTuple(new TimeUnitTuple<Date, BigDecimal>(start,
+					new BigDecimal(i * 1000d)));
 			start = UtilityTest.calculateNextHour(start, 1);
 		}
 		return enerP;
@@ -25,7 +27,7 @@ public class EnergyPlanTest {
 	public void testEnergyPlan() {
 		ep = fillEnergyPlan();
 		for (int i = 0; i < 24; i++) {
-			assertTrue(ep.getTimeEnergyTuple(i).getUnit() == i * 1000d);
+			assertTrue(ep.getTimeEnergyTuple(i).getUnit().doubleValue() == i * 1000d);
 		}
 		assertNull(ep.getTimeEnergyTuple(25));
 	}
@@ -50,8 +52,8 @@ public class EnergyPlanTest {
 		ep = fillEnergyPlan();
 		start = UtilityTest.getMidnight();
 		// assert update
-		assertTrue(ep.updateTimeEnergyTuple(start, 100d));
+		assertTrue(ep.updateTimeEnergyTuple(start, new BigDecimal(100d)));
 		// assert it has been updated
-		assertTrue(ep.getTimeEnergyTuple(0).getUnit() == 100d);
+		assertTrue(ep.getTimeEnergyTuple(0).getUnit().doubleValue() == 100d);
 	}
 }

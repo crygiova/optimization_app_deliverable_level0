@@ -9,7 +9,6 @@ package fi.aalto.itia.saga.data;
  * @param <Date>
  * @param <BigDecimal>
  */
-@SuppressWarnings("hiding")
 public class TimeUnitTuple<Date, BigDecimal> {
 
 	private final Date date;

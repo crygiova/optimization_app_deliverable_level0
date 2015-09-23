@@ -3,6 +3,7 @@
  */
 package fi.aalto.itia.saga.prosumer.storage;
 
+import java.math.BigDecimal;
 import java.util.Properties;
 
 import org.apache.commons.math3.distribution.NormalDistribution;
@@ -13,6 +14,7 @@ import fi.aalto.itia.saga.util.Utility;
 /**
  * @author giovanc1
  *
+ *         Factory which generates the storages
  */
 
 public class StorageModelFactory {
@@ -43,10 +45,10 @@ public class StorageModelFactory {
 	private static Integer id;
 
 	private static Double avgStateOfCharge;
-	
+
 	@SuppressWarnings("unused")
 	private static Double varianceStateOfCharge;
-	
+
 	@SuppressWarnings("unused")
 	private static NormalDistribution nd;
 
@@ -68,15 +70,19 @@ public class StorageModelFactory {
 				.getProperty(AVG_STATE_OF_CHARGE));
 		varianceStateOfCharge = Double.parseDouble(properties
 				.getProperty(VARIANCE_STORAGE_CAPACITY));
-		//TODO normal distribution nd = new NormalDistribution(0, varianceStateOfCharge);
+		// TODO normal distribution nd = new NormalDistribution(0,
+		// varianceStateOfCharge);
 	};
 
 	public static StorageModel getStorageModel() {
 		log.debug("Generating Storage of Type: " + factoryLogic);
 		switch (factoryLogic) {
 		case CONSTANT:
-			return new StorageModel(Integer.toString(id++), avgStateOfCharge,
-					avgStorageCapacity, avgChargingRate, avgDischargingRate);
+			return new StorageModel(Integer.toString(id++),
+					BigDecimal.valueOf(avgStateOfCharge),
+					BigDecimal.valueOf(avgStorageCapacity),
+					BigDecimal.valueOf(avgChargingRate),
+					BigDecimal.valueOf(avgDischargingRate));
 		case VARIABLE:
 			// TODO generate using a distribution the storages
 			break;
@@ -84,7 +90,7 @@ public class StorageModelFactory {
 		return null;
 	}
 
-	public static Properties getProperties () {
+	public static Properties getProperties() {
 		return properties;
 	}
 

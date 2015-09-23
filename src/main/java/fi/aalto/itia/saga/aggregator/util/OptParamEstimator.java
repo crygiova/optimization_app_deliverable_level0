@@ -2,6 +2,7 @@ package fi.aalto.itia.saga.aggregator.util;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Properties;
 
@@ -12,6 +13,12 @@ import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
+/**
+ * This class is used as an estimator for Optimization Parameters
+ * 
+ * @author giovanc1
+ *
+ */
 public class OptParamEstimator {
 
 	private static final String FILE_NAME_PROPERTIES_T = "targetFlex.xls";
@@ -21,7 +28,7 @@ public class OptParamEstimator {
 	private static final int TUP_COL = 0;
 	private static final int TDW_COL = 1;
 	// TODO apply the right scale factor
-	private static final double SCALE_FACTOR = 1;
+	private static final BigDecimal SCALE_FACTOR = new BigDecimal(1);
 
 	/**
 	 * Singleton instance for the object
@@ -30,13 +37,15 @@ public class OptParamEstimator {
 	/**
 	 * Target flexibility where tUp is t[0] and tDown is t[1]
 	 */
-	private static double[][] t;
+	private static BigDecimal[][] t;
 	/**
 	 * Optimization W parameter
 	 */
-	private static double w = 0;
-	private static double tSize;
+	private static BigDecimal w = new BigDecimal(0);
+	private static BigDecimal tSize;
 
+	
+	//Reading the properties files
 	static {
 		Workbook workbook = null;
 		// Loading Target Flex values
@@ -56,7 +65,7 @@ public class OptParamEstimator {
 		NumberCell tDwCell;
 
 		boolean finished = false;
-		t = new double[2][sheet.getRows()];// supposed to be 24
+		t = new BigDecimal[2][sheet.getRows()];// supposed to be 24
 		for (int row = INITIAL_ROW_T; !finished && row < sheet.getRows(); row++) {
 			tUpCell = (NumberCell) sheet.getCell(TUP_COL, row);// Target UP
 			tDwCell = (NumberCell) sheet.getCell(TDW_COL, row);// Target Down
@@ -66,16 +75,22 @@ public class OptParamEstimator {
 			t[1][row] = scaleDownTargetFlex(MathUtility.roundDoubleTo(
 					tDwCell.getValue(), 6));
 		}
-		// Calculating tSize
-		tSize = 0;
+		
+		tSize = BigDecimal.ZERO;// Calculating tSize
 		for (int i = 0; i < t[0].length; i++) {
-			tSize += Math.pow(t[0][i], 2);
-			tSize += Math.pow(t[1][i], 2);
+			BigDecimal a = t[0][i].pow(2);
+			BigDecimal b = t[1][i].pow(2);
+			a = a.add(b);
+			tSize = tSize.add(a);
 		}
+		tSize = MathUtility
+				.roundBigDecimalTo(tSize.subtract(BigDecimal.ONE), 6);
 		// Loading W values
 		Properties properties;
 		properties = Utility.getProperties(FILE_NAME_PROPERTIES_W);
-		w = Double.parseDouble(properties.getProperty(W_KEY));
+		w = MathUtility.roundBigDecimalTo(
+				new BigDecimal(
+						Double.parseDouble(properties.getProperty(W_KEY))), 6);
 	};
 
 	/**
@@ -103,7 +118,7 @@ public class OptParamEstimator {
 	 *            the day the target is required
 	 * @return
 	 */
-	public double[][] getT(Date midnight) {
+	public BigDecimal[][] getT(Date midnight) {
 		return t;
 	}
 
@@ -111,7 +126,7 @@ public class OptParamEstimator {
 	 * @param midnight
 	 * @return
 	 */
-	public double[] getTUp(Date midnight) {
+	public BigDecimal[] getTUp(Date midnight) {
 		return t[0];
 	}
 
@@ -119,7 +134,7 @@ public class OptParamEstimator {
 	 * @param midnight
 	 * @return
 	 */
-	public double[] getTDw(Date midnight) {
+	public BigDecimal[] getTDw(Date midnight) {
 		return t[1];
 	}
 
@@ -127,12 +142,12 @@ public class OptParamEstimator {
 	 * @param midnight
 	 * @return
 	 */
-	public double getW(Date midnight) {
+	public BigDecimal getW(Date midnight) {
 		return w;
 	}
 
 	// TODO implement logic
-	public double getTSize(Date midnight) {
+	public BigDecimal getTSize(Date midnight) {
 		return tSize;
 	}
 
@@ -142,9 +157,9 @@ public class OptParamEstimator {
 	 * @param flexToScale
 	 * @return Flexibility scaled by SCALE_FACTOR
 	 */
-	//TODO scale down by 5000 and multiply by number of prosumers !!!!
-	private static double scaleDownTargetFlex(double flexToScale) {
-		return flexToScale / SCALE_FACTOR;
+	// TODO scale down by 5000 and multiply by number of prosumers !!!!
+	private static BigDecimal scaleDownTargetFlex(BigDecimal flexToScale) {
+		return flexToScale.divide(SCALE_FACTOR);
 	}
 
 }

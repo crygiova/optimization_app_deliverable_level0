@@ -4,6 +4,10 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+/**
+ * @author giovanc1
+ * Utility Class for calendar operations
+ */
 public class SimulationCalendarUtils {
 
 	private static GregorianCalendar gc = (GregorianCalendar) GregorianCalendar

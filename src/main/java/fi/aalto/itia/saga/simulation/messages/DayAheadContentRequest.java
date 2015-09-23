@@ -1,24 +1,50 @@
 package fi.aalto.itia.saga.simulation.messages;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Date;
 
+/**
+ * @author giovanc1
+ *
+ *         DayAheadContentRequest represents the content of the day ahead
+ *         message request from Aggregator and Prosumers
+ *
+ */
 public class DayAheadContentRequest implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private double[] spotPrice;
-	private double[] tUp;
-	private double[] tDw;
-	private double tsize;
-	private double w;
+	/**
+	 * Spot Prices
+	 */
+	private BigDecimal[] spotPrice;
+	/**
+	 * Target Flex Up
+	 */
+	private BigDecimal[] tUp;
+	/**
+	 * Target Flex Down
+	 */
+	private BigDecimal[] tDw;
+	/**
+	 * Tmod
+	 */
+	private BigDecimal tsize;
+	/**
+	 * w parameter
+	 */
+	private BigDecimal w;
+	/**
+	 * 
+	 */
 	private Date startOfDay;
 
-	public DayAheadContentRequest(double[] spotPrice, double[] tUp,
-			double[] tDw, double tsize, double w, Date startOfDay) {
+	public DayAheadContentRequest(BigDecimal[] spotPrice, BigDecimal[] tUp,
+			BigDecimal[] tDw, BigDecimal tsize, BigDecimal w, Date startOfDay) {
 		super();
 		this.spotPrice = spotPrice;
 		this.tUp = tUp;
@@ -28,43 +54,43 @@ public class DayAheadContentRequest implements Serializable {
 		this.startOfDay = startOfDay;
 	}
 
-	public double[] getSpotPrice() {
+	public BigDecimal[] getSpotPrice() {
 		return spotPrice;
 	}
 
-	public void setSpotPrice(double[] spotPrice) {
+	public void setSpotPrice(BigDecimal[] spotPrice) {
 		this.spotPrice = spotPrice;
 	}
 
-	public double[] gettUp() {
+	public BigDecimal[] gettUp() {
 		return tUp;
 	}
 
-	public void settUp(double[] tUp) {
+	public void settUp(BigDecimal[] tUp) {
 		this.tUp = tUp;
 	}
 
-	public double[] gettDw() {
+	public BigDecimal[] gettDw() {
 		return tDw;
 	}
 
-	public void settDw(double[] tDw) {
+	public void settDw(BigDecimal[] tDw) {
 		this.tDw = tDw;
 	}
 
-	public double getTsize() {
+	public BigDecimal getTsize() {
 		return tsize;
 	}
 
-	public void setTsize(double tsize) {
+	public void setTsize(BigDecimal tsize) {
 		this.tsize = tsize;
 	}
 
-	public double getW() {
+	public BigDecimal getW() {
 		return w;
 	}
 
-	public void setW(double w) {
+	public void setW(BigDecimal w) {
 		this.w = w;
 	}
 

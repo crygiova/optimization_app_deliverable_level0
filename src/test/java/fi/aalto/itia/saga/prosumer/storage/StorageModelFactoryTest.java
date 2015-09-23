@@ -32,16 +32,16 @@ public class StorageModelFactoryTest {
 				.getFactoryLogic()) {
 			assertTrue("Charging Rate Assert", Double.parseDouble(prop
 					.getProperty("avgChargingRate")) == storageModel
-					.getMaxChargingRateWh());
+					.getMaxChargingRateWh().doubleValue());
 			assertTrue("DisCharging Rate Assert", Double.parseDouble(prop
 					.getProperty("avgDischargingRate")) == storageModel
-					.getMaxDischargingRateWh());
+					.getMaxDischargingRateWh().doubleValue());
 			assertTrue("Storage Capacity Assert", Double.parseDouble(prop
 					.getProperty("avgStorageCapacity")) == storageModel
-					.getMaxCapacityW());
+					.getMaxCapacityW().doubleValue());
 			assertTrue("State Of Charge", Double.parseDouble(prop
 					.getProperty("avgStateOfCharge")) == storageModel
-					.getStateOfChargeW());
+					.getStateOfChargeW().doubleValue());
 		}
 		if (StorageModelFactory.FactoryTypeLogic.VARIABLE == StorageModelFactory
 				.getFactoryLogic()) {

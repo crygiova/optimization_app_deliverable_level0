@@ -107,9 +107,9 @@ public class MainApp {
 			if (isEndOfSimulation) {
 				endOfSimulation();
 			}
-			log.debug("Updated Time: " + cal.getTime());
+			log.debug("Time: " + cal.getTime());
 		}
-		log.debug("EndOfSimulation");
+		log.debug("Main_EndOfSimulation");
 	}
 
 	/**
@@ -170,27 +170,6 @@ public class MainApp {
 
 	}
 
-	// private static void initSimulationEnvironment() {
-	// // add Server
-	// simulationElements.add(0, new Aggregator());
-	// // add One client
-	// ArrayList<SimulationElement> prosumers = new
-	// ArrayList<SimulationElement>();
-	// // Add as much as clients you want theoretically
-	// prosumers.add(0, new Prosumer(0));
-	//
-	//
-	// simulationElements.addAll(prosumers);
-	// // Adding clients to Server #in this case only ONE
-	// ((Aggregator) simulationElements.get(0)).setProsumers(prosumers);
-	// // Adding server reference to Clients
-	// for (int i = 1; i < simulationElements.size(); i++) {
-	// ((Prosumer) simulationElements.get(i))
-	// .setAggregator(simulationElements.get(0));
-	// }
-	//
-	// }
-
 	/**
 	 * This function releases all the simulation Tokens for each
 	 * SimulationElement in the Simulation Environment
@@ -242,7 +221,7 @@ public class MainApp {
 	/**
 	 * Procedure which will end the simulation of all the SimulationElements
 	 */
-	public static void endOfSimulation() {
+	public synchronized static void endOfSimulation() {
 		for (SimulationElement simulationElement : simulationElements) {
 			simulationElement.setEndOfSimulation(true);
 		}
@@ -257,14 +236,4 @@ public class MainApp {
 			e.printStackTrace();
 		}
 	}
-
-	// public static void main(String[] args) {
-	// context = new ClassPathXmlApplicationContext(
-	// "Beans.xml");
-	//
-	// HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
-	// obj.getMessage();
-	//
-	// }
-
 }

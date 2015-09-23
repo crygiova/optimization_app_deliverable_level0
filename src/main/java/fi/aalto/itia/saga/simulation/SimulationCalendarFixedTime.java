@@ -12,9 +12,8 @@ import org.apache.log4j.Logger;
  * @author giovanc1
  *
  */
-// TODO DEPRECATED
-// TODO need to set the calendar at the beginning of of the day and set 0 the
-// seconds
+
+@Deprecated
 public class SimulationCalendarFixedTime extends GregorianCalendar {
 
 	/**

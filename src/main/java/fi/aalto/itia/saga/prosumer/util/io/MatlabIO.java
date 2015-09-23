@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardWatchEventKinds;
@@ -20,6 +21,12 @@ import fi.aalto.itia.saga.simulation.SimulationCalendarUtils;
 import fi.aalto.itia.saga.simulation.messages.DayAheadContentResponse;
 import fi.aalto.itia.saga.util.MathUtility;
 
+/**
+ * CLass that allow the communication with the Matlab optimization module
+ * 
+ * @author giovanc1
+ *
+ */
 public class MatlabIO {
 	private static final String H = "H";
 	private static final String EQ = "=";
@@ -42,9 +49,29 @@ public class MatlabIO {
 	private static final String DP = "dP";
 	private static final String J = "J";
 
-	public static String prepareStringOut(int h, int r, double[] k, double s0,
-			double sh, double pmax, double[] q, double w, double[] tUp,
-			double[] tDown, double tsize, String outDir, int id) {
+	/**
+	 * This method prepare and returns the proper string for the communication
+	 * with Matlab
+	 * 
+	 * @param h
+	 * @param r
+	 * @param k
+	 * @param s0
+	 * @param sh
+	 * @param pmax
+	 * @param q
+	 * @param w
+	 * @param tUp
+	 * @param tDown
+	 * @param tsize
+	 * @param outDir
+	 * @param id
+	 * @return
+	 */
+	public static String prepareStringOut(int h, int r, BigDecimal[] k,
+			BigDecimal s0, BigDecimal sh, BigDecimal pmax, BigDecimal[] q,
+			BigDecimal w, BigDecimal[] tUp, BigDecimal[] tDown,
+			BigDecimal tsize, String outDir, int id) {
 		String buffer = H + EQ + String.valueOf(h) + NL;
 		buffer += R + EQ + String.valueOf(r) + NL;
 		buffer += S_0 + EQ + String.valueOf(s0) + NL;
@@ -61,6 +88,12 @@ public class MatlabIO {
 		return buffer;
 	}
 
+	/**
+	 * This method writes a string to a txt file
+	 * 
+	 * @param toWrite
+	 * @param fileName
+	 */
 	public static void writeOutputFile(String toWrite, String fileName) {
 		try {
 			BufferedWriter writer = new BufferedWriter(new FileWriter(new File(
@@ -73,7 +106,7 @@ public class MatlabIO {
 		}
 	}
 
-	private static String printArray(double[] k2) {
+	private static String printArray(BigDecimal[] k2) {
 		String buffer = "";
 		int i;
 		for (i = 0; i < k2.length - 1; i++) {
@@ -83,6 +116,13 @@ public class MatlabIO {
 		return buffer;
 	}
 
+	/**
+	 * Watcher method which waits response from Matlab
+	 * 
+	 * @param dirIn
+	 * @param fileIn
+	 * @return
+	 */
 	public static boolean watchOptResult(String dirIn, String fileIn) {
 		Path myDir = Paths.get(dirIn);
 		boolean outLoop = false;
@@ -126,6 +166,13 @@ public class MatlabIO {
 		return true;
 	}
 
+	/**
+	 * Reads the Optimization response message of Matlab
+	 * 
+	 * @param fileName
+	 * @param dayAheadMidnight
+	 * @return
+	 */
 	public static DayAheadContentResponse readOptResult(String fileName,
 			Date dayAheadMidnight) {
 		BufferedReader br = null;
@@ -149,7 +196,7 @@ public class MatlabIO {
 					opt.setDp(getArray(split[0]), getArray(split[1]));
 					break;
 				case J:
-					opt.setJ(Double.parseDouble(keyValue[1]));
+					opt.setJ(BigDecimal.valueOf(Double.parseDouble(keyValue[1])));
 					break;
 				}
 			}
@@ -170,7 +217,7 @@ public class MatlabIO {
 			Date dayAheadMidnight) {
 		TimeSequencePlan tsp = new TimeSequencePlan(dayAheadMidnight);
 		Date start = dayAheadMidnight;
-		double unit;
+		BigDecimal unit;
 		for (int i = 0; i < values.length; i++) {
 			unit = MathUtility.roundDoubleTo(Double.parseDouble(values[i]), 6);
 			tsp.addTimeEnergyTuple(start, unit);
@@ -179,9 +226,9 @@ public class MatlabIO {
 		return tsp;
 	}
 
-	private static double[] getArray(String s) {
+	private static BigDecimal[] getArray(String s) {
 		String[] buffer = s.split(COMMA);
-		double array[] = new double[buffer.length];
+		BigDecimal array[] = new BigDecimal[buffer.length];
 		for (int i = 0; i < buffer.length; i++) {
 			array[i] = MathUtility.roundDoubleTo(Double.parseDouble(buffer[i]),
 					6);

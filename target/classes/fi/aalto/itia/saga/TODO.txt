@@ -1,0 +1,7 @@
+//TODO 
+
+The following are the task to define next in order of priority:
+
+1 - Define the Messages Objects which are exchanged between Ag and P
+2 - Design the Optimization 
+3 - Define the Tasks of Ag and Prosumers 

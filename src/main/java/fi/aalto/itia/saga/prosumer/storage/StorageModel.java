@@ -1,12 +1,16 @@
 package fi.aalto.itia.saga.prosumer.storage;
 
+import java.math.BigDecimal;
+
 import org.apache.log4j.Logger;
 
 import fi.aalto.itia.saga.util.MathUtility;
 
 /**
- * @author giovanc1
- *Values are in Kw
+ * @author giovanc1 
+ * 
+ * Simple model of a storage! 
+ * Values are in Kw
  */
 public class StorageModel {
 	private final String EX_STORAGE_CAPACITY = "Maximum or minimum capacity storage exceeded\n";
@@ -14,15 +18,15 @@ public class StorageModel {
 	/***/
 	private String id;
 	/***/
-	private Double stateOfChargeW;
+	private BigDecimal stateOfChargeW;
 	/***/
-	private Double maxCapacityW;
+	private BigDecimal maxCapacityW;
 	/***/
-	private Double maxChargingRateWh;
+	private BigDecimal maxChargingRateWh;
 	/***/
-	private Double maxDischargingRateWh;
+	private BigDecimal maxDischargingRateWh;
 	/***/
-	private final Double minCapacityW = 0d;
+	private final BigDecimal minCapacityW = new BigDecimal(0d);
 
 	private final Logger log = Logger.getLogger(StorageModel.class);
 
@@ -33,8 +37,9 @@ public class StorageModel {
 	 * @param maxChargingRateWh
 	 * @param maxDischargingRateWh
 	 */
-	public StorageModel(String id, Double stateOfChargeW, Double maxCapacityW,
-			Double maxChargingRateWh, Double maxDischargingRateWh) {
+	public StorageModel(String id, BigDecimal stateOfChargeW,
+			BigDecimal maxCapacityW, BigDecimal maxChargingRateWh,
+			BigDecimal maxDischargingRateWh) {
 		super();
 		this.id = id;
 		this.stateOfChargeW = stateOfChargeW;
@@ -58,7 +63,7 @@ public class StorageModel {
 	}
 
 	/***/
-	public Double getStateOfChargeW() {
+	public BigDecimal getStateOfChargeW() {
 		return stateOfChargeW;
 	}
 
@@ -66,7 +71,8 @@ public class StorageModel {
 	 * @param stateOfChargeW
 	 * @throws Exception
 	 */
-	protected void setStateOfChargeW(Double stateOfChargeW) throws Exception {
+	protected void setStateOfChargeW(BigDecimal stateOfChargeW)
+			throws Exception {
 		if (this.checkChargingRate(stateOfChargeW, this.maxCapacityW)) {
 			this.stateOfChargeW = stateOfChargeW;
 		} else {
@@ -75,57 +81,18 @@ public class StorageModel {
 	}
 
 	/***/
-	public Double getMaxCapacityW() {
+	public BigDecimal getMaxCapacityW() {
 		return maxCapacityW;
 	}
 
 	/***/
-	public Double getMaxChargingRateWh() {
+	public BigDecimal getMaxChargingRateWh() {
 		return maxChargingRateWh;
 	}
 
 	/***/
-	public Double getMaxDischargingRateWh() {
+	public BigDecimal getMaxDischargingRateWh() {
 		return maxDischargingRateWh;
-	}
-
-	/**
-	 * @param wh
-	 */
-	public void charge(Double wh) {
-		// if (this.checkChargingRate(wh, this.maxChargingRateWh)) {
-		// Double nextStateOfCharge = this.stateOfChargeW + wh;
-		// if (nextStateOfCharge <= this.maxCapacityW) {
-		// this.setStateOfChargeW(nextStateOfCharge);
-		// } else {
-		// this.setStateOfChargeW(this.maxCapacityW);
-		// // TODO Exception
-		// }
-		// } else {
-		// // TODO exception or whateverElse
-		// }
-	}
-
-	/**
-	 * @param wh
-	 * @throws Exception
-	 */
-	public void discharge(Double wh) throws Exception {
-		// if (this.checkChargingRate(wh, this.maxDischargingRateWh)) {
-		// Double nextStateOfCharge = this.stateOfChargeW - wh;
-		// if ( nextStateOfCharge >= this.minCapacityW) {
-		// this.setStateOfChargeW(nextStateOfCharge);
-		// } else {
-		// this.setStateOfChargeW(this.minCapacityW);
-		// throw new
-		// Exception("Required discharging is bigger than the current status");//
-		// TODO Exception
-		// }
-		// } else {
-		// throw new
-		// Exception("DisCharging Rage Bigger than Max DisCharging Rate");//
-		// TODO Exception
-		// }
 	}
 
 	/**
@@ -133,7 +100,7 @@ public class StorageModel {
 	 * @param dischargeWh
 	 * @throws Exception
 	 */
-	public void chargeAndDischarge(Double chargeWh, Double dischargeWh)
+	public void chargeAndDischarge(BigDecimal chargeWh, BigDecimal dischargeWh)
 			throws Exception {
 		boolean exception = false;
 		String exceptionMsg = "";
@@ -142,21 +109,22 @@ public class StorageModel {
 						this.maxDischargingRateWh)) {
 			exceptionMsg += EX_STORAGE_CHARGING_RATE;
 			exception = true;
-			chargeWh = (chargeWh <= this.maxChargingRateWh) ? Math
-					.abs(chargeWh) : this.maxChargingRateWh;
-			dischargeWh = (dischargeWh <= this.maxDischargingRateWh) ? Math
-					.abs(dischargeWh) : this.maxChargingRateWh;
+			chargeWh = (chargeWh.compareTo(this.maxChargingRateWh) <= 0) ? chargeWh
+					.abs() : this.maxChargingRateWh;
+			dischargeWh = (dischargeWh.compareTo(this.maxDischargingRateWh) <= 0) ? dischargeWh
+					.abs() : this.maxChargingRateWh;
 
 			log.debug("Charging rates out of bounds: " + this.toString());
 		}
-		Double nextStateOfCharge = MathUtility.roundDoubleTo(
-				(this.stateOfChargeW + chargeWh - dischargeWh), 6);
-		if (nextStateOfCharge >= this.minCapacityW
-				&& nextStateOfCharge <= this.maxCapacityW) {
+		BigDecimal nextStateOfCharge = MathUtility.roundBigDecimalTo(
+				this.stateOfChargeW.add(chargeWh.subtract(dischargeWh)), 6);
+
+		if (nextStateOfCharge.compareTo(this.minCapacityW) >= 0
+				&& nextStateOfCharge.compareTo(this.maxCapacityW) <= 0) {
 			this.setStateOfChargeW(nextStateOfCharge);
 			log.debug("Charging Storage: " + this.toString());
 		} else {
-			nextStateOfCharge = (nextStateOfCharge < this.minCapacityW) ? this.minCapacityW
+			nextStateOfCharge = (nextStateOfCharge.compareTo(this.minCapacityW) < 0) ? this.minCapacityW
 					: this.maxCapacityW;
 			this.setStateOfChargeW(nextStateOfCharge);
 			exceptionMsg += EX_STORAGE_CAPACITY;
@@ -172,8 +140,10 @@ public class StorageModel {
 	 * @param chargingRate
 	 * @return
 	 */
-	private boolean checkChargingRate(Double wh, Double chargingRate) {
-		if (wh <= chargingRate && wh >= 0) {
+	private boolean checkChargingRate(BigDecimal wh, BigDecimal chargingRate) {
+
+		if (wh.compareTo(chargingRate) <= 0
+				&& wh.compareTo(BigDecimal.ZERO) >= 0) {
 			return true;
 		}
 		return false;

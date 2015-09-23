@@ -13,6 +13,9 @@ import fi.aalto.itia.saga.simulation.SimulationCalendarUtils;
 import fi.aalto.itia.saga.util.MathUtility;
 
 /**
+ * This class represents a time sequence of a Date and a BigDecimal.
+ * BigDecimal are used instead of Double !! 
+ * 
  * @author giovanc1
  *
  */
@@ -101,33 +104,40 @@ public class TimeSequencePlan {
 		return timEnergy.size();
 	}
 
-	// public boolean addToIndex(int index, double value) {
-	//
-	// if (index < this.timEnergy.size())
-	// timEnergy.get(index).add
-	// return true;
-	// return false;
-	// }
+	public boolean addUnitToIndex(int index,
+			TimeUnitTuple<Date, BigDecimal> value) {
+
+		if (index < this.timEnergy.size()) {
+			timEnergy.set(
+					index,
+					new TimeUnitTuple<Date, BigDecimal>(timEnergy.get(index)
+							.getDate(), timEnergy.get(index).getUnit()
+							.add(value.getUnit())));
+			return true;
+		}
+		return false;
+	}
 
 	// number of decimal values for the rounding of the mean
-	public Double getMeanValue(int decimal) {
+	public BigDecimal getMeanValue(int decimal) {
 		Mean mean = new Mean();
 		for (int i = 0; i < timEnergy.size(); i++)
-			mean.increment(timEnergy.get(i).getUnit());
-		return MathUtility.roundDoubleTo(mean.getResult(), decimal);
+			mean.increment(timEnergy.get(i).getUnit().doubleValue());
+		return MathUtility.roundBigDecimalTo(
+				BigDecimal.valueOf(mean.getResult()), decimal);
 	}
 
 	public static TimeSequencePlan initToZero(Date start, int numHours) {
 		TimeSequencePlan tsp = new TimeSequencePlan(start);
 		for (int i = 0; i < numHours; i++) {
-			tsp.addTimeEnergyTuple(start, 0d);
+			tsp.addTimeEnergyTuple(start, new BigDecimal(0d));
 			start = SimulationCalendarUtils.calculateNextHour(start, 1);
 		}
 		return tsp;
 	}
 
 	public static TimeSequencePlan initToValue(Date start, int numHours,
-			double value) {
+			BigDecimal value) {
 		TimeSequencePlan tsp = new TimeSequencePlan(start);
 		for (int i = 0; i < numHours; i++) {
 			tsp.addTimeEnergyTuple(start, value);
@@ -136,8 +146,8 @@ public class TimeSequencePlan {
 		return tsp;
 	}
 
-	public double[] getUnitToArray() {
-		double[] d = new double[timEnergy.size()];
+	public BigDecimal[] getUnitToArray() {
+		BigDecimal[] d = new BigDecimal[timEnergy.size()];
 		for (int i = 0; i < timEnergy.size(); i++) {
 			d[i] = timEnergy.get(i).getUnit();
 		}
@@ -147,7 +157,7 @@ public class TimeSequencePlan {
 	@Override
 	public String toString() {
 		String str = "";
-		for (TimeUnitTuple<Date, Double> timeUnitTuple : timEnergy) {
+		for (TimeUnitTuple<Date, BigDecimal> timeUnitTuple : timEnergy) {
 			str += timeUnitTuple.toString() + "\n";
 		}
 		return "TimeSequencePlan [start=" + start + ", timEnergy=\n" + str
