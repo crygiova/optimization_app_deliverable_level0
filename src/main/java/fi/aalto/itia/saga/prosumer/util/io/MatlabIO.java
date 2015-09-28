@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.StringReader;
 import java.math.BigDecimal;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -180,6 +181,54 @@ public class MatlabIO {
 		try {
 			String sCurrentLine;
 			br = new BufferedReader(new FileReader(fileName));
+			while ((sCurrentLine = br.readLine()) != null) {
+				// System.out.println(sCurrentLine);
+				String keyValue[] = sCurrentLine.split(EQ);
+				switch (keyValue[0]) {
+				case ID:
+					opt.setId(Integer.parseInt(keyValue[1]));
+					break;
+				case P:
+					opt.setP(createPSequence(keyValue[1].split(COMMA),
+							dayAheadMidnight));
+					break;
+				case DP:
+					String[] split = keyValue[1].split(S_COl);
+					opt.setDp(getArray(split[0]), getArray(split[1]));
+					break;
+				case J:
+					opt.setJ(BigDecimal.valueOf(Double.parseDouble(keyValue[1])));
+					break;
+				}
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (br != null)
+					br.close();
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+		}
+		return opt;
+	}
+
+	/**
+	 * Reads the Optimization response message of Matlab from a string message
+	 * without accessing a file in the filesystem
+	 * 
+	 * @param fileName
+	 * @param dayAheadMidnight
+	 * @return
+	 */
+	public static DayAheadContentResponse readOptResultFromString(
+			String content, Date dayAheadMidnight) {
+		BufferedReader br = null;
+		DayAheadContentResponse opt = new DayAheadContentResponse();
+		try {
+			String sCurrentLine;
+			br = new BufferedReader(new StringReader(content));
 			while ((sCurrentLine = br.readLine()) != null) {
 				// System.out.println(sCurrentLine);
 				String keyValue[] = sCurrentLine.split(EQ);

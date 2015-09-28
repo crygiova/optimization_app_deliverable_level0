@@ -32,6 +32,7 @@ public class Prosumer extends SimulationElement {
 
 	private final String STORAGE_TASK = "STORAGE";
 	private final String DA_RESPONSE = "DAResponse";
+	private final String QUEUE_PREFIX_NAME = "Prosumer_";
 
 	private final static Logger log = Logger.getLogger(Prosumer.class);
 
@@ -43,15 +44,23 @@ public class Prosumer extends SimulationElement {
 	private TimeSequencePlan dayAheadConsumption;
 	private TimeSequencePlan todaySchedule;
 	private TimeSequencePlan dayAheadSchedule;
+	private Scheduler scheduler;
 
 	private BigDecimal storageStatusAtMidnight;
 
 	/**
+	 * @throws Exception
 	 * 
 	 */
 	public Prosumer(int id, StorageController sc) {
 		this.id = id;
 		this.storageController = sc;
+		try {
+			scheduler = new Scheduler(QUEUE_PREFIX_NAME
+					+ String.valueOf(this.id));
+		} catch (Exception e) {
+			log.debug("Not possible to create Scheduler due to Some MQ problem!");
+		}
 		initScheduleConsumption();
 	}
 
@@ -121,7 +130,9 @@ public class Prosumer extends SimulationElement {
 		}
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see fi.aalto.itia.saga.simulation.SimulationElement#executeTasks()
 	 */
 	@Override
@@ -151,8 +162,12 @@ public class Prosumer extends SimulationElement {
 		elaborateIncomingMessages();
 	}
 
-	/* (non-Javadoc)
-	 * @see fi.aalto.itia.saga.simulation.SimulationElement#elaborateIncomingMessages()
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * fi.aalto.itia.saga.simulation.SimulationElement#elaborateIncomingMessages
+	 * ()
 	 */
 	@Override
 	public void elaborateIncomingMessages() {
@@ -179,12 +194,25 @@ public class Prosumer extends SimulationElement {
 			DayAheadContentResponse optResult;
 			DayAheadContentResponse response;
 			// TODO is could be a REST Web service or so
-			optResult = Scheduler.optimizeMatlab(h, r,
-					msgContent.getSpotPrice(), storageStatusAtMidnight,
-					storageController.getStorageCapacityW(),
-					storageController.getStorageMaxChargingRateWh(), dayAheadQ,
-					msgContent.getW(), msgContent.gettUp(),
-					msgContent.gettDw(), msgContent.getTsize(), midnight);
+			// optResult = Scheduler.optimizeMatlab(h, r,
+			// msgContent.getSpotPrice(), storageStatusAtMidnight,
+			// storageController.getStorageCapacityW(),
+			// storageController.getStorageMaxChargingRateWh(), dayAheadQ,
+			// msgContent.getW(), msgContent.gettUp(),
+			// msgContent.gettDw(), msgContent.getTsize(), midnight);
+			optResult = null;
+			try {
+				optResult = scheduler.optimizeMqMlab(h, r,
+						msgContent.getSpotPrice(), storageStatusAtMidnight,
+						storageController.getStorageCapacityW(),
+						storageController.getStorageMaxChargingRateWh(),
+						dayAheadQ, msgContent.getW(), msgContent.gettUp(),
+						msgContent.gettDw(), msgContent.getTsize(), midnight);
+			} catch (Exception e) {
+				log.debug("Not possible to instantiate RabbitMQ");
+				// TODO quit
+				e.printStackTrace();
+			}
 			dayAheadSchedule = optResult.getP();
 			// this is used only to clarify that the id of the response is
 			// changed and assigned the Prosumer ID
