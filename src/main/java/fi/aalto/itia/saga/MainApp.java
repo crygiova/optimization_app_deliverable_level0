@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Properties;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 
@@ -92,6 +93,9 @@ public class MainApp {
 
 	public static void main(String[] args) throws NoSuchFieldException,
 			SecurityException, InterruptedException {
+
+		long startTime = System.currentTimeMillis();
+
 		cal = initSimulationCalendar();
 		initSimulationEnvironment();
 		updateSimulationCountDownLatch();
@@ -110,6 +114,15 @@ public class MainApp {
 			log.debug("Time: " + cal.getTime());
 		}
 		log.debug("Main_EndOfSimulation");
+		// Execution Time
+		long execTime = System.currentTimeMillis() - startTime;
+		String out = String.format(
+				"%d min, %d sec",
+				TimeUnit.MILLISECONDS.toMinutes(execTime),
+				TimeUnit.MILLISECONDS.toSeconds(execTime)
+						- TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS
+								.toMinutes(execTime)));
+		log.debug("Execution time: " + out);
 	}
 
 	/**

@@ -48,4 +48,12 @@ public class StorageModelFactoryTest {
 			// TODO
 		}
 	}
+	
+	@Test
+	public void getValueWithinRange()
+	{
+		System.out.println(StorageModelFactory.getValueWithinRange(0, 15));
+		System.out.println(StorageModelFactory.getValueWithinRange(0, 15));
+		System.out.println(StorageModelFactory.getValueWithinRange(0, 15));
+	}
 }

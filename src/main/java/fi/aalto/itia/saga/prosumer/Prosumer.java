@@ -240,6 +240,7 @@ public class Prosumer extends SimulationElement {
 			this.storageController.chargeAndDischargeStorageWh(chargeWh,
 					dischargeWh);
 		} catch (Exception e) {
+			log.debug("Charge " + (chargeWh.subtract(dischargeWh)));
 			e.printStackTrace();
 		}
 	}

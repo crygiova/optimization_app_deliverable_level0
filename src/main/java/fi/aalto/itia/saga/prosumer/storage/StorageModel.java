@@ -124,12 +124,13 @@ public class StorageModel {
 			this.setStateOfChargeW(nextStateOfCharge);
 			log.debug("Charging Storage: " + this.toString());
 		} else {
+			BigDecimal buffer = nextStateOfCharge;
 			nextStateOfCharge = (nextStateOfCharge.compareTo(this.minCapacityW) < 0) ? this.minCapacityW
 					: this.maxCapacityW;
 			this.setStateOfChargeW(nextStateOfCharge);
 			exceptionMsg += EX_STORAGE_CAPACITY;
 			exception = true;
-			log.debug("Storage capacity out of bounds: " + this.toString());
+			log.debug("Storage capacity out of bounds: "+ buffer.toString() +" - " + this.toString());
 		}
 		if (exception)
 			throw new Exception(exceptionMsg);
