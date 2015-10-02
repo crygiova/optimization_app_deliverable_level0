@@ -1,11 +1,15 @@
 package fi.aalto.itia.saga.aggregator;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.concurrent.TimeoutException;
 
 import org.apache.log4j.Logger;
+
+import com.rabbitmq.client.Channel;
 
 import fi.aalto.itia.saga.aggregator.util.OptParamEstimator;
 import fi.aalto.itia.saga.aggregator.util.SpotPriceEstimator;
@@ -29,6 +33,7 @@ public class Aggregator extends SimulationElement {
 
 	private final String DAY_AHEAD_TASK = "DAYAHEAD";
 	private final String DAY_AHEAD_HEADER_REQUEST = "DA_Request";
+	private final static String INPUT_QUEUE_NAME = "Aggregator";
 
 	ArrayList<SimulationElement> prosumers;
 
@@ -39,9 +44,10 @@ public class Aggregator extends SimulationElement {
 	private final Logger log = Logger.getLogger(Aggregator.class);
 
 	public Aggregator() {
-		super();
+		super(INPUT_QUEUE_NAME);
 		totalDayAheadConsumption = TimeSequencePlan.initToZero(
 				SimulationCalendarUtils.getMidnight(calendar.getTime()), 24);
+		this.startConsumingMq();
 	}
 
 	public void setProsumers(ArrayList<SimulationElement> prosumers) {
@@ -135,10 +141,11 @@ public class Aggregator extends SimulationElement {
 
 		for (SimulationElement prosumer : prosumers) {
 			// Create content of the message
-			int idProsumer = ((Prosumer) prosumer).getId();
+			// int idProsumer = ((Prosumer) prosumer).getId();
 			Serializable content = new DayAheadContentRequest(spotPrice, tUp,
 					tDw, tSize, w, midnight);
-			SimulationMessage sm = new SimulationMessage(this, prosumer,
+			SimulationMessage sm = new SimulationMessage(
+					this.getInputQueueName(), prosumer.getInputQueueName(),
 					header, content);
 			this.sendMessage(sm);
 			// Wait for the response of the Prosumer means that at the moment is
@@ -170,17 +177,19 @@ public class Aggregator extends SimulationElement {
 				.initToZero(nextMidnight, 24);
 	}
 
+	// TODO Broadcast message send!
+
 	@SuppressWarnings("unused")
 	@Deprecated
 	private void communicationTest() {
-		for (int i = 0; i < 3; i++) {
-			SimulationMessage sm = new SimulationMessage(this,
-					prosumers.get(0), "AToP " + i, null);
-			log.debug("A->P: " + sm.getHeader());
-			this.sendMessage(sm);
-
-			log.debug("A<-P:TAKE " + this.takeMessage().getHeader());
-			// System.out.println(this.takeMsg());
-		}
+		// for (int i = 0; i < 3; i++) {
+		// SimulationMessage sm = new SimulationMessage(this,
+		// prosumers.get(0), "AToP " + i, null);
+		// log.debug("A->P: " + sm.getHeader());
+		// this.sendMessage(sm);
+		//
+		// log.debug("A<-P:TAKE " + this.waitForMessage().getHeader());
+		// // System.out.println(this.takeMsg());
+		// }
 	}
 }

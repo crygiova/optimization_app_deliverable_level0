@@ -169,7 +169,7 @@ public class MainApp {
 		ArrayList<SimulationElement> prosumers = new ArrayList<SimulationElement>();
 		// Add as much as clients you want theoretically
 		for (int i = 0; i < numberOfProsumers; i++) {
-			prosumers.add(i, new Prosumer(i));
+			prosumers.add(i, new Prosumer(i, "DR_Pros_" + i));
 		}
 		simulationElements.addAll(prosumers);
 		// Adding clients to Server #in this case only ONE
@@ -237,9 +237,12 @@ public class MainApp {
 	public synchronized static void endOfSimulation() {
 		for (SimulationElement simulationElement : simulationElements) {
 			simulationElement.setEndOfSimulation(true);
+			//TODO 
+			simulationElement.closeConnection();
 		}
 		releaseTokens();
 		takeTokens();
+		
 	}
 
 	public static void sleep(long millis) {

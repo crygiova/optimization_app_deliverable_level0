@@ -3,8 +3,10 @@
  */
 package fi.aalto.itia.saga.prosumer;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.concurrent.TimeoutException;
 
 import org.apache.log4j.Logger;
 
@@ -32,7 +34,7 @@ public class Prosumer extends SimulationElement {
 
 	private final String STORAGE_TASK = "STORAGE";
 	private final String DA_RESPONSE = "DAResponse";
-	private final String QUEUE_PREFIX_NAME = "Prosumer_";
+	private final String QUEUE_OPT_PREFIX_NAME = "Prosumer_";
 
 	private final static Logger log = Logger.getLogger(Prosumer.class);
 
@@ -52,20 +54,29 @@ public class Prosumer extends SimulationElement {
 	 * @throws Exception
 	 * 
 	 */
-	public Prosumer(int id, StorageController sc) {
+	public Prosumer(int id, StorageController sc, String inputQueueName) {
+		super(inputQueueName);
 		this.id = id;
 		this.storageController = sc;
 		try {
-			scheduler = new Scheduler(QUEUE_PREFIX_NAME
+			// broadcast messages
+			dRChannel.queueBind(inputQueueName, EXCHANGE_NAME, "");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			scheduler = new Scheduler(QUEUE_OPT_PREFIX_NAME
 					+ String.valueOf(this.id));
 		} catch (Exception e) {
 			log.debug("Not possible to create Scheduler due to Some MQ problem!");
 		}
 		initScheduleConsumption();
+		this.startConsumingMq();
 	}
 
-	public Prosumer(int id) {
-		this(id, new StorageController());
+	public Prosumer(int id, String inputQueueName) {
+		this(id, new StorageController(), inputQueueName);
 	}
 
 	/**
@@ -218,8 +229,9 @@ public class Prosumer extends SimulationElement {
 			// changed and assigned the Prosumer ID
 			response = optResult;
 			response.setId(this.id);
-			SimulationMessage sm = new SimulationMessage(this, this.aggregator,
-					DA_RESPONSE, response);
+			SimulationMessage sm = new SimulationMessage(
+					this.getInputQueueName(),
+					this.aggregator.getInputQueueName(), DA_RESPONSE, response);
 			this.sendMessage(sm);
 			log.debug(optResult.toString());
 		}

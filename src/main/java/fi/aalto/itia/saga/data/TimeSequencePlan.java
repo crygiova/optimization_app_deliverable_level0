@@ -1,5 +1,6 @@
 package fi.aalto.itia.saga.data;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -19,8 +20,12 @@ import fi.aalto.itia.saga.util.MathUtility;
  * @author giovanc1
  *
  */
-public class TimeSequencePlan {
+public class TimeSequencePlan implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1216068921552905410L;
 	// TODO Make ordered by Date/ Double Value
 	private Date start;
 	private List<TimeUnitTuple<Date, BigDecimal>> timEnergy = new ArrayList<TimeUnitTuple<Date, BigDecimal>>();

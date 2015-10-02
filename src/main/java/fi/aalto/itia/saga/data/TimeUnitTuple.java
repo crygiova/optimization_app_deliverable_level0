@@ -1,5 +1,7 @@
 package fi.aalto.itia.saga.data;
 
+import java.io.Serializable;
+
 /**
  * Tuple class which contains a Date type and a Double value called unit which
  * can represent different units as KW/h or €/KWh etc
@@ -9,8 +11,12 @@ package fi.aalto.itia.saga.data;
  * @param <Date>
  * @param <BigDecimal>
  */
-public class TimeUnitTuple<Date, BigDecimal> {
+public class TimeUnitTuple<Date, BigDecimal> implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7854298355052786515L;
 	private final Date date;
 	private final BigDecimal unit;
 
