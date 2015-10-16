@@ -20,6 +20,7 @@ import java.util.List;
 import fi.aalto.itia.saga.data.TimeSequencePlan;
 import fi.aalto.itia.saga.simulation.SimulationCalendarUtils;
 import fi.aalto.itia.saga.simulation.messages.DayAheadContentResponse;
+import fi.aalto.itia.saga.simulation.messages.IntraContentResponse;
 import fi.aalto.itia.saga.util.MathUtility;
 
 /**
@@ -33,6 +34,7 @@ public class MatlabIO {
 	private static final String EQ = "=";
 	private static final String NL = "\n";
 	private static final String R = "R";
+	private static final String T = "T";
 	private static final String K = "K";
 	private static final String S_0 = "S_0";
 	private static final String S_H = "S_H";
@@ -42,12 +44,18 @@ public class MatlabIO {
 	private static final String T_UP = "TUP";
 	private static final String T_DOWN = "TDW";
 	private static final String T_SIZE = "T_SIZE";
-	private static final String OUT_DIR = "OUT_DIR";
+	private static final String OPT_TYPE = "OPT_TYPE";
 	private static final String ID = "ID";
 	private static final String COMMA = ",";
 	private static final String S_COl = ";";
 	private static final String P = "P";
+	private static final String PS = "PS";
+	//DayAhead Schedule
+	private static final String DAS = "DAS";
+	private static final String DQ = "DQ";
 	private static final String DP = "dP";
+	private static final String DPD = "dPd";
+	private static final String DPU = "dPu";
 	private static final String J = "J";
 
 	/**
@@ -69,10 +77,10 @@ public class MatlabIO {
 	 * @param id
 	 * @return
 	 */
-	public static String prepareStringOut(int h, int r, BigDecimal[] k,
+	public static String prepareDAStringOut(int h, int r, BigDecimal[] k,
 			BigDecimal s0, BigDecimal sh, BigDecimal pmax, BigDecimal[] q,
 			BigDecimal w, BigDecimal[] tUp, BigDecimal[] tDown,
-			BigDecimal tsize, String outDir, int id) {
+			BigDecimal tsize, String opType, int id) {
 		String buffer = H + EQ + String.valueOf(h) + NL;
 		buffer += R + EQ + String.valueOf(r) + NL;
 		buffer += S_0 + EQ + String.valueOf(s0) + NL;
@@ -84,7 +92,25 @@ public class MatlabIO {
 		buffer += T_UP + EQ + printArray(tUp) + NL;
 		buffer += T_DOWN + EQ + printArray(tDown) + NL;
 		buffer += T_SIZE + EQ + String.valueOf(tsize) + NL;
-		buffer += OUT_DIR + EQ + outDir + NL;
+		buffer += OPT_TYPE + EQ + opType + NL;
+		buffer += ID + EQ + String.valueOf(id);
+		return buffer;
+	}
+
+	public static String prepareIntraStringOut(int h, int r, int t,
+			BigDecimal s0, BigDecimal sh, BigDecimal pmax, BigDecimal[] ps,
+			BigDecimal[] q1, BigDecimal dQ, BigDecimal[] dayAheadSchedule, String opType, int id) {
+		String buffer = H + EQ + String.valueOf(h) + NL;
+		buffer += R + EQ + String.valueOf(r) + NL;
+		buffer += T + EQ + String.valueOf(t) + NL;
+		buffer += S_0 + EQ + String.valueOf(s0) + NL;
+		buffer += S_H + EQ + String.valueOf(sh) + NL;
+		buffer += P_MAX + EQ + String.valueOf(pmax) + NL;
+		buffer += PS + EQ + printArray(ps) + NL;
+		buffer += DAS + EQ + printArray(dayAheadSchedule) + NL;
+		buffer += Q + EQ + printArray(q1) + NL;
+		buffer += DQ + EQ + String.valueOf(dQ) + NL;
+		buffer += OPT_TYPE + EQ + opType + NL;
 		buffer += ID + EQ + String.valueOf(id);
 		return buffer;
 	}
@@ -222,7 +248,7 @@ public class MatlabIO {
 	 * @param dayAheadMidnight
 	 * @return
 	 */
-	public static DayAheadContentResponse readOptResultFromString(
+	public static DayAheadContentResponse readDAOptResultFromString(
 			String content, Date dayAheadMidnight) {
 		BufferedReader br = null;
 		DayAheadContentResponse opt = new DayAheadContentResponse();
@@ -246,6 +272,45 @@ public class MatlabIO {
 					break;
 				case J:
 					opt.setJ(BigDecimal.valueOf(Double.parseDouble(keyValue[1])));
+					break;
+				}
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (br != null)
+					br.close();
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+		}
+		return opt;
+	}
+
+	public static IntraContentResponse readIntraOptResultFromString(
+			String content, Date dayAheadMidnight) {
+		BufferedReader br = null;
+		IntraContentResponse opt = new IntraContentResponse();
+		try {
+			String sCurrentLine;
+			br = new BufferedReader(new StringReader(content));
+			while ((sCurrentLine = br.readLine()) != null) {
+				// System.out.println(sCurrentLine);
+				String keyValue[] = sCurrentLine.split(EQ);
+				switch (keyValue[0]) {
+				case ID:
+					opt.setId(Integer.parseInt(keyValue[1]));
+					break;
+				case DPD:
+					opt.setdPd(getArray(keyValue[1]));
+					break;
+				case DPU:
+					opt.setdPu(getArray(keyValue[1]));
+					break;
+				case PS:
+					opt.setP(createPSequence(keyValue[1].split(COMMA),
+							dayAheadMidnight));
 					break;
 				}
 			}

@@ -214,6 +214,21 @@ public abstract class SimulationElement implements Runnable, Serializable {
 		}
 	}
 
+	public void publishMessage(SimulationMessage msg) {
+		String corrId = java.util.UUID.randomUUID().toString();
+
+		BasicProperties props = new BasicProperties.Builder()
+				.correlationId(corrId).replyTo(this.inputQueueName).build();
+		byte[] body;
+		try {
+			body = SimulationMessage.serialize(msg);
+			dRChannel.basicPublish(EXCHANGE_NAME, "", props, body);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+	}
+
 	// // Send a msg to a specified SimulationElement
 	// /**
 	// * @param peer

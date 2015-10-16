@@ -1,7 +1,7 @@
 package fi.aalto.itia.saga.data;
 
 
-//TODO Not used yet
+
 public class TaskSchedule implements Comparable<TaskSchedule> {
 
 	private String taskName;

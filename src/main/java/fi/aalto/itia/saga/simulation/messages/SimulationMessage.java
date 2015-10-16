@@ -19,6 +19,12 @@ public class SimulationMessage implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 15L;
+	
+	public static final String DAY_AHEAD_HEADER_REQUEST = "DA_Request";
+	public static final String DAY_AHEAD_HEADER_RESPONSE = "DA_Response";
+	public static final String INTRA_START_HEADER_REQUEST = "Intra_Start_Request";
+	public static final String INTRA_START_HEADER_RESPONSE = "Intra_Start_Response";
+	public static final String INTRA_HEADER_CHANGE_CONSUMPTION_REQUEST = "Change_Consumption";
 	/**
 	 * SimulationElement sender of the message
 	 */
@@ -36,7 +42,7 @@ public class SimulationMessage implements Serializable {
 	 * Serializable object with the content of the message.
 	 */
 	private Serializable content;
-
+ 
 	public SimulationMessage(String sender,
 			String receiver, String header, Serializable content) {
 		super();

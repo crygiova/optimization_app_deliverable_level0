@@ -14,8 +14,8 @@ import fi.aalto.itia.saga.simulation.SimulationCalendarUtils;
 import fi.aalto.itia.saga.util.MathUtility;
 
 /**
- * This class represents a time sequence of a Date and a BigDecimal.
- * BigDecimal are used instead of Double !! 
+ * This class represents a time sequence of a Date and a BigDecimal. BigDecimal
+ * are used instead of Double !!
  * 
  * @author giovanc1
  *
@@ -60,6 +60,17 @@ public class TimeSequencePlan implements Serializable {
 		else {
 			this.timEnergy.set(index, new TimeUnitTuple<Date, BigDecimal>(date,
 					unit));
+			return true;
+		}
+	}
+
+	public boolean updateTimeEnergyTuple(int index, BigDecimal unit) {
+
+		if (index == -1)
+			return false;
+		else {
+			this.timEnergy.set(index, new TimeUnitTuple<Date, BigDecimal>(
+					timEnergy.get(index).getDate(), unit));
 			return true;
 		}
 	}
