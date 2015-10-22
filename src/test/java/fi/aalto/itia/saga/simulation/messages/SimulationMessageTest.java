@@ -4,8 +4,6 @@ import java.io.IOException;
 
 import org.junit.Test;
 
-import fi.aalto.itia.saga.prosumer.Prosumer;
-
 public class SimulationMessageTest {
 
 	@Test

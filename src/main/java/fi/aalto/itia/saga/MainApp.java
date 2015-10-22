@@ -12,8 +12,10 @@ import java.util.concurrent.TimeUnit;
 import org.apache.log4j.Logger;
 
 import fi.aalto.itia.saga.aggregator.Aggregator;
+import fi.aalto.itia.saga.mongodb.DBExport;
 import fi.aalto.itia.saga.prosumer.Prosumer;
 import fi.aalto.itia.saga.simulation.SimulationCalendar;
+import fi.aalto.itia.saga.simulation.SimulationCalendarUtils;
 import fi.aalto.itia.saga.simulation.SimulationElement;
 import fi.aalto.itia.saga.util.Utility;
 
@@ -65,6 +67,9 @@ public class MainApp {
 	 */
 	public static final Integer numberOfProsumers;
 
+	private static Aggregator aggregator;
+	private static ArrayList<SimulationElement> prosumers;
+
 	/**
 	 * Represents the number of days of simulation requested
 	 */
@@ -76,6 +81,10 @@ public class MainApp {
 	private static Integer numberOfDaysSimulationCountDown;
 
 	private static final Logger log = Logger.getLogger(MainApp.class);
+
+	private static DBExport dbe = new DBExport();
+
+	private static long startTime;
 
 	// Loading the properties configuration
 	static {
@@ -94,7 +103,7 @@ public class MainApp {
 	public static void main(String[] args) throws NoSuchFieldException,
 			SecurityException, InterruptedException {
 
-		long startTime = System.currentTimeMillis();
+		startTime = System.currentTimeMillis();
 
 		cal = initSimulationCalendar();
 		initSimulationEnvironment();
@@ -107,13 +116,22 @@ public class MainApp {
 			simulationCountDownLatch.await();
 			takeTokens();
 			// Simulator Progress
+			// if it is 11pm save to db dayahead
+			if (cal.get(Calendar.HOUR_OF_DAY) == 23) {
+				dbe.buildDADoc(aggregator, prosumers, numberOfDaysSimulation
+						- numberOfDaysSimulationCountDown,
+						SimulationCalendarUtils.getMidnight(cal.getTime()));
+			}
 			isEndOfSimulation = nextSimulationStep();
 			if (isEndOfSimulation) {
 				endOfSimulation();
 			}
 			log.debug("Time: " + cal.getTime());
 		}
-		log.debug("Main_EndOfSimulation");
+		endOfSimulationProcess();
+	}
+
+	private static void endOfSimulationProcess() {
 		// Execution Time
 		long execTime = System.currentTimeMillis() - startTime;
 		String out = String.format(
@@ -122,7 +140,14 @@ public class MainApp {
 				TimeUnit.MILLISECONDS.toSeconds(execTime)
 						- TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS
 								.toMinutes(execTime)));
+		dbe.buildProsumersDoc(prosumers);
+		dbe.buildSimulationDoc(numberOfDaysSimulation, numberOfProsumers,
+				cal.getStartTime(), execTime);
+		dbe.writeToDb();
+		dbe.queryAll();
+		dbe.dropAll();
 		log.debug("Execution time: " + out);
+		log.debug("Main_EndOfSimulation");
 	}
 
 	/**
@@ -161,12 +186,12 @@ public class MainApp {
 	 * structures containing all the SimulationElement object used in the
 	 * Simulation
 	 */
-	// TODO improve this first draft of this function
 	private static void initSimulationEnvironment() {
 		// add Server
-		simulationElements.add(AGG_INDEX, new Aggregator());
-		// add One client
-		ArrayList<SimulationElement> prosumers = new ArrayList<SimulationElement>();
+		aggregator = new Aggregator();
+		simulationElements.add(AGG_INDEX, aggregator);
+		// add Prosumers
+		prosumers = new ArrayList<SimulationElement>();
 		// Add as much as clients you want theoretically
 		for (int i = 0; i < numberOfProsumers; i++) {
 			prosumers.add(i, new Prosumer(i, "DR_Pros_" + i));
@@ -180,7 +205,6 @@ public class MainApp {
 			((Prosumer) simulationElements.get(i))
 					.setAggregator(simulationElements.get(AGG_INDEX));
 		}
-
 	}
 
 	/**
@@ -237,12 +261,11 @@ public class MainApp {
 	public synchronized static void endOfSimulation() {
 		for (SimulationElement simulationElement : simulationElements) {
 			simulationElement.setEndOfSimulation(true);
-			//TODO 
 			simulationElement.closeConnection();
 		}
 		releaseTokens();
 		takeTokens();
-		
+
 	}
 
 	public static void sleep(long millis) {

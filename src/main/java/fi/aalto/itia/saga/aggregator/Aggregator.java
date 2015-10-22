@@ -41,6 +41,19 @@ public class Aggregator extends SimulationElement {
 
 	private TimeSequencePlan totalDayAheadConsumption;
 	private TimeSequencePlan totalTodayConsumption;
+	//initial FLex
+	private BigDecimal[] tUpTotal;
+	private BigDecimal[] tDwTotal;
+	//Cumulative Flex
+	private BigDecimal[] tUp;
+	private BigDecimal[] tDw;
+	
+	private BigDecimal[] dayAheadSpotPrice;
+	
+	public BigDecimal[] getDayAheadSpotPrice() {
+		return dayAheadSpotPrice;
+	}
+
 	// use for not scheduling the day ahead in the first day!
 	private boolean firstDay = true;
 	private boolean finishedIntraTask = true;
@@ -92,14 +105,18 @@ public class Aggregator extends SimulationElement {
 	@Override
 	public void scheduleTasks() {
 		this.tasks.add(new TaskSchedule(DAY_AHEAD_TASK, 12, 1));
-		if (firstDay) {
-			firstDay = false;
-		} else {
-			for (int i = 0; i < 24; i++) {
-				// the priority and the hour defines the order in the tasks
-				// queue
-				// intra day task
-				tasks.add(new TaskSchedule(INTRA_TASK, i, 3));
+		//if deciding to execute intra
+		if (OptParamEstimator.exeIntra()) {
+			// TODO uncomment for intra
+			if (firstDay) {
+				firstDay = false;
+			} else {
+				for (int i = 0; i < 24; i++) {
+					// the priority and the hour defines the order in the tasks
+					// queue
+					// intra day task
+					tasks.add(new TaskSchedule(INTRA_TASK, i, 3));
+				}
 			}
 		}
 	}
@@ -185,8 +202,9 @@ public class Aggregator extends SimulationElement {
 			dE = totalTodayConsumption.getIndex(index).getUnit()
 					.subtract(sumConsumptions);
 		}
-		log.debug("Imbalance dE: " + dE + " >> sumConsumption " + sumConsumptions
-				+ " >> sumDPu " + sumDPu + " >> sumDPu " + sumDPd);
+		log.debug("Imbalance dE: " + dE + " >> sumConsumption "
+				+ sumConsumptions + " >> sumDPu " + sumDPu + " >> sumDPu "
+				+ sumDPd);
 		BigDecimal r = BigDecimal.ZERO;
 		boolean isUp = dE.compareTo(BigDecimal.ZERO) < 0;
 		if (isUp) {
@@ -200,9 +218,9 @@ public class Aggregator extends SimulationElement {
 				r = BigDecimal.valueOf(dE.doubleValue() / sumDPd.doubleValue());
 			// r = dE.divide(sumDPd);
 		}
-		//TODO delete 0.9
-		r = BigDecimal.valueOf(Math.min(Math.max(r.doubleValue()*0.9, 0), 1));
-		
+		// TODO delete 0.9
+		r = BigDecimal.valueOf(Math.min(Math.max(r.doubleValue() * 0.9, 0), 1));
+
 		IntraChangeConsumptionRequest content = new IntraChangeConsumptionRequest(
 				isUp, r);// need to send r and up or down! Make an object
 		SimulationMessage changeConsumptionRequest = new SimulationMessage(
@@ -231,22 +249,22 @@ public class Aggregator extends SimulationElement {
 		// creating the content of the message
 		Date midnight = SimulationCalendarUtils.getDayAheadMidnight(calendar
 				.getTime());
-		BigDecimal[] spotPrice = SpotPriceEstimator.getInstance()
+		dayAheadSpotPrice = SpotPriceEstimator.getInstance()
 				.getSpotPriceDouble(midnight);
 		BigDecimal w = OptParamEstimator.getInstance().getW(midnight);
 		BigDecimal tSize = OptParamEstimator.getInstance().getTSize(midnight);
 
 		// won't change during the process
-		final BigDecimal[] tUpTotal = OptParamEstimator.getInstance().getTUp(
+		tUpTotal = OptParamEstimator.getInstance().getTUp(
 				midnight);
-		final BigDecimal[] tDwTotal = OptParamEstimator.getInstance().getTDw(
+		tDwTotal = OptParamEstimator.getInstance().getTDw(
 				midnight);
-		BigDecimal[] tUp = tUpTotal.clone();
-		BigDecimal[] tDw = tDwTotal.clone();
+		tUp = tUpTotal.clone();
+		tDw = tDwTotal.clone();
 
 		for (SimulationElement prosumer : prosumers) {
 			// Create content of the message
-			Serializable content = new DayAheadContentRequest(spotPrice, tUp,
+			Serializable content = new DayAheadContentRequest(dayAheadSpotPrice, tUp,
 					tDw, tSize, w, midnight);
 			SimulationMessage sm = new SimulationMessage(
 					this.getInputQueueName(), prosumer.getInputQueueName(),
@@ -261,7 +279,7 @@ public class Aggregator extends SimulationElement {
 			DayAheadContentResponse dacr = ((DayAheadContentResponse) response
 					.getContent());
 			for (int i = 0; i < tUp.length && i < tDw.length; i++) {
-				//Update flexibility
+				// Update flexibility
 				tUp[i] = tUp[i].subtract(dacr.getDpUp()[i]);
 				tDw[i] = tDw[i].subtract(dacr.getDpDown()[i]);
 				// TODO Update Total Day Ahead Consumption
@@ -284,6 +302,30 @@ public class Aggregator extends SimulationElement {
 	}
 
 	// TODO Broadcast message send!
+
+	public BigDecimal[] getTotalDayAheadConsumption() {
+		return totalDayAheadConsumption.getUnitToArray();
+	}
+
+	public BigDecimal[] getTotalTodayConsumption() {
+		return totalTodayConsumption.getUnitToArray();
+	}
+
+	public BigDecimal[] gettUpTotal() {
+		return tUpTotal;
+	}
+
+	public BigDecimal[] gettDwTotal() {
+		return tDwTotal;
+	}
+
+	public BigDecimal[] gettUp() {
+		return tUp;
+	}
+
+	public BigDecimal[] gettDw() {
+		return tDw;
+	}
 
 	@SuppressWarnings("unused")
 	@Deprecated

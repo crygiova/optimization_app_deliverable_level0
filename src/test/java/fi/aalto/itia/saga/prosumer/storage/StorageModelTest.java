@@ -3,11 +3,6 @@
  */
 package fi.aalto.itia.saga.prosumer.storage;
 
-import org.junit.Test;
-
-import fi.aalto.itia.saga.prosumer.storage.StorageModel;
-import static org.junit.Assert.*;
-
 /**
  * @author giovanc1
  *

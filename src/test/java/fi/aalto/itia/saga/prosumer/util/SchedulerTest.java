@@ -1,5 +1,4 @@
 package fi.aalto.itia.saga.prosumer.util;
-import java.util.Date;
 
 import org.junit.Test;
 

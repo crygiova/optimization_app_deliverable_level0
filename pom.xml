@@ -107,6 +107,25 @@
 			<version>2.6.12</version>
 		</dependency>
 
+		<!-- Mongo Db -->
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongodb-driver</artifactId>
+			<version>3.0.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>bson</artifactId>
+			<version>3.0.4</version>
+		</dependency>
+
+		<!-- Google Commons -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>18.0</version>
+		</dependency>
+
 
 	</dependencies>
 </project>

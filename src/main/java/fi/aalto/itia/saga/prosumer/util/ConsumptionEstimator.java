@@ -29,6 +29,7 @@ public class ConsumptionEstimator {
 	private static final String MEAN = "mean";
 	private static final String VARIANCE = "variance";
 	private static final String DEVIATION = "maxDeviation";
+	private static final String DB_CONS = "consumptionDB";
 
 	private static Properties properties;
 	private static NormalDistribution nd;
@@ -37,12 +38,16 @@ public class ConsumptionEstimator {
 	private static Double variance;
 	private static Double deviation;
 
+	private static ImportConsumptions importConsumption = new ImportConsumptions();
+	private static boolean dbConsumption;
+
 	/** Load Properties from Property File */
 	static {
 		properties = Utility.getProperties(FILE_NAME_PROPERTIES);
 		mean = Double.parseDouble(properties.getProperty(MEAN));
 		variance = Double.parseDouble(properties.getProperty(VARIANCE));
 		deviation = Double.parseDouble(properties.getProperty(DEVIATION));
+		dbConsumption = Boolean.parseBoolean((properties.getProperty(DB_CONS)));
 	};
 
 	/**
@@ -50,11 +55,25 @@ public class ConsumptionEstimator {
 	 */
 	public static TimeSequencePlan getConsumption(Date start) {
 		TimeSequencePlan ep = new TimeSequencePlan(start);
-		nd = new NormalDistribution(mean, variance);
-		for (int i = 0; i < H; i++) {
-			BigDecimal value = MathUtility.roundDoubleTo(nd.sample(), 6);// Math.round(nd.sample());
-			ep.addTimeEnergyTuple(start, value);
-			start = SimulationCalendarUtils.calculateNextHour(start, 1);
+		if (dbConsumption) {
+			// Check the period of the year from the db
+			String key = importConsumption.getPeriodName(start);
+			// get the consumption
+			Double[] cons = importConsumption.getConsumption(key);
+			for (int i = 0; i < H; i++) {
+				BigDecimal value = MathUtility.roundDoubleTo(cons[i], 6);// Math.round(nd.sample());
+				ep.addTimeEnergyTuple(start, value);
+				start = SimulationCalendarUtils.calculateNextHour(start, 1);
+			}
+
+		} else {
+
+			nd = new NormalDistribution(mean, variance);
+			for (int i = 0; i < H; i++) {
+				BigDecimal value = MathUtility.roundDoubleTo(nd.sample(), 6);// Math.round(nd.sample());
+				ep.addTimeEnergyTuple(start, value);
+				start = SimulationCalendarUtils.calculateNextHour(start, 1);
+			}
 		}
 		return ep;
 	}

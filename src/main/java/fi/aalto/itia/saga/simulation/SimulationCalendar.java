@@ -1,5 +1,6 @@
 package fi.aalto.itia.saga.simulation;
 
+import java.util.Date;
 import java.util.GregorianCalendar;
 
 import org.apache.log4j.Logger;
@@ -18,6 +19,9 @@ public class SimulationCalendar extends GregorianCalendar {
 			.getLogger(SimulationCalendar.class);
 
 	private static SimulationCalendar myCalendar = new SimulationCalendar();
+	
+	private static Date startTime;
+	
 
 	/**
 	 * 
@@ -53,8 +57,13 @@ public class SimulationCalendar extends GregorianCalendar {
 		this.set(MINUTE, 0);
 		this.set(SECOND, 0);
 		log.debug("SimulationCalendar started " + this.getTime());
+		startTime = this.getTime();
 	}
 
+
+	public Date getStartTime() {
+		return startTime;
+	}
 
 	/**
 	 * Init the calendar with default values

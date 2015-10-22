@@ -24,6 +24,7 @@ public class OptParamEstimator {
 	private static final String FILE_NAME_PROPERTIES_T = "targetFlex.xls";
 	private static final String FILE_NAME_PROPERTIES_W = "wParameter.properties";
 	private static final String W_KEY = "W";
+	private static final String INTRA_KEY = "intra";
 	private static final int INITIAL_ROW_T = 0;
 	private static final int TUP_COL = 0;
 	private static final int TDW_COL = 1;
@@ -42,10 +43,10 @@ public class OptParamEstimator {
 	 * Optimization W parameter
 	 */
 	private static BigDecimal w = new BigDecimal(0);
+	private static boolean exeIntraDay = false;
 	private static BigDecimal tSize;
 
-	
-	//Reading the properties files
+	// Reading the properties files
 	static {
 		Workbook workbook = null;
 		// Loading Target Flex values
@@ -75,7 +76,7 @@ public class OptParamEstimator {
 			t[1][row] = scaleDownTargetFlex(MathUtility.roundDoubleTo(
 					tDwCell.getValue(), 6));
 		}
-		
+
 		tSize = BigDecimal.ZERO;// Calculating tSize
 		for (int i = 0; i < t[0].length; i++) {
 			BigDecimal a = t[0][i].pow(2);
@@ -91,6 +92,9 @@ public class OptParamEstimator {
 		w = MathUtility.roundBigDecimalTo(
 				new BigDecimal(
 						Double.parseDouble(properties.getProperty(W_KEY))), 6);
+		// Decides if executing the intraday or not
+		if (properties.getProperty(INTRA_KEY).compareToIgnoreCase("Y") == 0)
+			exeIntraDay = true;
 	};
 
 	/**
@@ -162,4 +166,7 @@ public class OptParamEstimator {
 		return flexToScale.divide(SCALE_FACTOR);
 	}
 
+	public static boolean exeIntra() {
+		return exeIntraDay;
+	}
 }

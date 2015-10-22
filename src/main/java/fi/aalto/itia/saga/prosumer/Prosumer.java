@@ -10,6 +10,7 @@ import java.util.Date;
 
 import org.apache.log4j.Logger;
 
+import fi.aalto.itia.saga.aggregator.util.OptParamEstimator;
 import fi.aalto.itia.saga.data.TaskSchedule;
 import fi.aalto.itia.saga.data.TimeSequencePlan;
 import fi.aalto.itia.saga.prosumer.storage.StorageController;
@@ -57,6 +58,8 @@ public class Prosumer extends SimulationElement {
 	private TimeSequencePlan dayAheadConsumptionDeviated;
 	private TimeSequencePlan todaySchedule;
 	private TimeSequencePlan dayAheadSchedule;
+	private BigDecimal[] dayAheadDpUp;
+	private BigDecimal[] dayAheadDpDw;
 
 	private IntraContentResponse intraEnergyConsumption;
 	private int nextHour;
@@ -66,6 +69,7 @@ public class Prosumer extends SimulationElement {
 	private BigDecimal storageStatusAtMidnight;
 
 	private boolean storageCharged = false;
+
 
 	/**
 	 * @throws Exception
@@ -229,8 +233,13 @@ public class Prosumer extends SimulationElement {
 
 		dayAheadConsumptionEstimated = ConsumptionEstimator
 				.getConsumption(midnight);
-		dayAheadConsumptionDeviated = ConsumptionEstimator
-				.getConsumptionDeviated(dayAheadConsumptionEstimated);
+		if (OptParamEstimator.exeIntra()) {
+			dayAheadConsumptionDeviated = ConsumptionEstimator
+					.getConsumptionDeviated(dayAheadConsumptionEstimated);
+		} else {
+			// TODO DElete with intra
+			dayAheadConsumptionDeviated = dayAheadConsumptionEstimated;
+		}
 		BigDecimal[] dayAheadQ = dayAheadConsumptionEstimated.getUnitToArray();
 
 		log.debug("DayAhead Consumption "
@@ -252,6 +261,8 @@ public class Prosumer extends SimulationElement {
 			e.printStackTrace();
 		}
 		dayAheadSchedule = optResult.getP();
+		dayAheadDpUp = optResult.getDpUp();
+		dayAheadDpDw = optResult.getDpDown();
 		// this is used only to clarify that the id of the response is
 		// changed and assigned the Prosumer ID
 		response = optResult;
@@ -370,7 +381,7 @@ public class Prosumer extends SimulationElement {
 		IntraChangeConsumptionRequest iccr = (IntraChangeConsumptionRequest) inputMsg
 				.getContent();
 		int length = intraEnergyConsumption.getdPd().length;
-		BigDecimal[] dp = new BigDecimal[length];
+		//BigDecimal[] dp = new BigDecimal[length];
 		BigDecimal[] dpBuffer;
 		if (iccr.isUp()) {
 			dpBuffer = intraEnergyConsumption.getdPu().clone();
@@ -462,6 +473,26 @@ public class Prosumer extends SimulationElement {
 			currentHourStatus = storageController.getStorageCapacityW();
 		return MathUtility.roundBigDecimalTo(currentHourStatus, 6);
 
+	}
+
+	public TimeSequencePlan getDayAheadConsumptionEstimated() {
+		return dayAheadConsumptionEstimated;
+	}
+
+	public TimeSequencePlan getDayAheadConsumptionDeviated() {
+		return dayAheadConsumptionDeviated;
+	}
+
+	public TimeSequencePlan getDayAheadSchedule() {
+		return dayAheadSchedule;
+	}
+
+	public BigDecimal[] getDayAheadDpUp() {
+		return dayAheadDpUp;
+	}
+
+	public BigDecimal[] getDayAheadDpDw() {
+		return dayAheadDpDw;
 	}
 
 }

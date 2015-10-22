@@ -44,6 +44,10 @@ public class StorageController {
 	public BigDecimal getStorageCapacityW() {
 		return storage.getMaxCapacityW();
 	}
+	
+	public String getStorageId() {
+		return storage.getId();
+	}
 
 	/*
 	 * TODO implement a solution that knows what is the real charge of the
