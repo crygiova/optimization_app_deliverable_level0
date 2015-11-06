@@ -23,13 +23,16 @@ public class OptParamEstimator {
 
 	private static final String FILE_NAME_PROPERTIES_T = "targetFlex.xls";
 	private static final String FILE_NAME_PROPERTIES_W = "wParameter.properties";
+	private static final String FILE_NAME_PROPERTIES_NUM_PROS = "mainApp.properties";
 	private static final String W_KEY = "W";
+	private static final String N_PROS = "numberOfProsumers";
 	private static final String INTRA_KEY = "intra";
 	private static final int INITIAL_ROW_T = 0;
 	private static final int TUP_COL = 0;
 	private static final int TDW_COL = 1;
-	// TODO apply the right scale factor
-	private static final BigDecimal SCALE_FACTOR = new BigDecimal(1);
+	// TODO apply the right scale factor 10 amount of consumers, later take the
+	// amou8nt from the confg file
+	private static final BigDecimal SCALE_FACTOR;
 
 	/**
 	 * Singleton instance for the object
@@ -48,6 +51,14 @@ public class OptParamEstimator {
 
 	// Reading the properties files
 	static {
+		
+		Properties properties;
+		properties = Utility.getProperties(FILE_NAME_PROPERTIES_NUM_PROS);
+		BigDecimal npros = MathUtility.roundBigDecimalTo(
+				new BigDecimal(
+						Double.parseDouble(properties.getProperty(N_PROS))), 6);
+		SCALE_FACTOR = new BigDecimal(5000).divide(npros);
+		
 		Workbook workbook = null;
 		// Loading Target Flex values
 		ClassLoader classLoader = Thread.currentThread()
@@ -86,8 +97,8 @@ public class OptParamEstimator {
 		}
 		tSize = MathUtility
 				.roundBigDecimalTo(tSize.subtract(BigDecimal.ONE), 6);
+
 		// Loading W values
-		Properties properties;
 		properties = Utility.getProperties(FILE_NAME_PROPERTIES_W);
 		w = MathUtility.roundBigDecimalTo(
 				new BigDecimal(

@@ -144,8 +144,8 @@ public class MainApp {
 		dbe.buildSimulationDoc(numberOfDaysSimulation, numberOfProsumers,
 				cal.getStartTime(), execTime);
 		dbe.writeToDb();
-		dbe.queryAll();
-		dbe.dropAll();
+		//dbe.queryAll();
+		//dbe.dropAll();
 		log.debug("Execution time: " + out);
 		log.debug("Main_EndOfSimulation");
 	}

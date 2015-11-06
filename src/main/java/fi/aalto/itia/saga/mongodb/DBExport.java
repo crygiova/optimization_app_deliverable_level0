@@ -120,7 +120,7 @@ public class DBExport {
 		return agg;
 	}
 
-	private Document buildDAProsDoc(ArrayList<SimulationElement> prosumers) {
+	private List<Document> buildDAProsDoc(ArrayList<SimulationElement> prosumers) {
 		Document pros[] = new Document[prosumers.size()];
 		Document finalPDoc = new Document();
 		// TODO
@@ -138,7 +138,8 @@ public class DBExport {
 			pros[i].append(constant.P_DW, transBigToDouble(p.getDayAheadDpDw()));
 		}
 		finalPDoc.append(constant.DA_PROS, asList(pros));
-		return finalPDoc;
+		//return finalPDoc;
+		return asList(pros);
 	}
 
 	public void writeToDb() {
